@@ -49,11 +49,15 @@ function clickFun(param) {
 函数(2)$.getJson('/get_info', function(data){...}
     功能： 绑定路由"get_info", 从数据库中获得数据，初始化计划树
  */
+
+function test(){ alert("123"); }
+
+
 $.getJSON('/get_info', function(data)
 {
     console.log(2222)
     originTrainPlain = data;
-    console.log(new Date().getTIme())
+    console.log(new Date().getTime())
     myChart.setOption(option = {
         tooltip: {
             trigger: 'item',
@@ -104,6 +108,8 @@ $.getJSON('/get_info', function(data)
     });
 
 });
+
+
 //----------------------------------------------------------------//
 
 

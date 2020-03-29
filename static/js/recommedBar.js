@@ -7,6 +7,7 @@ optionCourse = null;
 optionPerson = null;
 $.getJSON('/getRecommedData', function(coursePersonJson)
 {
+    console.log(3333)
     var optionCourse = {
         dataset: coursePersonJson['course'],
         grid: {containLabel: true},
@@ -66,9 +67,13 @@ $.getJSON('/getRecommedData', function(coursePersonJson)
         ]
     };
     if (optionCourse && typeof optionCourse === "object") {
+        console.log(optionCourse)
         chartCourse.setOption(optionCourse, true);
+        console.log(chartCourse)
     }
     if (optionPerson && typeof optionPerson === "object") {
+        console.log(optionPerson)
         chartPerson.setOption(optionPerson, true);
+        console.log(chartPerson)
     }
 });
