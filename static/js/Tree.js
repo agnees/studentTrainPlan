@@ -1,6 +1,9 @@
 var dom = document.getElementById("container");
 var originTrainPlain = null;
 var myChart = echarts.init(dom);
+
+console.log(myChart)
+
 var app = {};
 option = null;
 
@@ -48,7 +51,9 @@ function clickFun(param) {
  */
 $.getJSON('/get_info', function(data)
 {
+    console.log(2222)
     originTrainPlain = data;
+    console.log(new Date().getTIme())
     myChart.setOption(option = {
         tooltip: {
             trigger: 'item',
@@ -128,15 +133,19 @@ function getScore(Node){
     }
 }
 //------------------------------------------------------------------------//
-
-
+// var option = myChart.getOption();
+// console.log(option,'option')
+// console.log(new Date().getTIme())
 // -----------------------------------------------------------------------//
 /*
 函数(4):setInterval(function(){...}
     功能: 定时根据计划树更新进度条进度。若所修学分超过所需学分，则进度条不再更新变化。
  */
-setInterval(function(){
+
+ function fuckThisBug (){
+
     Tree = myChart.getOption()['series'][0]['data'][0];
+
     var subjects = ["思想政治理论", "外语", "文化素质教育必修", "体育", "军事", "健康教育", "数学", "物理", "计算机",
         "学科基础", "专业选修"];
     var subjects2TotalScore = {};  //所需总学分
@@ -204,6 +213,7 @@ setInterval(function(){
         dom = document.getElementById(pLabels[idx]);
         dom.textContent = TotalExistScore + '/' + TotalScore;
     }
-}, 1)
+}
+setInterval(fuckThisBug(), 1)
 
 //-----------------------------------------------------------------------//

@@ -8,8 +8,10 @@ class Config:
     def init_app(app):
         pass
 
+
 config = {
     'default': Config,
-    'MYSQL_PASSWORD': '123456',
-    'DATABASE_NAME': 'studentTrainPlan'
+    "MYSQL_HOST": '47.104.136.38',
+    'MYSQL_PASSWORD': 'root',
+    'DATABASE_NAME': 'studenttrainplan'
 }

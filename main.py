@@ -173,7 +173,7 @@ def register():
                 return u'没有这个用户了'
             else:
                 if result[0][6] == user:
-                    sql = "UPDATE student SET PASSWORD='%s' WHERE STU_NO='%s'" % (password, stu_id)
+                    sql = "UPDATE STUDENT SET PASSWORD='%s' WHERE STU_NO='%s'" % (password, stu_id)
                     query.update(sql)
                     return redirect(url_for('login'))
                 else:
@@ -272,7 +272,7 @@ def personal_information():
     """
     stu_no = session.get('stu_id')
     print(stu_no + ' is stu_no')
-    sql = "SELECT * FROM student WHERE STU_NO = '%s'" % stu_no
+    sql = "SELECT * FROM STUDENT WHERE STU_NO = '%s'" % stu_no
     result = query.query(sql)
     return render_template('personal_information.html', result=result)
 

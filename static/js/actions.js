@@ -77,12 +77,14 @@ function dfsScore(Node){
  */
 
 
-setTimeout(function initScore(){
+function initScore(){
+
     console.log("111");
     var allScore = ['1', '2', "3", '4', '5'];
     var courseScore = [];
     var courseName = [];
     var allSubject = [];
+    console.log(myChart.getOption())
     Tree = myChart.getOption()['series'][0]['data'][0];
     for(var idx=0; idx<Tree['children'].length; idx++) {
         var subName = Tree['children'][idx]['name'];
@@ -141,7 +143,9 @@ setTimeout(function initScore(){
             $("#score").attr("disabled",true);
         }
     })
-}, 3000)
+}
+
+setTimeout(initScore(), 3000)
 
 // -------------------------------------------------------------------//
 // --------------------------------------------------- //

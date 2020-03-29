@@ -3,6 +3,7 @@ from numpy import *
 import numpy as np
 from numpy import linalg as la
 
+
 def getSigK(Sigma, k):
     '''
     输入：
@@ -12,23 +13,28 @@ def getSigK(Sigma, k):
     '''
     eyeK = np.eye(k)
     return mat(eyeK * Sigma[:k])
+
+
 def reBuild(U, Sigma, VT, k):
     '''
     使用前k个特征值重构数据
     '''
     Sigk = getSigK(Sigma, k)
     # 左行右列
-    return mat(np.dot(np.dot(U[:,:k], Sigk), VT[: k,:]))
+    return mat(np.dot(np.dot(U[:, :k], Sigk), VT[: k, :]))
 
-def ecludSim(inA,inB):
-    return 1.0/(1.0 + la.norm(inA - inB))
+
+def ecludSim(inA, inB):
+    return 1.0 / (1.0 + la.norm(inA - inB))
+
 
 def cosSim(inA, inB):
     '''
     基于余弦相似性度量
     '''
-    sim = float(inA.T* inB) / (la.norm(inA) * la.norm(inB))
+    sim = float(inA.T * inB) / (la.norm(inA) * la.norm(inB))
     return 0.5 + 0.5 * sim
+
 
 def svdMethod(svdData, dataMat, simMeas, user, item):
     '''
@@ -48,13 +54,13 @@ def svdMethod(svdData, dataMat, simMeas, user, item):
     U, Sigma, I_t = svdData
     k = 0
     while sum(Sigma[:k]) < sum(Sigma) * 0.9:
-        k = k+ 1
+        k = k + 1
     SigK = getSigK(Sigma, k)
-    itemFeature = dataMat.T * U[:,:k] * SigK.I
+    itemFeature = dataMat.T * U[:, :k] * SigK.I
     for j in range(N):
-        if dataMat[user,j] == 0 or j == item:
+        if dataMat[user, j] == 0 or j == item:
             continue
-        sim = simMeas(itemFeature[item,:].T, itemFeature[j,:].T)
+        sim = simMeas(itemFeature[item, :].T, itemFeature[j, :].T)
         # print("the similarity between {} and {} is {}".format(j,item, sim))
         ratSim = dataMat[user, j] * sim
         simTotal += sim
@@ -62,6 +68,7 @@ def svdMethod(svdData, dataMat, simMeas, user, item):
     if simTotal == 0:
         return 0
     return ratSimTotal / simTotal
+
 
 def recommedCoursePerson(dataMat, user, N=7, simMeas=ecludSim, estMethod=svdMethod):
     '''
@@ -82,7 +89,7 @@ def recommedCoursePerson(dataMat, user, N=7, simMeas=ecludSim, estMethod=svdMeth
     '''
     print(user)
     dataMat = mat(dataMat)
-    unRatedItems = nonzero(dataMat[user,:].A == 0)[1]
+    unRatedItems = nonzero(dataMat[user, :].A == 0)[1]
     if len(unRatedItems) == 0:
         print("没有未评分商品")
         return None
@@ -94,10 +101,10 @@ def recommedCoursePerson(dataMat, user, N=7, simMeas=ecludSim, estMethod=svdMeth
 
     k = 0
     while sum(Sigma[:k]) < sum(Sigma) * 0.9:
-        k = k+ 1
+        k = k + 1
     SigK = getSigK(Sigma, k)
-    userFeature  = dataMat * I_t[:,:k] * SigK.I
-    recomedUserVec = userFeature[user,:]
+    userFeature = dataMat * I_t[:, :k] * SigK.I
+    recomedUserVec = userFeature[user, :]
     user_and_score = []
     for idx, each in enumerate(userFeature):
         if user != idx:
@@ -125,11 +132,12 @@ def toBarJson(data, dict2id):
         ]
      }
     """
-    jsonData = {"source":[]}
+    jsonData = {"source": []}
     for each in data:
         unit = [each[1], dict2id[each[0]]]
         jsonData['source'].append(unit)
     return jsonData
+
 
 def regularData(data, a, b):
     """
@@ -137,8 +145,8 @@ def regularData(data, a, b):
     """
     dataNum = [i[0] for i in data['source']]
     Max, Min = max(dataNum), min(dataNum)
-    k = (b-a)/(Max-Min)
-    dataRg = [a+ k*(i-Min) for i in dataNum]
-    for idx,each in enumerate(data['source']):
+    k = (b - a) / (Max - Min)
+    dataRg = [a + k * (i - Min) for i in dataNum]
+    for idx, each in enumerate(data['source']):
         each[0] = dataRg[idx]
     return data

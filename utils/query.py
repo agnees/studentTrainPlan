@@ -1,27 +1,32 @@
 import pymysql
 from config import config
 
+
 def query(sql):
     """
     功能; 使用sql语句查询数据库中学生选课信息.
     参数: sql(string)
     """
-    db = pymysql.connect('localhost', 'root', config['MYSQL_PASSWORD'], config['DATABASE_NAME'], charset='utf8')
+    db = pymysql.connect(config['MYSQL_HOST'], 'root', config['MYSQL_PASSWORD'], config['DATABASE_NAME'],
+                         charset='utf8')
     cur = db.cursor()
     try:
+        print(sql)
         cur.execute(sql)
         result = cur.fetchall()
         db.commit()
-
-        #print('query success')
+        print('query success')
+        return result
 
         # print('query success')
-    except:
-        # print('query loss')
+    except Exception as err:
+        print(err.args)
+        print('query loss')
         db.rollback()
-    cur.close()
-    db.close()
-    return result
+    finally:
+        cur.close()
+        db.close()
+    return
 
 
 def update(sql):
@@ -29,18 +34,20 @@ def update(sql):
     功能; 使用sql语句更新数据库中学生选课信息。
     参数: sql(string)
     """
-    db = pymysql.connect('localhost', 'root', config['MYSQL_PASSWORD'], config['DATABASE_NAME'], charset='utf8')
+    db = pymysql.connect(config['MYSQL_HOST'], 'root', config['MYSQL_PASSWORD'], config['DATABASE_NAME'],
+                         charset='utf8')
     cur = db.cursor()
     try:
         cur.execute(sql)
         db.commit()
-        #print('update success')
+        # print('update success')
         # print('update success')
     except:
         # print('update loss')
         db.rollback()
     cur.close()
     db.close()
+
 
 def getPlanTreeJson(stu_id):
     """
@@ -61,7 +68,7 @@ def getPlanTreeJson(stu_id):
 
     children1 = {}
     children1['name'] = '思想政治理论'
-    children1_list =[]
+    children1_list = []
     children2 = {}
     children2['name'] = '外语'
     children2_list = []
@@ -100,21 +107,22 @@ def getPlanTreeJson(stu_id):
     for j in range(44):
         add_time_list.append([])
 
-    sql="SELECT CO_NO,COMMENT FROM CHOOSE WHERE STU_NO='%s'" % stu_id
-    course2score=query(sql)
+    sql = "SELECT CO_NO,COMMENT FROM CHOOSE WHERE STU_NO='%s'" % stu_id
+    course2score = query(sql)
     co2score = {}
     for cur in course2score:
         co2score[cur[0]] = cur[1]
 
-    #print(co2score)
+    # print(co2score)
+
 
     for co in finished_co:
         course_add = {}
         aid_str = str(aid)
-        sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO from education_plan WHERE CO_100='%s'" % aid_str
+        sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO from EDUCATION_PLAN WHERE CO_100='%s'" % aid_str
         co_name = query(sql)
-        #print('数据库查询结果')
-        #print(co_name)
+        # print('数据库查询结果')
+        # print(co_name)
         aid = aid + 1
         add_is_list = []
 
@@ -124,7 +132,7 @@ def getPlanTreeJson(stu_id):
         add_score = float(co_name[0][4])
 
         if co == '0':
-            #print(co_name)
+            # print(co_name)
             add_curse['name'] = co_name[0][2]
             add_curse['itemStyle'] = {'borderColor': 'red'}
             add_curse['value'] = add_score
@@ -483,6 +491,7 @@ def getPlanTreeJson(stu_id):
     data['children'] = children
     return data
 
+
 def updateDatabase(stu_id, train_plan):
     """
     功能: 用户在“培养计划”界面点击“提交”按钮后，使用最新“计划树”信息更新数据库
@@ -491,7 +500,7 @@ def updateDatabase(stu_id, train_plan):
     :return: 无
     """
     data = train_plan['children']
-    array_finish = [0]*120
+    array_finish = [0] * 120
     # print(array_finish)
     for data_children in data:
         data_children = data_children['children']
@@ -502,8 +511,8 @@ def updateDatabase(stu_id, train_plan):
             for data_children_child in data_children_child_1:
                 name = data_children_child['children'][0]['name']
                 color = data_children_child['children'][0]['itemStyle']['borderColor']
-                #print(name, color)
-                sql = "select CO_100 from education_plan WHERE CO_NAME='%s'" % name
+                # print(name, color)
+                sql = "select CO_100 from EDUCATION_PLAN WHERE CO_NAME='%s'" % name
                 co_100 = query(sql)
                 co_100 = co_100[0][0]
 
@@ -518,19 +527,19 @@ def updateDatabase(stu_id, train_plan):
         else:
             finish_co += '0'
     print(finish_co)
-    #print(array_finish)
-    sql = "UPDATE edu_stu_plan SET FINISHED_CO='%s' WHERE STU_NO='%s'" % (finish_co,stu_id)
+    # print(array_finish)
+    sql = "UPDATE edu_stu_plan SET FINISHED_CO='%s' WHERE STU_NO='%s'" % (finish_co, stu_id)
     update(sql)
 
 
 def updateScore(stu_id, scores):
-    sql="SELECT CO_NO, CO_NAME FROM EDUCATION_PLAN";
+    sql = "SELECT CO_NO, CO_NAME FROM EDUCATION_PLAN";
     name2no = {}
     result = query(sql)
     for cur in result:
         name2no[cur[1]] = cur[0]
 
     for cur in scores:
-        sql="UPDATE CHOOSE SET COMMENT='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (scores[cur], stu_id, name2no[cur])
-        #print(sql)
+        sql = "UPDATE CHOOSE SET COMMENT='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (scores[cur], stu_id, name2no[cur])
+        # print(sql)
         update(sql)
