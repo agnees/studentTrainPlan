@@ -1,7 +1,7 @@
 		/*
 			create by zrong.me
-			请大家关注我的个人微博 说Z先生爱你
-			也请大家关注我的个人网站 zrong.me
+			��������������������������������� ���Z������������
+			������������������������������������ zrong.me
 		*/
 		*{
 			padding: 0;
@@ -26,22 +26,14 @@
 		}
 		#box{
 			width: 100%;
-  			height: 100%;
-  			background-color: #F7FAFC;
-  			background-image: url('');
-  			background-size: cover;
-  			background-position: 50% 50%;
-  			background-repeat: no-repeat;
-  			position: fixed;
-  			top: 0;
-  			left: 0;
-  			right: 0;
-  			bottom: 0;
-  			z-index: 1;
+			height: 100%;
+			background: url(../images/login-bgc.jpeg)no-repeat center;
+			background-size: cover;
 		}
+		/*整体下方登录大盒子*/
 		.cent-box{
-			width: 300px;
-			height: 440px;
+			/* width: 300px; */
+			height: 400px;
 			vertical-align: middle;
 			white-space: normal;
 			margin: 0 auto;
@@ -49,10 +41,11 @@
 			z-index: 2;
 			left: 50%;
 			top: 50%;
-			margin-left: -150px;
-			margin-top: -220px;
+			transform: translate(-50%,-50%);
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
 		}
-		.register-box{
+		/*.register-box{
 			height: 490px;
 			margin-top: -270px;
 		}
@@ -82,6 +75,7 @@
 		.clearfix:before{
 			content: '';
 			display: table;
+
 		}
 		.index-tab{
 			text-align: center;
@@ -119,8 +113,9 @@
     		background: #0f88eb;
 		}
 		.slide-bar1{
-			left: 4em;
-		}
+			left: 4em;}
+*/
+		/*表单格式*/
 		.form{
 			float: none;
 			margin: auto;
@@ -129,14 +124,17 @@
 		}
 		.form .group{
 			padding: 1px 0;
-    		border: 1px solid #d5d5d5;
+    		/*圆角*/
     		border-radius: 3px;
 		}
+		/*输入框格式*/
 		.form .group .group-ipt{
 			position: relative;
     		margin: 0;
-    		overflow: hidden;
+			overflow: hidden;
+			margin-bottom: 34px;
 		}
+		/*输入时格式*/
 		.form .group .group-ipt input{
 			padding: 1em .8em;
     		width: 100%;
@@ -147,7 +145,13 @@
     		background: rgba(255,255,255,0.5);
     		font-family: 'Microsoft Yahei';
     		color: #666;
-    		position: relative;
+			position: relative;
+			background-color: rgb(242,242,242);
+		}
+		/*未输入时空格内容字体格式*/
+		.form .group .group-ipt input::placeholder{
+			text-align: center;
+			color: #000;
 		}
 		#password,#verify,#user,#password1{
 			border-top: 1px solid #e8e8e8;
@@ -160,12 +164,13 @@
 			cursor: pointer;
 			height: 40px;
 		}
+		/*登录按钮*/
 		.button{
-			margin-top:18px; 
+			margin-top:18px;
 		}
 		#button{
 			width: 100%;
-			background: #0f88eb;
+			background: rgb(129,211,248);
     		box-shadow: none;
     		border: 0;
     		border-radius: 3px;
@@ -177,21 +182,27 @@
     		font-family: 'Microsoft Yahei';
 		}
 		#button:hover{
-			background: #80c3f7;
+			background: rgb(129,211,248);
 		}
+		/*记住我整体框架*/
 		.remember{
 			margin-top: 10px;
 			line-height: 30px;
 		}
+		/*将元素设置为块级*/
 		.remember label{
 			display: block;
 		}
+		/*记住我字体*/
 		.remember-me{
 			font-size: 14px;
 			float: left;
 			position: relative;
+			/*鼠标放在光标上面时显示为手指*/
 			cursor: pointer;
 		}
+		/*记住我点击方框*/
+		/*点击前*/
 		.icon{
 			width: 11px;
 			height: 11px;
@@ -202,6 +213,7 @@
 			margin-right: 5px;
 			cursor: pointer;
 		}
+		/*点击后填充*/
 		.zt{
 			width: 9px;
 			height: 9px;
@@ -209,6 +221,7 @@
 			margin: 1px;
 			display: block;
 		}
+		/*记住我id选择器*/
 		#remember-me{
 			position: absolute;
 			left: 0;

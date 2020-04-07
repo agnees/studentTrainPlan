@@ -1,69 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<title>登录</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/register-login.css">
-    <link rel="icon" href="../static/images/logo.ico" type="image/x-icon"/>
-</head>
-<body>
-<div id="box"></div>
-<div class="cent-box">
-	<div class="cent-box-header">
-		<h1 class="main-title hide">天津大学</h1>
-		<h2 class="sub-title">本科培养计划</h2>
-	</div>
-
-	<div class="cont-main clearfix">
-		<div class="index-tab">
-			<div class="index-slide-nav">
-				<a href="{{ url_for('login') }}" class="active">登录</a>
-				<a href="{{ url_for('register') }}">修改密码</a>
-				<div class="slide-bar"></div>				
-			</div>
-		</div>
-    <form method="post">
-        <div class="login form">
-			<div class="group">
-				<div class="group-ipt email">
-					<input type="text" name="stu_id" id="email" class="ipt" placeholder="输入您的学号" required>
-				</div>
-				<div class="group-ipt password">
-					<input type="password" name="password" id="password" class="ipt" placeholder="输入您的登录密码" required>
-				</div>
-
-			</div>
-            <div class="button">
-                <button type="submit" class="login-btn register-btn" id="button">登录</button>
-            </div>
-		</div>
-    </form>
-
-		<div class="remember clearfix">
-			<label class="remember-me"><span class="icon"><span class="zt"></span></span><input type="checkbox" name="remember-me" id="remember-me" class="remember-mecheck" checked>记住我</label>
-			<label class="forgot-password">
-				<a href="#">忘记密码？</a>
-			</label>
-		</div>
-	</div>
-</div>
-
-
-<script src='../static/js/particles.js' type="text/javascript"></script>
-<script src='../static/js/background.js' type="text/javascript"></script>
-<script src='../static/js/jquery.min.js' type="text/javascript"></script>
-<script src='../static/js/layer/layer.js' type="text/javascript"></script>
-<script src='../static/js/index.js' type="text/javascript"></script>
-<script>
-	
-	$("#remember-me").click(function(){
-		var n = document.getElementById("remember-me").checked;
-		if(n){
-			$(".zt").show();
-		}else{
-			$(".zt").hide();
+{#    // 外部样式表#}
+	<link rel="stylesheet" type="text/css" href="../static/css/register-login.css?v=5">
+	<link rel="icon" href="../static/images/logo.ico" type="image/x-icon" />
+{#    // 内部#}
+	<style>
+        /*logo+msg*/
+		.school-title {
+            /*flex布局，-webkit厂商前缀*/
+			display: flex;
+			display: -webkit-flex;
+			display: -webkit-box;
+			display: -moz-box;
+            /*子元素居中*/
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			box-align: center;
+            /*弹性盒：元素纵轴居中对齐*/
+			align-items: center;
+            /* 绝对定位*/
+			position: absolute;
+			top: 50px;
+			left: 50%;
+            /* X轴平移，负数为左*/
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
 		}
-	});
-</script>
+
+		/*图片*/
+        .school-logo {
+			width: 150px;
+			height: 150px;
+            /*为图片设置圆角*/
+			border-radius: 50%;
+		}
+
+		.school-msg {
+			margin-left: 50px;
+			color: rgb(0, 0, 255);
+			font-size: 28px;
+            text-align: center;
+            /*自提位置*、
+			text-align: center;
+			width: 521px;
+			height: 100px;
+            /*rgb颜色代码*/
+			background-color: rgb(215, 215, 215);
+		}
+
+		.school-msg>p:nth-of-type(2) {
+			font-size: 21px;
+		}
+
+		.cent-box {
+            /*整体的大方框，白色背景*/
+			display: flex;
+			display: -webkit-flex;
+			display: -webkit-box;
+			display: -moz-box;
+			background-color: #ffffff;
+		}
+
+		.sys-name {
+            /*选课学分系统蓝色框*/
+			width: 20px;
+			font-size: 23px;
+            /*边框*/
+			border: 1px solid #000;
+			display: flex;
+			display: -webkit-flex;
+			display: -webkit-box;
+			display: -moz-box;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+            /*任何多余的空间被划分均匀，一半以上的子元素放在上面，剩下的子元素放在另一半*/
+			box-align: center;
+			align-items: center;
+            /*蓝色背景设置宽度*/
+			padding: 0 46px;
+			color: #fff;
+			background: url('../static/images/sys-name-bgc.jpg')no-repeat center;
+            /*此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小*/
+			background-size: cover;
+		}
+
+		/*蓝色选课学分系统旁边的白色框*/
+        .cont-main {
+			padding: 0 205px;
+			border-top: 1px solid #000;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+			text-align: center;
+		}
+
+        /*滚动条*/
+		.contacts {
+			position: absolute;
+			bottom: 12%;
+			left: 50%;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			width: 500px;
+            /*滚动条内容溢出元素框，内容会被修剪，并且其余内容是不可见的*/
+			overflow: hidden;
+			height: 25px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+	<div class="school-title">
+		<img src="../static/images/login-header.jpg" alt="北京信息科技大学" class="school-logo">
+		<div class="school-msg">
+			<p>北京信息科技大学</p>
+			<p>Beijing Information Science & Technology University</p>
+		</div>
+	</div>
+	<div class="cent-box">
+		<div class="sys-name">
+			选课学分管理系统
+		</div>
+		<div class="cont-main clearfix">
+			<p style="font-size: 32px;
+			color: #000;
+			line-height: 110px;
+			font-weight: bold;">Welcome!</p>
+			<!-- <div class="index-tab">
+				<div class="index-slide-nav">
+					<a href="{{ url_for('login') }}" class="active">登录</a>
+					<a href="{{ url_for('register') }}">修改密码</a>
+					<div class="slide-bar"></div>
+				</div>
+			</div> -->
+{#            /*表单*/#}
+			<form method="post">
+				<div class="login form">
+					<div class="group">
+						<div class="group-ipt email">
+							<input type="text" name="stu_id" id="email" class="ipt" placeholder="账号" required>
+						</div>
+						<div class="group-ipt password">
+							<input type="password" name="password" id="password" class="ipt" placeholder="密码" required>
+						</div>
+					</div>
+					<button type="submit" id="login-btn" style="display: none;"></button>
+				</div>
+			</form>
+{#            /*记住我和忘记密码*/#}
+			<div class="remember clearfix">
+				<label class="remember-me"><span class="icon"><span class="zt"></span></span><input type="checkbox"
+						name="remember-me" id="remember-me" class="remember-mecheck" checked>记住我</label>
+				<label class="forgot-password">
+					<a href="#">忘记密码？</a>
+				</label>
+			</div>
+{#            登录按钮*/#}
+			<div class="button">
+                <a href="{{ url_for('login') }}" class="active"><button type="text" class="login-btn register-btn" id="button">登录</button></a>
+			</div>
+		</div>
+	</div>
+    <!--浮动框*/-->
+	<div class="contacts">
+		<div class="contacts-ctn">
+            <!--空白部分被浏览器忽略-->
+			<p style="white-space: nowrap;">如有问题请联系：************</p>
+		</div>
+	</div>
+
+	<!-- <script src='../static/js/particles.js' type="text/javascript"></script> -->
+	<!-- <script src='../static/js/background.js' type="text/javascript"></script> -->
+	<script src='../static/js/jquery.min.js' type="text/javascript"></script>
+	<script src='../static/js/layer/layer.js' type="text/javascript"></script>
+	<!-- <script src='../static/js/index.js' type="text/javascript"></script> -->
+	<script>
+        /*滚动条*/
+		$(function(){
+			var marginLeft = 0;
+			/*获取文档第一个元素*/
+			var elm = document.querySelector('.contacts-ctn');
+			var elmOffsetWidth = elm.offsetWidth;
+			marginLeft = elmOffsetWidth
+			$(elm).css('margin-left',marginLeft);
+			setInterval(function(){
+				marginLeft--;
+				$(elm).css('margin-left',marginLeft);
+				if(Math.abs(marginLeft)>elmOffsetWidth){
+					marginLeft = elmOffsetWidth;
+					$(elm).css('margin-left',marginLeft)
+				}
+			},25);
+
+			$('.login-btn').on('click',function(){
+				$('#login-btn').click();
+			})
+		})
+		$("#remember-me").click(function () {
+			var n = document.getElementById("remember-me").checked;
+			/*如果为真则展示*/
+			if (n) {
+				$(".zt").show();
+			} else {
+				$(".zt").hide();
+			}
+		});
+	</script>
 </body>
+
 </html>

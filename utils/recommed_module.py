@@ -73,7 +73,7 @@ def svdMethod(svdData, dataMat, simMeas, user, item):
 def recommedCoursePerson(dataMat, user, N=7, simMeas=ecludSim, estMethod=svdMethod):
     '''
     输入：
-        dataMat(mat)(M,N): 评分矩阵.
+        dataMat(mat)(M,N): 评分矩阵. [[1,2,3,5],[3,5,9,9]]
         use(int): 想推荐的用户id.
         N(int): 为用户推荐的未评分的商品个数
         simMeas(double): 两个特征向量的相似度评价函数
@@ -89,6 +89,8 @@ def recommedCoursePerson(dataMat, user, N=7, simMeas=ecludSim, estMethod=svdMeth
     '''
     print(user)
     dataMat = mat(dataMat)
+
+    # 返回矩阵自非o的元素的列
     unRatedItems = nonzero(dataMat[user, :].A == 0)[1]
     if len(unRatedItems) == 0:
         print("没有未评分商品")
@@ -143,6 +145,7 @@ def regularData(data, a, b):
     """
     功能，将列表的值归一化到[a,b]之间
     """
+    # 获取二维数组第一列，推荐级别
     dataNum = [i[0] for i in data['source']]
     Max, Min = max(dataNum), min(dataNum)
     k = (b - a) / (Max - Min)
