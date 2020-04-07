@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="1) 修复bug" />
+    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/insert_student.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/insert_student.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/map_student_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/map_student_course.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/recommed_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/recommed_module.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,48 +20,49 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/studentTrainPlan$studentTrainPlan.coverage" NAME="studentTrainPlan Coverage Results" MODIFIED="1558023454928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@47.104.136.38" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@47.104.136.38" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@47.104.136.38" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="studenttrainplan: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="studentTrainPlan" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5235">
-              <caret line="353" column="17" selection-start-line="353" selection-start-column="17" selection-end-line="353" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/schema.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="46" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/exampleImage/1.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28125">
-              <caret line="1934" selection-start-line="1934" selection-end-line="1934" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/insert_student.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="27" />
+            <state relative-caret-position="421">
+              <caret line="427" column="17" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#93#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,22 +70,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/query.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="8580">
+              <caret line="573" column="30" selection-start-line="573" selection-start-column="18" selection-end-line="573" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/map_student_course.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -83,58 +86,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style1.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>C</find>
-      <find>select CLASSIFICATION,</find>
-      <find>CO_100</find>
-      <find>Tree.js</find>
-      <find>get_info()</find>
-      <find>get</find>
-      <find>name</find>
-      <find>chartCourse</find>
-      <find>echart</find>
-      <find>echarts</find>
-      <find>init</find>
-      <find>initScore</find>
-      <find>fuck</find>
-      <find>actions.js</find>
-      <find>actions</find>
-      <find>returnData</find>
-      <find>ajax</find>
-      <find>add_is</find>
-      <find>originTrainPlain</find>
-      <find>subjects</find>
-      <find>processes</find>
-      <find>updataScore</find>
-      <find>rebuild</find>
-      <find>dfsScore</find>
-      <find>allScore</find>
-      <find>course2score</find>
-      <find>courseIndex</find>
-      <find>pLabels</find>
-      <find>submit</find>
-      <find>train</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>config['MYSQL_HOST']</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/static</dir>
-      <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/templates</dir>
-    </dirStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,31 +107,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils/recommed_module.py" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/sql/insert_edu_stu_plan.sql" />
-        <option value="2496cf06-89bc-4faf-9dfc-1b056296fab2/consoles/Connection" />
-        <option value="$PROJECT_DIR$/sql/insert_choose.sql" />
-        <option value="$PROJECT_DIR$/static/js/echarts-gl.min.js" />
-        <option value="$PROJECT_DIR$/static/js/dataTool.min.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/js/recommedBar.js" />
-        <option value="$PROJECT_DIR$/templates/recommed.html" />
-        <option value="$PROJECT_DIR$/sql/schema.sql" />
-        <option value="$PROJECT_DIR$/exampleImage/1.json" />
-        <option value="$PROJECT_DIR$/templates/train_plan.html" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/utils/query.py" />
-        <option value="$PROJECT_DIR$/static/js/actions.js" />
-        <option value="$PROJECT_DIR$/static/js/Tree.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
   </component>
+  <component name="ProjectId" id="1ZnnNarcbJ1XILRmv1CWTGcnyT7" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -176,11 +127,44 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -188,15 +172,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/static/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="studentTrainPlan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -224,9 +208,10 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -245,6 +230,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -254,6 +240,56 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="studentTrainPlan" type="PythonConfigurationType" factoryName="Python">
+      <module name="studentTrainPlan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.1723886" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="@47.104.136.38: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="@47.104.136.38: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6a69be2e" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="@47.104.136.38: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@20caa840" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -266,436 +302,164 @@
       <option name="presentableId" value="Default" />
       <updated>1558022752388</updated>
       <workItem from="1558022758913" duration="1878000" />
+      <workItem from="1585483692155" duration="6856000" />
+      <workItem from="1585574063330" duration="6068000" />
+      <workItem from="1585636903531" duration="115177000" />
     </task>
-    <task id="LOCAL-00001" summary="1) 修复bug">
-      <created>1585478559452</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1585478559452</updated>
-    </task>
-    <task id="LOCAL-00002" summary="1) 修复bug">
-      <created>1585483012099</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1585483012099</updated>
-    </task>
-    <task id="LOCAL-00003" summary="1) 修复bug">
-      <created>1586256529875</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1586256529875</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1878000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="823" extended-state="0" />
     <layout>
-      <window_info id="DB Browser" order="0" weight="0.32980973" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49753696" visible="true" weight="0.2706131" />
-      <window_info id="Structure" order="2" sideWeight="0.50246304" side_tool="true" weight="0.18604651" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="UI Designer" order="6" />
-      <window_info id="Favorites" order="7" sideWeight="0.50120485" side_tool="true" weight="0.18604651" />
-      <window_info anchor="bottom" id="DB Execution Console" order="0" weight="0.44096386" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.48554218" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3819277" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Tool Output" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32891566" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="14" />
-      <window_info anchor="bottom" id="Python Console" order="15" />
+      <window_info id="DB Browser" weight="0.32980973" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="DB Execution Console" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32968536" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994528" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="1) 修复bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="1) 修复bug" />
+  <component name="WindowStateProjectService">
+    <state x="184" y="98" key="#HTTP_Proxy" timestamp="1585837247212">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="98" key="#HTTP_Proxy/0.0.1440.900@0.0.1440.900" timestamp="1585837247212" />
+    <state x="320" y="115" key="#SQL_Dialects" timestamp="1585921853585">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1585921853585" />
+    <state x="274" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585837675038">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="184" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1585837313178" />
+    <state x="274" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" timestamp="1585837675038" />
+    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.832@0.23.1440.832" timestamp="1585484060261" />
+    <state x="314" y="52" key="CommitChangelistDialog2" timestamp="1585490293147">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="314" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585490293147" />
+    <state width="1398" height="130" key="GridCell.Tab.0.bottom" timestamp="1586252369673">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="130" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586252369673" />
+    <state width="1367" height="74" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1586236125663" />
+    <state width="702" height="179" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1585848507981" />
+    <state width="972" height="74" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1586237612494" />
+    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" timestamp="1585579657483" />
+    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1585580263496" />
+    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.835@0.23.1440.835" timestamp="1585577368804" />
+    <state width="1398" height="130" key="GridCell.Tab.0.center" timestamp="1586252369671">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="130" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586252369671" />
+    <state width="1367" height="74" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1586236125662" />
+    <state width="702" height="179" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1585848507980" />
+    <state width="972" height="74" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1586237612493" />
+    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" timestamp="1585579657474" />
+    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1585580263495" />
+    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.835@0.23.1440.835" timestamp="1585577368802" />
+    <state width="1398" height="130" key="GridCell.Tab.0.left" timestamp="1586252369671">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="130" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586252369671" />
+    <state width="1367" height="74" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1586236125661" />
+    <state width="702" height="179" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1585848507979" />
+    <state width="972" height="74" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1586237612490" />
+    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" timestamp="1585579657421" />
+    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1585580263494" />
+    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.835@0.23.1440.835" timestamp="1585577368801" />
+    <state width="1398" height="130" key="GridCell.Tab.0.right" timestamp="1586252369672">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="130" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586252369672" />
+    <state width="1367" height="74" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1586236125662" />
+    <state width="702" height="179" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1585848507981" />
+    <state width="972" height="74" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1586237612493" />
+    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" timestamp="1585579657476" />
+    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1585580263495" />
+    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.835@0.23.1440.835" timestamp="1585577368803" />
+    <state width="300" height="457" key="HiddenNamespacesPopup" timestamp="1585837718544">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="300" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1585837718544" />
+    <state x="498" y="168" key="RollbackChangesDialog" timestamp="1585574145022">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="498" y="168" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585574145022" />
+    <state x="229" y="57" key="SettingsEditor" timestamp="1586244949382">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="57" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1586244949382" />
+    <state x="229" y="76" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1585484039272" />
+    <state x="456" y="140" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1585839999652">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="456" y="140" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1585839999652" />
+    <state x="402" y="72" width="667" height="729" key="find.popup" timestamp="1586165909119">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="402" y="72" width="667" height="729" key="find.popup/0.23.1440.828@0.23.1440.828" timestamp="1586165909119" />
+    <state x="385" y="204" width="670" height="623" key="search.everywhere.popup" timestamp="1586177556733">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586084679723" />
+    <state x="385" y="204" width="670" height="623" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1586177556733" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/practice.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/studentTrainPlan$main.coverage" NAME="main Coverage Results" MODIFIED="1586252369655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="db://2496cf06-89bc-4faf-9dfc-1b056296fab2/objects/schemas/studenttrainplan/tables/CHOOSE">
-      <provider selected="true" editor-type-id="1.DATA">
-        <state row-count="100" readonly="false">
-          <columns>
-            <column name="AD_YEAR" position="0" visible="true" />
-            <column name="MAJOR" position="1" visible="true" />
-            <column name="STU_NO" position="2" visible="true" />
-            <column name="CO_NO" position="3" visible="true" />
-            <column name="GRADE" position="4" visible="true" />
-            <column name="COMMENT" position="5" visible="true" />
-          </columns>
-          <sorting />
-          <content-types />
-        </state>
-      </provider>
-    </entry>
-    <entry file="db://2496cf06-89bc-4faf-9dfc-1b056296fab2/objects/schemas/studenttrainplan/tables/STUDENT">
-      <provider selected="true" editor-type-id="1.DATA">
-        <state row-count="31" readonly="false">
-          <columns>
-            <column name="NAME" position="0" visible="true" />
-            <column name="SEX" position="1" visible="true" />
-            <column name="STU_NO" position="2" visible="true" />
-            <column name="COLLEGE" position="3" visible="true" />
-            <column name="MAJOR" position="4" visible="true" />
-            <column name="AD_YEAR" position="5" visible="true" />
-            <column name="PASSWORD" position="6" visible="true" />
-            <column name="ID" position="7" visible="true" />
-          </columns>
-          <sorting />
-          <content-types />
-        </state>
-      </provider>
-    </entry>
-    <entry file="db://2496cf06-89bc-4faf-9dfc-1b056296fab2/objects/schemas/studenttrainplan/tables/NEWS">
-      <provider selected="true" editor-type-id="1.DATA">
-        <state row-count="0" readonly="false">
-          <columns>
-            <column name="TOPIC" position="0" visible="true" />
-            <column name="COMMENTS" position="1" visible="true" />
-            <column name="COMMENTER" position="2" visible="true" />
-            <column name="CREATE_TIME" position="3" visible="true" />
-            <column name="NEWS_ID" position="4" visible="true" />
-            <column name="IS_FIRST" position="5" visible="true" />
-          </columns>
-          <sorting />
-          <content-types />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pymysql/cursors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="298" column="8" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.7/lib/python/site-packages/werkzeug/serving.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="1029" selection-start-line="1029" selection-end-line="1029" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/resource.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/toJson.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/errors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="db://2496cf06-89bc-4faf-9dfc-1b056296fab2/consoles/Connection">
-      <provider selected="true" editor-type-id="0.CONSOLE">
-        <state line="4012" column="27" selection-start="246421" selection-end="246423" vertical-scroll-proportion="-9.392858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="db://2496cf06-89bc-4faf-9dfc-1b056296fab2/objects/schemas/studenttrainplan/tables/EDU_STU_PLAN">
-      <provider selected="true" editor-type-id="1.DATA">
-        <state row-count="30" readonly="false">
-          <columns>
-            <column name="AD_YEAR" position="0" visible="true" />
-            <column name="STU_NO" position="1" visible="true" />
-            <column name="DIRECTION" position="2" visible="true" />
-            <column name="FINISHED_CO" position="3" visible="true" />
-            <column name="HAS_CREDITS" position="4" visible="true" />
-            <column name="NOT_CREDITS" position="5" visible="true" />
-          </columns>
-          <sorting />
-          <content-types />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/templating.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="124" column="4" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/insert_edu_stu_plan.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="17" selection-end-line="31" selection-end-column="163" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/insert_education_plan.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" lean-forward="true" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/insert_loginformation.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/insert_choose.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="db://2496cf06-89bc-4faf-9dfc-1b056296fab2/objects/schemas/studenttrainplan/tables/EDUCATION_PLAN">
-      <provider selected="true" editor-type-id="1.DATA">
-        <state row-count="0" readonly="false">
-          <columns>
-            <column name="AD_YEAR" position="0" visible="true" />
-            <column name="MAJOR" position="1" visible="true" />
-            <column name="CLASSIFICATION" position="2" visible="true" />
-            <column name="CO_NO" position="3" visible="true" />
-            <column name="CO_100" position="4" visible="true" />
-            <column name="CO_NAME" position="5" visible="true" />
-            <column name="TEACHER" position="6" visible="true" />
-            <column name="CREDITS" position="7" visible="true" />
-            <column name="TOTAL_HR" position="8" visible="true" />
-            <column name="START_TIME" position="9" visible="true" />
-            <column name="END_TIME" position="10" visible="true" />
-            <column name="CLASS_TIME" position="11" visible="true" />
-            <column name="MAX_STUDENTS" position="12" visible="true" />
-            <column name="CO_HR" position="13" visible="true" />
-            <column name="ONLINE_HR" position="14" visible="true" />
-            <column name="EXPR_HR" position="15" visible="true" />
-            <column name="PRAC_HR" position="16" visible="true" />
-            <column name="PRAC_WK" position="17" visible="true" />
-            <column name="START_SEMENMTER" position="18" visible="true" />
-            <column name="IS_MUST" position="19" visible="true" />
-            <column name="COLLEGE" position="20" visible="true" />
-            <column name="NOTE" position="21" visible="true" />
-          </columns>
-          <sorting />
-          <content-types />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/recommed_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/standardSchemas/xhtml1-transitional.dtd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="457" column="10" selection-start-line="457" selection-start-column="10" selection-end-line="457" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manager.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/managerEdit.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news_center.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/personal_information.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/dataTool.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/echarts-gl.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret column="672726" lean-forward="true" selection-start-column="672726" selection-end-column="672726" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery.superslide.2.1.1.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery-2.2.4.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery1.42.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/particles.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/recommedBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/recommed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="305" column="4" selection-start-line="305" selection-start-column="4" selection-end-line="305" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/background.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-599">
-          <caret line="94" column="3" lean-forward="true" selection-start-line="94" selection-start-column="3" selection-end-line="94" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/Tree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/train_plan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="166" column="53" selection-start-line="166" selection-start-column="53" selection-end-line="166" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5235">
-          <caret line="353" column="17" selection-start-line="353" selection-start-column="17" selection-end-line="353" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="46" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28125">
-          <caret line="1934" selection-start-line="1934" selection-end-line="1934" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/insert_student.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="421">
+          <caret line="427" column="17" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="8580">
+          <caret line="573" column="30" selection-start-line="573" selection-start-column="18" selection-end-line="573" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/map_student_course.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/404.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exampleImage/1.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
