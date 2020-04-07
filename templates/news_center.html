@@ -1,52 +1,158 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../static/css/style1.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="../static/css/register-login.css">
-    <link rel="icon" href="../static/images/logo.ico" type="image/x-icon"/>
-<script src="../static/js/jquery1.42.min.js" type="text/javascript"></script>
-<script src="../static/js/jquery.js"></script>
-<script src="../static/js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
-<title>课程论坛</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="../static/css/style1.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/register-login.css">
+  <link rel="icon" href="../static/images/logo.ico" type="image/x-icon" />
+  <script src="../static/js/jquery1.42.min.js" type="text/javascript"></script>
+  <script src="../static/js/jquery.js"></script>
+  <script src="../static/js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+  <title>查询评分</title>
+  <style>
+    .content_box1 {
+      top: 119px;
+    }
+
+    .header_box1 {
+      /* position: relative; */
+      background: url(../static/images/index-header.jpg)no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .nav_box {
+      width: 902px;
+      height: 116px;
+      float: right;
+      margin-left: 50px;
+      margin-top: 50px;
+      color: #ffffff;
+    }
+
+    .nav_box a {
+      color: #ffffff;
+    }
+
+    .nav_slide1 a {
+      word-break: keep-all;
+      color: #000;
+    }
+
+    .contacts {
+      position: absolute;
+      bottom: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      width: 500px;
+      overflow: hidden;
+      height: 25px;
+    }
+
+    .user-msg {
+      position: absolute;
+      right: 50px;
+      bottom: 0;
+      cursor: pointer;
+    }
+
+    .user-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .user-name-num {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+    }
+
+    .user-name-num>div {
+      width: 96px;
+      height: 30px;
+      background-color: rgb(215, 215, 215);
+      font-size: 16px;
+      border: 1px solid #000;
+    }
+
+    .contacts {
+      position: absolute;
+      bottom: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      width: 500px;
+      overflow: hidden;
+      height: 25px;
+    }
+
+    body {
+      background: url(../static/images/index-bgc.jpg)no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .fenye_box {
+      position: absolute;
+      top: 196%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      ;
+      transform: translateX(-50%);
+    }
+  </style>
 </head>
 
 <body>
-<div class="wapper_box">
-<div class="header_box"></div>
-<div class="header_box1">
-    <div class="header_box2">
-         <a class="logo_box" href="{{ url_for('index') }}"><img src="../static/images/logo1.jpeg"/></a>
-         <ul class="nav_box">
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('personal_information') }}">个人中心</a></li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('news_center') }}">课程论坛</a>
-               <div class="nav_slide">
-                <div class="nav_slide1">
-                    <a href="{{ url_for('news_center') }}">课程讨论<span><img src="../static/images/siade_bg1.png"/></span></a>
-                    <a href="{{ url_for('course_discussion') }}">发布话题<span><img src="../static/images/siade_bg1.png"/></span></a>
-                 </div>
-               </div>  
-             </li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('recommed') }}">课程推荐</a></li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('train_plan') }}">课程进度</a></li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('index') }}">首页</a></li>
-         </ul>
+  <div class="wapper_box">
+    <div class="header_box"></div>
+    <div class="header_box1">
+      <div class="user-msg">
+        <img src="../static/images/icon_A.png" class="user-icon" alt="个人信息">
+        <div class="user-name-num">
+          <div><a href="{{ url_for('personal_information') }}">个人信息</a></div>
+          <div><a href="{{ url_for('register') }}">修改密码</a></div>
+        </div>
+      </div>
+      <div class="header_box2">
+        <!-- <a class="logo_box" href="{{ url_for('index') }}"><img src="../static/images/logo1.jpeg" /></a> -->
+        <ul class="nav_box">
+            <li class="nav_1"><a class="nav_but" href="{{ url_for('news_center') }}">话题</a>
+                <div class="nav_slide">
+                    <div class="nav_slide1">
+                        <a href="{{ url_for('news_center') }}">课程公告<span><img
+                                    src="../static/images/siade_bg1.png" /></span></a>
+                        <a href="{{ url_for('course_discussion') }}">课程讨论<span><img
+                                    src="../static/images/siade_bg1.png" /></span></a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_1"><a class="nav_but" href="{{ url_for('recommed') }}">推荐</a></li>
+            <li class="nav_1"><a class="nav_but" href="{{ url_for('train_plan') }}?type=0">评分</a></li>
+            <li class="nav_1"><a class="nav_but" href="{{ url_for('train_plan') }}?type=1">查询</a></li>
+            <li class="nav_1"><a class="nav_but" href="{{ url_for('index') }}">首页</a></li>
+        </ul>
     </div>
-        <script>	 
-             $(".nav_1").mouseenter(function(){
-				 $(this).find(".nav_slide").slideDown()
-			  });
-			  
-			  $(".nav_1").mouseleave(function(){ 
-				 $(".nav_slide").slideUp()
-			 });
+      <script>
+        $(".nav_1").mouseenter(function () {
+          $(this).find(".nav_slide").slideDown()
+        });
+
+        $(".nav_1").mouseleave(function () {
+          $(".nav_slide").slideUp()
+        });
 			 //$(".producys_box").mouseout(function(){
 				// $(this).find(".producys_box1").slideUp(); 
 			 //});
-          </script>
-</div>
-<!--banner部分开始-->
-  <div class="banner_box">
+      </script>
+    </div>
+    <!--banner部分开始-->
+    <!-- <div class="banner_box">
         <ul class="banner_pic">
             <li><img src="../static/images/logo.jpeg" /></li>
             <li><img src="../static/images/logo.jpeg" /></li>
@@ -56,54 +162,84 @@
         <a class="prev" href="javascript:void(0)"></a>
         <a class="next" href="javascript:void(0)"></a>
         <div class="num"><ul></ul></div>
-  </div>
-	<script>
-    /*鼠标移过，左右按钮显示*/
-    $(".banner_box").hover(function(){
-        $(this).find(".prev,.next").fadeTo("show",0.1);
-    },function(){
+  </div> -->
+    <script>
+      /*鼠标移过，左右按钮显示*/
+      $(".banner_box").hover(function () {
+        $(this).find(".prev,.next").fadeTo("show", 0.1);
+      }, function () {
         $(this).find(".prev,.next").hide();
-    })
-    /*鼠标移过某个按钮 高亮显示*/
-    $(".prev,.next").hover(function(){
-        $(this).fadeTo("show",0.7);
-    },function(){
-        $(this).fadeTo("show",0.1);
-    })
-    $(".banner_box").slide({ titCell:".num ul" , mainCell:".banner_pic" , effect:"fold", autoPlay:true, delayTime:700 , autoPage:true });
+      })
+      /*鼠标移过某个按钮 高亮显示*/
+      $(".prev,.next").hover(function () {
+        $(this).fadeTo("show", 0.7);
+      }, function () {
+        $(this).fadeTo("show", 0.1);
+      })
+      $(".banner_box").slide({ titCell: ".num ul", mainCell: ".banner_pic", effect: "fold", autoPlay: true, delayTime: 700, autoPage: true });
     </script>
     <!-- 代码 结束 -->
-  <!--banner部分结束-->
+    <!--banner部分结束-->
 
-<!--内容开始-->
-<div class="content_box1">
-  <div class="content_box2"> 
-    <div class="menu_box">
-       <p class="menu_box_title">课程论坛<span>news</span></p>
-       <ul class="menu_box1">
-          <li><a href="{{ url_for('news_center') }}">课程讨论</a></li>
-          <li><a href="{{ url_for('course_discussion') }}">发布话题</a></li>
-       </ul>
+    <!--内容开始-->
+    <div class="content_box1">
+      <div class="content_box2">
+        <div class="menu_box">
+          <p class="menu_box_title">课程论坛<span>news</span></p>
+          <ul class="menu_box1">
+            <li><a href="{{ url_for('news_center') }}">课程讨论</a></li>
+            <li><a href="{{ url_for('course_discussion') }}">发布话题</a></li>
+          </ul>
+        </div>
+        <div class="content_boxL">
+          <div class="content_boxL_nav">
+            <p class="content_boxL_nav_title">课程讨论</p>
+            <div class="content_boxL_nav_R"><a href="">首页 ></a> <a href="">课程论坛 ></a><a href=""> 课程讨论</a></div>
+          </div>
+          <div class="content_boxL_text">
+            <ul class="content_boxL_list">
+              {% for message in result %}
+              <li><a class="content_boxL_list_info" href="detail/{{ message[4] }}">{{ message[2] }}:【 {{ message[0] }}】
+                  {{ message[1] }}<span class="yewu_date">{{ message[3] }}</span></a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="fenye_box"><a href="">首页</a><a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a
+              href="">……</a><a>下一页</a><a href="">最后一页</a></div>
+        </div>
+      </div>
+
+      <!--内容结束-->
     </div>
-    <div class="content_boxL">
-       <div class="content_boxL_nav">
-         <p class="content_boxL_nav_title">课程讨论</p>
-         <div class="content_boxL_nav_R"><a href="">首页 ></a> <a href="">课程论坛 ></a><a href=""> 课程讨论</a></div>
-       </div>
-       <div class="content_boxL_text">
-         <ul class="content_boxL_list">
-           {% for message in result %}
-               <li><a class="content_boxL_list_info" href="detail/{{ message[4] }}">{{ message[2] }}:【 {{ message[0] }}】 {{ message[1] }}<span class="yewu_date">{{ message[3] }}</span></a></li>
-           {% endfor %}
-         </ul>       
-       </div>
-       <div class="fenye_box"><a href="">首页</a><a href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">……</a><a>下一页</a><a href="">最后一页</a></div>
+    <div class="contacts">
+      <div class="contacts-ctn">
+        <p style="white-space: nowrap;">如有问题请联系：************</p>
+      </div>
     </div>
-</div>
-
-<!--内容结束--> 
-</div>
-
 </body>
+<script>
+  $(function () {
+    //跑马灯
+    var marginLeft = 0;
+    var elm = document.querySelector('.contacts-ctn');
+    var elmOffsetWidth = elm.offsetWidth;
+    marginLeft = elmOffsetWidth
+    $(elm).css('margin-left', marginLeft);
+    setInterval(function () {
+      marginLeft--;
+      $(elm).css('margin-left', marginLeft);
+      if (Math.abs(marginLeft) > elmOffsetWidth) {
+        marginLeft = elmOffsetWidth;
+        $(elm).css('margin-left', marginLeft)
+      }
+    }, 25);
+    /*鼠标移过，左右按钮显示*/
+    $(".user-msg").mouseover(function () {
+      $('.user-name-num').show();
+    }).mouseout(function () {
+      $('.user-name-num').hide();
+    })
+  })
+</script>
 
 </html>

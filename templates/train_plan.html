@@ -1,11 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="../static/css/style1.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../static/css/style1.css?v=3" rel="stylesheet" type="text/css" />
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
     <!--    <script src="../static/js/jquery.js"></script>-->
     <!--    <script src="../static/js/jquery.superslide.2.1.1.js" type="text/javascript"></script>-->
@@ -19,227 +20,451 @@
 
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="icon" href="../static/images/logo.ico" type="image/x-icon"/>
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="icon" href="../static/images/logo.ico" type="image/x-icon" />
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
     <!--    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <title>培养计划</title>
+    <title>查询评分</title>
+    <style>
+        .header_box1 {
+            /* position: relative; */
+            background: url(../static/images/index-header.jpg)no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .nav_box {
+            width: 902px;
+            height: 116px;
+            float: right;
+            margin-left: 50px;
+            margin-top: 50px;
+            color: #ffffff;
+        }
+
+        .nav_box a {
+            color: #ffffff;
+        }
+
+        .nav_slide1 a {
+            word-break: keep-all;
+            color: #000;
+        }
+
+        .contacts {
+            position: absolute;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            width: 500px;
+            overflow: hidden;
+            height: 25px;
+        }
+
+        .user-msg {
+            position: absolute;
+            right: 50px;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        .user-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .user-name-num {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(100%);
+            -webkit-transform: translateY(100%);
+        }
+
+        .user-name-num>div {
+            width: 96px;
+            height: 30px;
+            background-color: rgb(215, 215, 215);
+            font-size: 16px;
+            border: 1px solid #000;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content_box_bot1 {
+            height: auto;
+            min-height: 100%;
+            background: url(../static/images/index-bgc.jpg)no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .info_news_text>div {
+            background-color: #ffffff;
+        }
+
+        .content_box_bot_l {
+            display: block;
+            margin: 0 auto;
+            float: none;
+            position: absolute;
+            z-index: 9999;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #container {
+            margin-left: auto;
+            margin-top: 200px;
+        }
+
+        .act {
+            background-color: rgb(0, 64, 151);
+            color: #ffffff;
+        }
+
+        .el-button {
+            display: inline-block;
+            line-height: 1;
+            white-space: nowrap;
+            cursor: pointer;
+            background: #fff;
+            border: 1px solid #dcdfe6;
+            color: #606266;
+            -webkit-appearance: none;
+            text-align: center;
+            box-sizing: border-box;
+            outline: none;
+            margin: 0;
+            transition: .1s;
+            font-weight: 500;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: #409eff;
+            border-color: #409eff;
+        }
+        .process-parent1,.process-parent2,.process-parent3,.process-parent4,.process-parent5,.process-parent6,.process-parent7,.process-parent8,.process-parent9,.process-parent10,.process-parent11,.process-parent12{
+            height: 40px;
+        }
+        .content_box_bot1{
+            -webkit-box-sizing:content-box;
+            box-sizing: content-box;
+        }
+    </style>
+
 <body>
-<div class="wapper_box">
-    <div class="header_box"></div>
-    <div class="header_box1">
-        <div class="header_box2">
-            <a class="logo_box" href="{{ url_for('index') }}"><img src="../static/images/logo1.jpeg"/></a>
-            <ul class="nav_box">
-                <li class="nav_1"><a class="nav_but" href="{{ url_for('personal_information') }}">个人中心</a></li>
-                <li class="nav_1"><a class="nav_but" href="{{ url_for('news_center') }}">课程论坛</a>
-                    <div class="nav_slide">
-                        <div class="nav_slide1">
-                            <a href="{{ url_for('news_center') }}">课程公告<span><img src="../static/images/siade_bg1.png"/></span></a>
-                            <a href="{{ url_for('course_discussion') }}">课程讨论<span><img
-                                    src="../static/images/siade_bg1.png"/></span></a>
+    <div class="wapper_box">
+        <div class="header_box"></div>
+        <div class="header_box1">
+            <div class="user-msg">
+                <img src="../static/images/icon_A.png" class="user-icon" alt="个人信息">
+                <div class="user-name-num">
+                    <div><a href="{{ url_for('personal_information') }}">个人信息</a></div>
+                    <div><a href="{{ url_for('register') }}">修改密码</a></div>
+                </div>
+            </div>
+            <div class="header_box2">
+                <!-- <a class="logo_box" href="{{ url_for('index') }}"><img src="../static/images/logo1.jpeg" /></a> -->
+                <ul class="nav_box">
+                    <li class="nav_1"><a class="nav_but" href="{{ url_for('news_center') }}">话题</a>
+                        <div class="nav_slide">
+                            <div class="nav_slide1">
+                                <a href="{{ url_for('news_center') }}">课程公告<span><img
+                                            src="../static/images/siade_bg1.png" /></span></a>
+                                <a href="{{ url_for('course_discussion') }}">课程讨论<span><img
+                                            src="../static/images/siade_bg1.png" /></span></a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="nav_1"><a class="nav_but" href="{{ url_for('recommed') }}">推荐</a></li>
-                <li class="nav_1"><a class="nav_but" href="{{ url_for('train_plan') }}">课程进度</a></li>
-                <li class="nav_1"><a class="nav_but" href="{{ url_for('index') }}">首页</a></li>
-            </ul>
-        </div>
-
-    </div>
-    <!--banner部分开始-->
-
-
-    <!--banner部分结束-->
-
-    <!--内容开始-->
-
-
-    <!--内容结束-->
-
-</div>
-
-<div class="content_box_bot1">
-    <ul class="content_box_bot_l">
-        <div class="info_news">
-            <div class="info_news_but"><p class="on">课程进度</p>
-                <p>评分</p></div>
-
-            <div class="col-md-4">
-                <ul class="info_news_text info_news_text1 ">
-                    <p class="info1"> 总进度</p>
-                    <div class="process-parent1">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on1">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info2"> 思想政治</p>
-                    <div class="process-parent2">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on2">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info3"> 外语</p>
-                    <div class="process-parent3">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on3">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info4"> 文化素质</p>
-                    <div class="process-parent4">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on4">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info5"> 体育</p>
-                    <div class="process-parent5">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on5">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info6"> 军事</p>
-                    <div class="process-parent6">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on6">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info7"> 健康教育</p>
-                    <div class="process-parent7">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on7">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info8"> 数学</p>
-                    <div class="process-parent8">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on8">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info9"> 物理</p>
-                    <div class="process-parent9">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on9">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info10"> 计算机</p>
-                    <div class="process-parent10">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on10">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info11"> 学科基础</p>
-                    <div class="process-parent11">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on11">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <p class="info12"> 专业选修</p>
-                    <div class="process-parent12">
-                        <div class="progress-bar bg-success" style="width:0%"><p class="on2" id="on12">0%</p>
-                        </div>
-                        <div class="progress-bar bg-warning" style="width:0%">
-                        </div>
-                    </div>
-                    <div class="submit">
-                        <input type="submit" onclick="submit()" value="提交 ">
-                    </div>
-                    <div class="reset">
-                        <input type="reset" onclick="rebuild()" name="butReset" value="撤销">
-                    </div>
+                    </li>
+                    <li class="nav_1"><a class="nav_but" href="{{ url_for('recommed') }}">推荐</a></li>
+                    <li class="nav_1"><a class="nav_but" href="{{ url_for('train_plan') }}?type=0">评分</a></li>
+                    <li class="nav_1"><a class="nav_but" href="{{ url_for('train_plan') }}?type=1">查询</a></li>
+                    <li class="nav_1"><a class="nav_but" href="{{ url_for('index') }}">首页</a></li>
                 </ul>
             </div>
 
-            <ul class="info_news_text info_news_text2">
-                <select id="domain" style="width:220px; height: 40px">
-                    <option selected="selected">课程类别</option>
-                </select>
-                <p></p>
-                <select id="course" style="width:220px; height: 40px">
-                    <option selected="selected">课程</option>
-                </select>
-                <p></p>
-                <select id="score" style="width:220px; height: 40px">
-                    <option selected="selected">分数</option>
-                </select>
-                <p></p>
-                <div class="scoreConfirm" style="width:220px; height: 40px">
-                    <input type="reset" id='btnScore' onclick="updataScore()" name="score" value="确定评分">
-                </div>
-            </ul>
-
-
         </div>
-    </ul>
-    <div id="container" style="width:1600px; height:750px;position: absolute; margin-top:0px; margin-left:310px;"></div>
-    <script>
-            $(".nav_1").mouseenter(function(){
+        <!--banner部分开始-->
+
+
+        <!--banner部分结束-->
+
+        <!--内容开始-->
+
+
+        <!--内容结束-->
+
+    </div>
+
+    <div class="content_box_bot1">
+        <ul class="content_box_bot_l">
+            <div class="info_news">
+                <div class="info_news_but">
+                    <p class="on">课程进度</p>
+                    <p>评分</p>
+                </div>
+
+                <div class="col-md-4">
+                    <ul class="info_news_text info_news_text1 ">
+                        <p class="info1"> 总进度</p>
+                        <div class="process-parent1">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on1">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info2"> 思想政治</p>
+                        <div class="process-parent2">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on2">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info3"> 外语</p>
+                        <div class="process-parent3">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on3">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info4"> 文化素质</p>
+                        <div class="process-parent4">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on4">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info5"> 体育</p>
+                        <div class="process-parent5">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on5">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info6"> 军事</p>
+                        <div class="process-parent6">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on6">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info7"> 健康教育</p>
+                        <div class="process-parent7">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on7">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info8"> 数学</p>
+                        <div class="process-parent8">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on8">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info9"> 物理</p>
+                        <div class="process-parent9">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on9">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info10"> 计算机</p>
+                        <div class="process-parent10">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on10">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info11"> 学科基础</p>
+                        <div class="process-parent11">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on11">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <p class="info12"> 专业选修</p>
+                        <div class="process-parent12">
+                            <div class="progress-bar bg-success" style="width:0%">
+                                <p class="on2" id="on12">0%</p>
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:0%">
+                            </div>
+                        </div>
+                        <div class="submit" style="background-color: initial;">
+                            <input type="submit" onclick="submit()" class="el-button" value="提交 ">
+                        </div>
+                        <div class="reset" style="background-color: initial;">
+                            <input type="reset" onclick="rebuild()" class="el-button" name="butReset" value="撤销">
+                        </div>
+                    </ul>
+                </div>
+
+                <ul class="info_news_text info_news_text2">
+                    <select id="domain" style="width:220px; height: 40px">
+                        <option selected="selected">课程类别</option>
+                    </select>
+                    <p></p>
+                    <select id="course" style="width:220px; height: 40px">
+                        <option selected="selected">课程</option>
+                    </select>
+                    <p></p>
+                    <select id="score" style="width:220px; height: 40px">
+                        <option selected="selected">分数</option>
+                    </select>
+                    <p></p>
+                    <div class="scoreConfirm" style="width:220px; height: 40px">
+                        <input type="reset" id='btnScore' onclick="updataScore()" name="score" class="el-button" value="确定评分">
+                    </div>
+                </ul>
+            </div>
+        </ul>
+        <div id="container" style="width:1600px; height:750px;position: absolute;   margin-top: 200px;top: 1092px;    transform: rotate(270deg);">
+        </div>
+        <script>
+            $(".nav_1").mouseenter(function () {
                 $(this).find(".nav_slide").slideDown()
             });
-            $(".nav_1").mouseleave(function(){
+            $(".nav_1").mouseleave(function () {
                 $(".nav_slide").slideUp()
             });
-            //$(".producys_box").mouseout(function(){
-            // $(this).find(".producys_box1").slideUp();
-            //});
-
-
-
-
-
-
-
-    </script>
-
-    <script type="text/javascript" src="../static/js/Tree.js"></script>
-
-    <script>
-                $(".info_news_but p").each(function(n){
-
-                    $(this).click(function(){
-                        $(this).addClass("on").siblings("p").removeClass("on");
-                        $(".info_news_text").hide(400).eq(n).show(500);
-                    });
+        </script>
+        <script type="text/javascript" src="../static/js/Tree.js"></script>
+        <script>
+            $(".info_news_but p").each(function (n) {
+                $(this).click(function () {
+                    $(this).addClass("on").siblings("p").removeClass("on");
+                    $(".info_news_text").hide(400).eq(n).show(500);
                 });
+            });
+            UrlSearch();
+            if (type == '1') {
+                $('.content_box_bot1').css('background','none');
+                $(".info_news_but p:nth-of-type(1)").show();
+                $(".info_news_but p:nth-of-type(1)").css('margin-left','107px');
+                $(".info_news_but p:nth-of-type(2)").hide();
+            } else {
+                $('#container').remove();
+                $(".info_news_but p:nth-of-type(2)").click();
+                $('.content_box_bot_l').css('margin-top','100px');
+                $('.info_news_but').css('overflow','initial');
+                $('.scoreConfirm').css('margin-left','49px');
+                $(".info_news_but p:nth-of-type(2)").css('margin-top',' -14px');
+                $(".info_news_but p:nth-of-type(2)").css('margin-left','61px');
+                $(".info_news_but p:nth-of-type(1)").hide();
+                $(".info_news_but p:nth-of-type(2)").show();
+            }
+            //获取地址栏参数
+            function UrlSearch() {
+                var name, value;
+                var str = location.href; //取得整个地址栏
+                var num = str.indexOf("?")
+                str = str.substr(num + 1); //取得所有参数 stringvar.substr(start [, length ]
 
-
-
-
-
-
-
-    </script>
-    <script type="text/javascript">
-                window.onload = function(){
-                    initScore();
-                };
-
-
-
-
-
-    </script>
-
-</div>
+                var arr = str.split("&"); //各个参数放到数组里
+                for (var i = 0; i < arr.length; i++) {
+                    num = arr[i].indexOf("=");
+                    if (num > 0) {
+                        name = arr[i].substring(0, num);
+                        value = arr[i].substr(num + 1);
+                        this[name] = value;
+                    }
+                }
+            }
+        </script>
+    </div>
+    <!-- <div class="contacts">
+        <div class="contacts-ctn">
+          <p style="white-space: nowrap;">如有问题请联系：************</p>
+        </div>
+      </div> -->
 </body>
+<script>
+    $(function () {
+        // var marginLeft = 0;
+        // var elm = document.querySelector('.contacts-ctn');
+        // var elmOffsetWidth = elm.offsetWidth;
+        // marginLeft = elmOffsetWidth
+        // $(elm).css('margin-left', marginLeft);
+        // setInterval(function () {
+        //     marginLeft--;
+        //     $(elm).css('margin-left', marginLeft);
+        //     if (Math.abs(marginLeft) > elmOffsetWidth) {
+        //         marginLeft = elmOffsetWidth;
+        //         $(elm).css('margin-left', marginLeft)
+        //     }
+        // }, 25);
+        /*鼠标移过，左右按钮显示*/
+        $(".user-msg").mouseover(function () {
+            $('.user-name-num').show();
+        }).mouseout(function () {
+            $('.user-name-num').hide();
+        });
+        $('.submit>input,#btnScore,.reset>input').mousedown(function () {
+            $(this).addClass('act');
+        }).mouseup(function () {
+            $(this).removeClass('act');
+        })
+        $('.act').on('click', function () {
+            submit();
+        })
+        function submit() {
+            var postData = {};
+            var tree = myChart.getOption()['series'][0]['data'][0];
+            var scores = course2score;
+            var returnData = { 'tree': tree, 'scores': scores };
+            $.ajax({
+                type: 'POST',
+                url: "submit_train_plan",
+                contentType: "application/json",
+                data: JSON.stringify(returnData),  //转化字符串
+                dataType: "json",
+
+                success: function (data) {
+
+                    myChart.setOption({
+                        series: [{
+                            name: "trianPlanTree",
+                            data: [data]
+                        }]
+                    })
+                    originTrainPlain = data;
+                    console.log(data)
+                },
+                error: function (data) {
+                    console.log(data)
+                }
+            })
+        }
+    })
+</script>
 
 </html>

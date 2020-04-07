@@ -1,8 +1,4 @@
-		/*
-			create by zrong.me
-			请大家关注我的个人微博 说Z先生爱你
-			也请大家关注我的个人网站 zrong.me
-		*/
+
 		*{
 			padding: 0;
 			margin: 0;
@@ -26,22 +22,13 @@
 		}
 		#box{
 			width: 100%;
-  			height: 100%;
-  			background-color: #F7FAFC;
-  			background-image: url('');
-  			background-size: cover;
-  			background-position: 50% 50%;
-  			background-repeat: no-repeat;
-  			position: fixed;
-  			top: 0;
-  			left: 0;
-  			right: 0;
-  			bottom: 0;
-  			z-index: 1;
+			height: 100%;
+			background: url(../images/login-bgc.jpeg)no-repeat center;
+			background-size: cover;
 		}
 		.cent-box{
-			width: 300px;
-			height: 440px;
+			/* width: 300px; */
+			height: 400px;
 			vertical-align: middle;
 			white-space: normal;
 			margin: 0 auto;
@@ -49,8 +36,9 @@
 			z-index: 2;
 			left: 50%;
 			top: 50%;
-			margin-left: -150px;
-			margin-top: -220px;
+			transform: translate(-50%,-50%);
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
 		}
 		.register-box{
 			height: 490px;
@@ -129,13 +117,14 @@
 		}
 		.form .group{
 			padding: 1px 0;
-    		border: 1px solid #d5d5d5;
+    		/* border: 1px solid #d5d5d5; */
     		border-radius: 3px;
 		}
 		.form .group .group-ipt{
 			position: relative;
     		margin: 0;
-    		overflow: hidden;
+			overflow: hidden;
+			margin-bottom: 34px;
 		}
 		.form .group .group-ipt input{
 			padding: 1em .8em;
@@ -147,7 +136,12 @@
     		background: rgba(255,255,255,0.5);
     		font-family: 'Microsoft Yahei';
     		color: #666;
-    		position: relative;
+			position: relative;
+			background-color: rgb(242,242,242);
+		}
+		.form .group .group-ipt input::placeholder{
+			text-align: center;
+			color: #000;
 		}
 		#password,#verify,#user,#password1{
 			border-top: 1px solid #e8e8e8;
@@ -165,7 +159,7 @@
 		}
 		#button{
 			width: 100%;
-			background: #0f88eb;
+			background: rgb(129,211,248);
     		box-shadow: none;
     		border: 0;
     		border-radius: 3px;
@@ -177,7 +171,7 @@
     		font-family: 'Microsoft Yahei';
 		}
 		#button:hover{
-			background: #80c3f7;
+			background: rgb(129,211,248);
 		}
 		.remember{
 			margin-top: 10px;

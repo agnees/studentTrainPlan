@@ -1,106 +1,271 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../static/css/style1.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="../static/images/logo.ico" type="image/x-icon"/>
-<script src="{{ url_for('static', filename="js/jquery1.42.min.js") }}" type="text/javascript"></script>
-<script src="{{ url_for('static', filename="js/jquery.js") }}"></script>
-<script src="{{ url_for('static', filename="js/jquery.superslide.2.1.1.js") }}" type="text/javascript"></script>
-<title>首页</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="../static/css/style1.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="../static/images/logo.ico" type="image/x-icon" />
+  <script src="{{ url_for('static', filename="js/jquery1.42.min.js") }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename="js/jquery.js") }}"></script>
+  <script src="{{ url_for('static', filename="js/jquery.superslide.2.1.1.js") }}" type="text/javascript"></script>
+  <title>首页</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .wapper_box {
+      overflow: initial;
+    }
+
+    body {
+      background: url(../static/images/index-bgc.jpg)no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .header_box1 {
+      position: relative;
+      background: url(../static/images/index-header.jpg)no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .user-msg {
+      position: absolute;
+      right: 50px;
+      bottom: 0;
+      cursor: pointer;
+    }
+
+    .user-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .user-name-num {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+    }
+
+    .user-name-num>div {
+      width: 96px;
+      height: 30px;
+      background-color: rgb(215, 215, 215);
+      font-size: 16px;
+      border: 1px solid #000;
+    }
+
+    .contacts {
+      position: absolute;
+      bottom: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      width: 500px;
+      overflow: hidden;
+      height: 25px;
+    }
+
+    .tab-ctn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .tab-item {
+      width: 300px;
+      height: 47px;
+      border: 1px solid #000;
+      border-radius: 3px;
+      text-align: right;
+      line-height: 45px;
+      text-indent: 10px;
+      padding-right: 22px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-bottom: 45px;
+      cursor: pointer;
+    }
+
+    .tab-item:nth-of-type(1) {
+      background: url(../static/images/shu.png)no-repeat left center;
+      background-size: 40px 40px;
+    }
+
+    .tab-item:nth-of-type(2) {
+      background: url(../static/images/A.png)no-repeat left center;
+      background-size: 40px 40px;
+    }
+
+    .tab-item:nth-of-type(3) {
+      background: url(../static/images/tuijian.png)no-repeat left center;
+      background-size: 40px 40px;
+    }
+
+    .tab-item:nth-of-type(4) {
+      background: url(../static/images/shequluntan.png)no-repeat left center;
+      background-size: 50px 40px;
+    }
+
+    .news-topic {
+      width: 300PX;
+      height: 500px;
+      overflow: hidden;
+      overflow-y: scroll;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .news-topic-item {
+      display: -webkit-flex;
+      display: flex;
+      width: 100%;
+      height: 60px;
+    }
+
+    .news-topic-item .news-date,
+    .news-topic-item .news-msg {
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+    }
+    .news-topic-item .news-msg{
+      align-items: initial;
+    }
+
+    .news-topic-item .news-msg {
+      flex: 1;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .news-topic-item .news-msg>div {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
 </head>
 
 <body>
-<div class="wapper_box">
-<div class="header_box"></div>
-<div class="header_box1">
-    <div class="header_box2">
-         <a class="logo_box" href="{{ url_for('index') }}"><img src="{{ url_for('static', filename="images/logo1.jpeg") }}"/></a>
-         <ul class="nav_box">
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('personal_information') }}">个人中心</a></li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('news_center') }}">课程论坛</a>
-               <div class="nav_slide">
-                <div class="nav_slide1">
-                    <a href="{{ url_for('news_center') }}">课程公告<span><img src="../static/images/siade_bg1.png"/></span></a>
-                    <a href="{{ url_for('course_discussion') }}">课程讨论<span><img src="../static/images/siade_bg1.png"/></span></a>
-                 </div>
-               </div>
-             </li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('recommed') }}">课程推荐</a></li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('train_plan') }}">课程进度</a></li>
-             <li class="nav_1"><a class="nav_but" href="{{ url_for('index') }}">首页</a></li>
-         </ul>
+  <div class="wapper_box">
+    <div class="header_box1">
+      <div class="user-msg">
+        <img src="../static/images/icon_A.png" class="user-icon" alt="个人信息">
+        <div class="user-name-num">
+          <div><a href="{{ url_for('personal_information') }}">个人信息</a></div>
+          <div><a href="{{ url_for('register') }}">修改密码</a></div>
+        </div>
+      </div>
     </div>
-        <script>
-             $(".nav_1").mouseenter(function(){
-				 $(this).find(".nav_slide").slideDown()
-			  });
-
-			  $(".nav_1").mouseleave(function(){
-				 $(".nav_slide").slideUp()
-			 });
-			 //$(".producys_box").mouseout(function(){
-				// $(this).find(".producys_box1").slideUp();
-			 //});
-          </script>
-</div>
-<!--banner部分开始-->
-  <div class="banner_box">
-        <ul class="banner_pic">
-            <li><img src="../static/images/logo.jpeg" /></li>
-            <li><img src="../static/images/logo.jpeg" /></li>
-            <li><img src="../static/images/logo.jpeg" /></li>
-
-        </ul>
-        <a class="prev" href="javascript:void(0)"></a>
-        <a class="next" href="javascript:void(0)"></a>
-        <div class="num"><ul></ul></div>
-  </div>
-	<script>
-    /*鼠标移过，左右按钮显示*/
-    $(".banner_box").hover(function(){
-        $(this).find(".prev,.next").fadeTo("show",0.1);
-    },function(){
-        $(this).find(".prev,.next").hide();
-    })
-    /*鼠标移过某个按钮 高亮显示*/
-    $(".prev,.next").hover(function(){
-        $(this).fadeTo("show",0.7);
-    },function(){
-        $(this).fadeTo("show",0.1);
-    })
-    $(".banner_box").slide({ titCell:".num ul" , mainCell:".banner_pic" , effect:"fold", autoPlay:true, delayTime:700 , autoPage:true });
-    </script>
     <!-- 代码 结束 -->
-  <!--banner部分结束-->
+    <!--banner部分结束-->
+    <div class="tab-ctn">
+      <div class="tab-item">查询</div>
+      <div class="tab-item">评分</div>
+      <div class="tab-item">推荐</div>
+      <div class="tab-item">话题</div>
+    </div>
+    <!--内容开始-->
+    <!-- <div class="content_box">
+      <ul class="content_box_top">
+        <li>
+          <a href="{{ url_for('train_plan') }}" onclick="get_info()"> <img src="../static/images/icon11.png" /></a>
+          <h3 class="obj_title" onclick="get_info()">课程进度</h3>
+        </li>
+        <li>
+          <a href="{{ url_for('recommed') }}"><img src="../static/images/icon21.png" /></a>
+          <h3 class="obj_title">选课推荐</h3>
+        </li>
+        <li>
+          <a href="{{ url_for('course_discussion') }}"><img src="../static/images/icon31.png" /></a>
+          <h3 class="obj_title">课程讨论</h3>
+        </li>
+        <li>
+          <a href="{{ url_for('personal_information') }}"><img src="../static/images/icon41.png" /></a>
+          <h3 class="obj_title">个人中心</h3>
+        </li>
+      </ul>
+    </div> -->
 
-<!--内容开始-->
-<div class="content_box">
-   <ul class="content_box_top">
-      <li>
-        <a href="{{ url_for('train_plan') }}"  onclick="get_info()" >  <img src="../static/images/icon11.png"/></a>
-        <h3 class="obj_title" onclick="get_info()" >课程进度</h3>
-      </li>
-      <li>
-        <a href="{{ url_for('recommed') }}"><img src="../static/images/icon21.png"/></a>
-        <h3 class="obj_title">选课推荐</h3>
-      </li>
-      <li>
-        <a href="{{ url_for('course_discussion') }}"><img src="../static/images/icon31.png"/></a>
-        <h3 class="obj_title">课程讨论</h3>
-      </li>
-      <li>
-        <a href="{{ url_for('personal_information') }}"><img src="../static/images/icon41.png"/></a>
-        <h3 class="obj_title">个人中心</h3>
-      </li>
-   </ul>
-</div>
-
-<!--内容结束-->
-
-</div>
+    <!--内容结束-->
+    <div class="contacts">
+      <div class="contacts-ctn">
+        <p style="white-space: nowrap;">如有问题请联系：************</p>
+      </div>
+    </div>
+    <div class="news-topic">
+      <div class="news-topic-item">
+        <div class="news-date">
+          2019-01-05
+        </div>
+        <div class="news-msg">
+          <div>测试测试测试测试测试测试测试测试测试测试</div>
+          <div>测试测试测试测试测试</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </body>
+<script src='../static/js/jquery.min.js' type="text/javascript"></script>
+<script>
+  $(function () {
+    //跑马灯
+    var marginLeft = 0;
+    var elm = document.querySelector('.contacts-ctn');
+    var elmOffsetWidth = elm.offsetWidth;
+    marginLeft = elmOffsetWidth
+    $(elm).css('margin-left', marginLeft);
+    setInterval(function () {
+      marginLeft--;
+      $(elm).css('margin-left', marginLeft);
+      if (Math.abs(marginLeft) > elmOffsetWidth) {
+        marginLeft = elmOffsetWidth;
+        $(elm).css('margin-left', marginLeft)
+      }
+    }, 25);
+    /*鼠标移过，左右按钮显示*/
+    $(".user-msg").mouseover(function () {
+      $('.user-name-num').show();
+    }).mouseout(function () {
+      $('.user-name-num').hide();
+    })
+    /*鼠标移过某个按钮 高亮显示*/
+    $(".prev,.next").hover(function () {
+      $(this).fadeTo("show", 0.7);
+    }, function () {
+      $(this).fadeTo("show", 0.1);
+    })
+    // $(".banner_box").slide({ titCell: ".num ul", mainCell: ".banner_pic", effect: "fold", autoPlay: true, delayTime: 700, autoPage: true });
+    //跳转
+    $('.tab-item').on('click', function () {
+      var txt = $(this).text();
+      if (txt == '查询') {
+        location.href = './train_plan?type=1';
+      } else if (txt == '评分') {
+        location.href = './train_plan?type=0';
+      } else if (txt == '推荐') {
+        location.href = './recommed';
+      } else if (txt == '话题') {
+        location.href = './news_center';
+      }
+    })
+  })
+</script>
 
 </html>

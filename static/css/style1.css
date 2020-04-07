@@ -457,226 +457,215 @@ a:active, a:focus {
 }
 
 .process-parent1 {
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-left:70px;
 	position: absolute;
 	width: 250px;
 	border: 1px solid #ccc;
-	height: 20px;
+	height: 31px;
 	border-radius: 3px;
 }
 
 
 .info1{
 	position: absolute;
-	margin-top:20px;
+	margin-top: 15px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 
 .process-parent2 {
-	margin-top:50px;
+	margin-top: 50px;
 	position: absolute;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info2{
 	position: absolute;
-	margin-top:50px;
+	margin-top: 58px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent3 {
-	margin-top:80px;
+	margin-top: 100px;
 	position: absolute;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info3{
 	position: absolute;
-	margin-top:80px;
+	margin-top: 109px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent4 {
 	position: absolute;
-	margin-top:110px;
+	margin-top: 150px;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info4{
 	position: absolute;
-	margin-top:110px;
+	margin-top: 157px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent5 {
-	margin-top:140px;
+	margin-top: 200px;
 	margin-left:70px;
 	position: absolute;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info5{
 	position: absolute;
-	margin-top:140px;
+	margin-top: 207px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent6 {
-	margin-top:170px;
+	margin-top: 250px;
 	position: absolute;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info6{
 	position: absolute;
-	margin-top:170px;
+	margin-top: 263px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent7 {
-	margin-top:200px;
+	margin-top: 300px;
 	margin-left:70px;
 	position: absolute;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info7{
 	position: absolute;
-	margin-top:200px;
+	margin-top: 314px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent8 {
 	position: absolute;
-	margin-top:230px;
+	margin-top: 350px;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info8{
 	position: absolute;
-	margin-top:230px;
+	margin-top: 363px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent9 {
-	margin-top:260px;
+	margin-top: 400px;
 	position: absolute;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info9{
 	position: absolute;
-	margin-top:260px;
+	margin-top: 414px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent10 {
-	margin-top:290px;
+	margin-top: 450px;
 	position: absolute;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info10{
 	position: absolute;
-	margin-top:290px;
+	margin-top: 462px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent11 {
 	position: absolute;
-	margin-top:320px;
+	margin-top: 500px;
 	margin-left:70px;
 	width: 250px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info11{
 	position: absolute;
-	margin-top:320px;
+	margin-top: 512px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .process-parent12 {
 	position: absolute;
-	margin-top:350px;
+	margin-top: 550px;
 	width: 250px;
 	margin-left:70px;
 	border: 1px solid #ccc;
 	height: 20px;
 	border-radius: 3px;
-
 }
 .info12{
 	position: absolute;
-	margin-top:350px;
+	margin-top: 559px;
 	margin-left:3px;
-	background: #fff;
+	/* background: #fff; */
 	width: 70px;
 	height: 20px;
 }
 .submit{
 	position: absolute;
-	margin-top:400px;
+	margin-top: 609px;
 	margin-left:100px;
 	height: 60px;
 	width: 100px;
@@ -685,7 +674,7 @@ a:active, a:focus {
 
 .reset{
 	position: absolute;
-	margin-top:400px;
+	margin-top: 609px;
 	margin-left:250px;
 	height: 60px;
 	width: 100px;
@@ -729,4 +718,29 @@ a:active, a:focus {
 	position: absolute;
 	margin-top:100px;
 	margin-left:1200px;
+}
+.el-button {
+	display: inline-block;
+	line-height: 1;
+	white-space: nowrap;
+	cursor: pointer;
+	background: #fff;
+	border: 1px solid #dcdfe6;
+	color: #606266;
+	-webkit-appearance: none;
+	text-align: center;
+	box-sizing: border-box;
+	outline: none;
+	margin: 0;
+	transition: .1s;
+	font-weight: 500;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	padding: 12px 20px;
+	font-size: 14px;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #409eff;
+	border-color: #409eff;
 }
