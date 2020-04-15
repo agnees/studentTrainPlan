@@ -636,6 +636,9 @@ def updateDatabase(stu_id, train_plan):
     :return: 无
     """
 
+    if len(train_plan) <= 0:
+        return
+
     sql = "select CO_100,co_name from EDUCATION_PLAN WHERE CO_100 >='0'"
     results = query(sql)
     coname2co = {}
@@ -643,6 +646,9 @@ def updateDatabase(stu_id, train_plan):
         coname2co[result[1]] = result[0]
 
     data = train_plan['children']
+    if len(data) <= 0:
+        return
+
     # 120门课
     array_finish = [0] * len(results)
     # print(array_finish)
