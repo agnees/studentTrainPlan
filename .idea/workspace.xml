@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/register-login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/register-login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personal_information.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personal_information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/query.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +47,98 @@
   <component name="FavoritesManager">
     <favorites_list name="studentTrainPlan" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utils/query.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="641" column="62" selection-start-line="641" selection-start-column="62" selection-end-line="641" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/map_student_course.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="634">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/1437855905/builtins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="3674" column="8" selection-start-line="3674" selection-start-column="8" selection-end-line="3674" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="178" selection-start-line="178" selection-end-line="178" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/404.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/style1.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1305">
+                <caret line="87" selection-start-line="87" selection-end-line="87" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -57,13 +147,85 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>reco</find>
+      <find>recommed</find>
+      <find>co2score</find>
+      <find>ad_year_calssfaiction_index</find>
+      <find>通识实践</find>
+      <find>data_children</find>
+      <find>data_childrens</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/static/js/actions.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/utils/query.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="305" />
+    <option name="y" value="25" />
+    <option name="width" value="1440" />
+    <option name="height" value="823" />
   </component>
   <component name="ProjectId" id="1ZnnNarcbJ1XILRmv1CWTGcnyT7" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -84,15 +246,29 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/static/js" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/css" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.query">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="studentTrainPlan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,6 +313,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="query" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="studentTrainPlan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/query.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="studentTrainPlan" type="PythonConfigurationType" factoryName="Python">
       <module name="studentTrainPlan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,6 +357,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.query" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -201,128 +404,147 @@
       <workItem from="1558022758913" duration="1878000" />
       <workItem from="1585483692155" duration="6856000" />
       <workItem from="1585574063330" duration="6068000" />
-      <workItem from="1585636903531" duration="123258000" />
+      <workItem from="1585636903531" duration="115177000" />
     </task>
-    <task id="LOCAL-00001" summary="1） tinajiazhushi">
-      <created>1586258330312</created>
+    <task id="LOCAL-00001" summary="1)提交">
+      <created>1586258933188</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1586258330312</updated>
+      <updated>1586258933188</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1)提交">
+      <created>1586264413287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586264413291</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1)提交">
+      <created>1586264623879</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586264623883</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1）">
+      <created>1586266080678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586266080679</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1) 处理后端代码">
+      <created>1586917264766</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586917264766</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1) 处理后端代码">
+      <created>1586917971288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586917971288</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19379845" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="DB Browser" order="3" weight="0.32980973" />
+      <window_info id="Project Explorer" order="4" />
+      <window_info id="Job Explorer" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32968536" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" weight="0.41445783" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.053012047" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="DB Execution Console" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010571" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.31084338" />
+      <window_info anchor="bottom" id="Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1） tinajiazhushi" />
-    <option name="LAST_COMMIT_MESSAGE" value="1） tinajiazhushi" />
+    <MESSAGE value="1)提交" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/agnees/studentTrainPlan&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
+    <MESSAGE value="1）" />
+    <MESSAGE value="1) 处理后端代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="1) 处理后端代码" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="98" key="#HTTP_Proxy" timestamp="1585837247212">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="184" y="98" key="#HTTP_Proxy/0.0.1440.900@0.0.1440.900" timestamp="1585837247212" />
-    <state x="320" y="115" key="#SQL_Dialects" timestamp="1585921853585">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1585921853585" />
-    <state x="274" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585837675038">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="184" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1585837313178" />
-    <state x="274" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" timestamp="1585837675038" />
-    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.832@0.23.1440.832" timestamp="1585484060261" />
-    <state x="314" y="52" key="CommitChangelistDialog2" timestamp="1586929340555">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="314" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1586929340555" />
-    <state x="314" y="60" key="CommitChangelistDialog2/0.23.1440.832@0.23.1440.832" timestamp="1586258329064" />
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom" timestamp="1586929247456">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586929247456" />
-    <state width="1367" height="74" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1586236125663" />
-    <state width="702" height="179" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1585848507981" />
-    <state width="972" height="130" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1586258961426" />
-    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" timestamp="1585579657483" />
-    <state width="972" height="170" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1586268009440" />
-    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.835@0.23.1440.835" timestamp="1585577368804" />
-    <state width="1398" height="170" key="GridCell.Tab.0.center" timestamp="1586929247453">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586929247453" />
-    <state width="1367" height="74" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1586236125662" />
-    <state width="702" height="179" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1585848507980" />
-    <state width="972" height="130" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1586258961424" />
-    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" timestamp="1585579657474" />
-    <state width="972" height="170" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1586268009439" />
-    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.835@0.23.1440.835" timestamp="1585577368802" />
-    <state width="1398" height="170" key="GridCell.Tab.0.left" timestamp="1586929247448">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586929247448" />
-    <state width="1367" height="74" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1586236125661" />
-    <state width="702" height="179" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1585848507979" />
-    <state width="972" height="130" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1586258961424" />
-    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" timestamp="1585579657421" />
-    <state width="972" height="170" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1586268009437" />
-    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.835@0.23.1440.835" timestamp="1585577368801" />
-    <state width="1398" height="170" key="GridCell.Tab.0.right" timestamp="1586929247454">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="170" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586929247454" />
-    <state width="1367" height="74" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1586236125662" />
-    <state width="702" height="179" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1585848507981" />
-    <state width="972" height="130" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1586258961425" />
-    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" timestamp="1585579657476" />
-    <state width="972" height="170" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1586268009439" />
-    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.835@0.23.1440.835" timestamp="1585577368803" />
-    <state width="300" height="457" key="HiddenNamespacesPopup" timestamp="1585837718544">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="300" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1585837718544" />
-    <state x="191" y="122" key="MergeDialog" timestamp="1586258536492">
-      <screen x="0" y="23" width="1440" height="832" />
-    </state>
-    <state x="191" y="122" key="MergeDialog/0.23.1440.832@0.23.1440.832" timestamp="1586258536492" />
-    <state x="480" y="188" key="MultipleFileMergeDialog" timestamp="1586258536622">
-      <screen x="0" y="23" width="1440" height="832" />
-    </state>
-    <state x="480" y="188" key="MultipleFileMergeDialog/0.23.1440.832@0.23.1440.832" timestamp="1586258536622" />
-    <state x="498" y="168" key="RollbackChangesDialog" timestamp="1585574145022">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="498" y="168" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585574145022" />
-    <state x="229" y="57" key="SettingsEditor" timestamp="1586244949382">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="229" y="57" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1586244949382" />
-    <state x="229" y="76" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1585484039272" />
-    <state x="367" y="205" key="Vcs.Push.Dialog.v2" timestamp="1586258548915">
-      <screen x="0" y="23" width="1440" height="832" />
-    </state>
-    <state x="367" y="205" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1586258548915" />
-    <state x="456" y="140" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1585839999652">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="456" y="140" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1585839999652" />
-    <state x="402" y="72" width="667" height="729" key="find.popup" timestamp="1586165909119">
-      <screen x="0" y="23" width="1440" height="828" />
-    </state>
-    <state x="402" y="72" width="667" height="729" key="find.popup/0.23.1440.828@0.23.1440.828" timestamp="1586165909119" />
-    <state x="465" y="263" key="git4idea.merge.GitPullDialog" timestamp="1586258951149">
-      <screen x="0" y="23" width="1440" height="832" />
-    </state>
-    <state x="465" y="263" key="git4idea.merge.GitPullDialog/0.23.1440.832@0.23.1440.832" timestamp="1586258951149" />
-    <state x="385" y="205" width="670" height="627" key="search.everywhere.popup" timestamp="1586270132252">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586084679723" />
-    <state x="385" y="204" width="670" height="623" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1586177556733" />
-    <state x="385" y="205" width="670" height="627" key="search.everywhere.popup/0.23.1440.833@0.23.1440.833" timestamp="1586270132252" />
+    <state x="184" y="98" key="#HTTP_Proxy" />
+    <state x="184" y="98" key="#HTTP_Proxy/0.0.1440.900@0.0.1440.900" />
+    <state x="320" y="115" key="#SQL_Dialects" />
+    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" />
+    <state x="274" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="184" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" />
+    <state x="274" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" />
+    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.832@0.23.1440.832" />
+    <state x="314" y="52" key="CommitChangelistDialog2" />
+    <state x="314" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" />
+    <state width="1398" height="130" key="GridCell.Tab.0.bottom" />
+    <state width="1398" height="130" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" />
+    <state width="1367" height="74" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" />
+    <state width="702" height="179" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" />
+    <state width="972" height="74" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" />
+    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" />
+    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" />
+    <state width="878" height="243" key="GridCell.Tab.0.bottom/0.23.1440.835@0.23.1440.835" />
+    <state width="1398" height="130" key="GridCell.Tab.0.center" />
+    <state width="1398" height="130" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" />
+    <state width="1367" height="74" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" />
+    <state width="702" height="179" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" />
+    <state width="972" height="74" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" />
+    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" />
+    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" />
+    <state width="878" height="243" key="GridCell.Tab.0.center/0.23.1440.835@0.23.1440.835" />
+    <state width="1398" height="130" key="GridCell.Tab.0.left" />
+    <state width="1398" height="130" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" />
+    <state width="1367" height="74" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" />
+    <state width="702" height="179" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" />
+    <state width="972" height="74" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" />
+    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" />
+    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" />
+    <state width="878" height="243" key="GridCell.Tab.0.left/0.23.1440.835@0.23.1440.835" />
+    <state width="1398" height="130" key="GridCell.Tab.0.right" />
+    <state width="1398" height="130" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" />
+    <state width="1367" height="74" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" />
+    <state width="702" height="179" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" />
+    <state width="972" height="74" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" />
+    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" />
+    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" />
+    <state width="878" height="243" key="GridCell.Tab.0.right/0.23.1440.835@0.23.1440.835" />
+    <state width="300" height="457" key="HiddenNamespacesPopup" />
+    <state width="300" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" />
+    <state x="498" y="168" key="RollbackChangesDialog" />
+    <state x="498" y="168" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" />
+    <state x="229" y="57" key="SettingsEditor" />
+    <state x="229" y="57" key="SettingsEditor/0.0.1440.900@0.0.1440.900" />
+    <state x="229" y="76" key="SettingsEditor/0.23.1440.832@0.23.1440.832" />
+    <state x="456" y="140" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" />
+    <state x="456" y="140" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" />
+    <state x="402" y="72" width="667" height="729" key="find.popup" />
+    <state x="402" y="72" width="667" height="729" key="find.popup/0.23.1440.828@0.23.1440.828" />
+    <state x="385" y="204" width="670" height="623" key="search.everywhere.popup" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" />
+    <state x="385" y="204" width="670" height="623" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -336,8 +558,118 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/studentTrainPlan$studentTrainPlan.coverage" NAME="studentTrainPlan Coverage Results" MODIFIED="1586266106465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/studentTrainPlan$main.coverage" NAME="main Coverage Results" MODIFIED="1586266416809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/studentTrainPlan$main.coverage" NAME="main Coverage Results" MODIFIED="1586252369655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>name=='历史人物评析'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/utils/recommed_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2115">
+          <caret line="143" column="4" selection-start-line="143" selection-start-column="4" selection-end-line="143" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/schema.sql">
+      <provider editor-type-id="OdpsQlGraph" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="OdpsQlEditor">
+        <state relative-caret-position="525">
+          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/insert_student.sql">
+      <provider editor-type-id="OdpsQlGraph" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="OdpsQlEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/404.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style1.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1305">
+            <caret line="87" selection-start-line="87" selection-end-line="87" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/map_student_course.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/1437855905/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="3674" column="8" selection-start-line="3674" selection-start-column="8" selection-end-line="3674" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="641" column="62" selection-start-line="641" selection-start-column="62" selection-end-line="641" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

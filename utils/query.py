@@ -1,5 +1,7 @@
+import json
+
 import pymysql
-from config import config# 配置模块
+from config import config  # 配置模块
 
 
 def query(sql):
@@ -9,12 +11,12 @@ def query(sql):
     """
     db = pymysql.connect(config['MYSQL_HOST'], 'root', config['MYSQL_PASSWORD'], config['DATABASE_NAME'],
                          charset='utf8')
-    cur = db.cursor()# 使用cursor（）获取操作游标
+    cur = db.cursor()  # 使用cursor（）获取操作游标
     try:
         print(sql)
-        cur.execute(sql)# 执行sql语句
-        result = cur.fetchall()# 获取所有列表记录
-        db.commit()# 提交到数据库执行
+        cur.execute(sql)  # 执行sql语句
+        result = cur.fetchall()  # 获取所有列表记录
+        db.commit()  # 提交到数据库执行
         print('query success')
         return result
 
@@ -49,6 +51,104 @@ def update(sql):
     db.close()
 
 
+def get_plan_tree(stu_id):
+    calssfication_config = {'通识理论必修': 36, '通识理论选修（公选）': 8, '通识实践必修': 3, '实践选修': 6, '学科理论必修': 52.5, "学科实践必修": 6,
+                            '专业理论必修': 24, '专业理论选修': 12, '专业实践必修': 22.5, '第二课堂': 12}
+    """
+    功能: 传入学生stu_id,然后利用stu_id从数据库查询得到该学生选课信息，再转换为计划树所需的json格式
+    :param stud_id:
+    :return: 学生选课计划树Json数据
+    """
+    sql = "select FINISHED_CO from EDU_STU_PLAN WHERE STU_NO='%s'" % stu_id
+    result = query(sql)
+    finished_co = result[0][0]
+    print(finished_co)
+
+    # 从CHOOSE表获取课程序列号和评分，用stu_id查找
+    sql = "SELECT CO_NO,COMMENT FROM CHOOSE WHERE STU_NO='%s'" % stu_id
+    # 将查询结果定义为course2score
+    course2score = query(sql)
+    co2score = {}
+    # 对当前查到的课程在course2score进行遍历，生成字典{课程序列号：评分}
+    for cur in course2score:
+        co2score[cur[0]] = cur[1]
+
+    sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO,AD_YEAR,CO_100 " \
+          "from EDUCATION_PLAN WHERE CO_100>'%s'" % '0'
+    courses = query(sql)
+
+    co2course = {}
+    classfication_index = set()  # 存大类
+    ad_year_calssfaiction_index = {}  # key: 大类： value : 2016_大类
+    ad_year_calssfaiction_is_must_index = {}  # key :2016_大类 value :选修_2016_大类
+    ad_year_calssfaiction_is_must_data = {}
+    for course in courses:
+        co2course[course[5]] = course
+        classfication_index.add(course[0])
+
+        if course[0] not in ad_year_calssfaiction_index.keys():
+            ad_year_calssfaiction_index[course[0]] = set()
+        ad_year_calssfaiction_index[course[0]].add('%s_%s' % (course[6], course[0]))
+
+        if '%s_%s' % (course[6], course[0]) not in ad_year_calssfaiction_is_must_index.keys():
+            ad_year_calssfaiction_is_must_index['%s_%s' % (course[6], course[0])] = set()
+        ad_year_calssfaiction_is_must_index['%s_%s' % (course[6], course[0])].add(
+            '%s_%s_%s' % (course[3], course[6], course[0]))
+
+        if '%s_%s_%s' % (course[3], course[6], course[0]) not in ad_year_calssfaiction_is_must_data.keys():
+            ad_year_calssfaiction_is_must_data['%s_%s_%s' % (course[3], course[6], course[0])] = []
+
+        # 处理data
+        course_data = {'name': course[2], 'value': float(course[4]), 'score': int(co2score[course[5]]),
+                       'itemStyle': {'borderColor': 'red'}}
+
+        if finished_co[int(course[7]) - 1] == '1':
+            course_data['itemStyle'] = {'borderColor': 'green'}
+
+        ad_year_calssfaiction_is_must_data['%s_%s_%s' % (course[3], course[6], course[0])].append(course_data)
+    # 进行树的处理
+    data = {}
+    data['name'] = '总进度'
+    childrens = []
+    ## 遍历拿到第二层所有节点
+    classfication_index = list(classfication_index)
+    classfication_index.sort()
+
+    for classfication in classfication_index:
+        children = {'name': classfication, 'value': calssfication_config[classfication]}
+
+        third_childrens = []
+        # 索引第三层节点
+        adindexs = list(ad_year_calssfaiction_index[classfication])
+        adindexs.sort()
+        for ad_year_calssfaiction in adindexs:
+            print(ad_year_calssfaiction)
+            third_children = {'name': ad_year_calssfaiction.split("_")[0]}
+
+            fourth_childrens = []
+            # 找第四层索引
+            for must in ad_year_calssfaiction_is_must_index[ad_year_calssfaiction]:
+                name = "选修"
+                if must.split("_")[0] == "1":
+                    name = "必修"
+                fourth_children = {'name': name, 'children': ad_year_calssfaiction_is_must_data[must]}
+
+                fourth_childrens.append(fourth_children)
+
+            # 设置第四层
+            third_children['children'] = fourth_childrens
+            third_childrens.append(third_children)
+
+        # 设置第三层
+        children["children"] = third_childrens
+        childrens.append(children)
+
+    # 设置第二层节点
+    data["children"] = childrens
+
+    return data
+
+
 def getPlanTreeJson(stu_id):
     """
     功能: 传入学生stu_id,然后利用stu_id从数据库查询得到该学生选课信息，再转换为计划树所需的json格式
@@ -64,12 +164,12 @@ def getPlanTreeJson(stu_id):
     finished_co = result[0][0]
     print(finished_co)
 
-# 建立父节点data，命名为总进度
+    # 建立父节点data，命名为总进度
     data = {}
     data['name'] = '总进度'
     children = []
 
-# 建立第二层孩子结点children1~n，存放课程种类；并建立第三层孩子结点children1~n_list
+    # 建立第二层孩子结点children1~n，存放课程种类；并建立第三层孩子结点children1~n_list
     children1 = {}
     children1['name'] = '思想政治理论'
     children1_list = []
@@ -108,10 +208,10 @@ def getPlanTreeJson(stu_id):
 
     score = [0.0] * 15
 
-# 建立课程+时间序列add_time_list，共11门课， 4个年份，11*4=44
+    # 建立课程+时间序列add_time_list，共11门课， 4个年份，11*4=44
     add_time_list = []
     for j in range(44):
-        add_time_list.append([]) #在末尾添加新对象
+        add_time_list.append([])  # 在末尾添加新对象
 
     # 从CHOOSE表获取课程序列号和评分，用stu_id查找
     sql = "SELECT CO_NO,COMMENT FROM CHOOSE WHERE STU_NO='%s'" % stu_id
@@ -123,7 +223,6 @@ def getPlanTreeJson(stu_id):
         co2score[cur[0]] = cur[1]
 
     # print(co2score)
-
 
     # 在finished_co中遍历co,co 就是finished_co中的每一位000111
     for co in finished_co:
@@ -156,7 +255,7 @@ def getPlanTreeJson(stu_id):
             # 加上评分，根据co_name数据条获取co_number,然后在co2score{序号：评分}字典中获取评分
             add_curse['score'] = int(co2score[co_name[0][5]])
 
-# is_must判断，必修=1,选修=0，作为name加入到add_is字典中
+            # is_must判断，必修=1,选修=0，作为name加入到add_is字典中
             if co_name[0][3] == 1:
                 add_is['name'] = '必修'
             else:
@@ -191,9 +290,9 @@ def getPlanTreeJson(stu_id):
             # add_time_list.append(add_is)
             # add_time['children'] = add_time_list
 
-# 课程开始时间为co_time，6789代表年份
+        # 课程开始时间为co_time，6789代表年份
         str_co_time = str(co_name[0][1])
-    # 如果classification是思想政治理论，通过co_name数据条判断
+        # 如果classification是思想政治理论，通过co_name数据条判断
         if co_name[0][0] == '思想政治理论':
             # 如果当前是2016年,第三位是6
             if str_co_time[3] == '6':
@@ -499,7 +598,7 @@ def getPlanTreeJson(stu_id):
     children10['value'] = 24.5
     children11['value'] = 21.5
 
-# 把第三层子节点导入作为第二层的children
+    # 把第三层子节点导入作为第二层的children
     children1['children'] = children1_list
     children2['children'] = children2_list
     children3['children'] = children3_list
@@ -512,7 +611,7 @@ def getPlanTreeJson(stu_id):
     children10['children'] = children10_list
     children11['children'] = children11_list
 
-# 往父节点把所有的数据导入children.append
+    # 往父节点把所有的数据导入children.append
     children.append(children1)
     children.append(children2)
     children.append(children3)
@@ -527,6 +626,7 @@ def getPlanTreeJson(stu_id):
     data['children'] = children
     return data
 
+
 # 模拟选课调用的方法
 def updateDatabase(stu_id, train_plan):
     """
@@ -535,35 +635,51 @@ def updateDatabase(stu_id, train_plan):
     :param train_plan: “培养计划”界面“计划树”数据的json格式
     :return: 无
     """
+
+    if len(train_plan) <= 0:
+        return
+
+    sql = "select CO_100,co_name from EDUCATION_PLAN WHERE CO_100 >='0'"
+    results = query(sql)
+    coname2co = {}
+    for result in results:
+        coname2co[result[1]] = result[0]
+
     data = train_plan['children']
+    if len(data) <= 0:
+        return
+
     # 120门课
-    array_finish = [0] * 120
+    array_finish = [0] * len(results)
     # print(array_finish)
     # 第2层遍历
     for data_children in data:
-        data_children = data_children['children']
-        print(data_children)
+        data_childrens = data_children['children']
+        # print(data_children)
         # 第3层遍历
-        for data_children_child_1 in data_children:
+        for data_children_child_1 in data_childrens:
             # print('data_children_child', data_children_child)
-            data_children_child_1 = data_children_child_1['children']
+            data_children_child_1s = data_children_child_1['children']
             # 第4层遍历
-            for data_children_child in data_children_child_1:
-                name = data_children_child['children'][0]['name']
-                color = data_children_child['children'][0]['itemStyle']['borderColor']
-                # print(name, color)
-                sql = "select CO_100 from EDUCATION_PLAN WHERE CO_NAME='%s'" % name
-                co_100 = query(sql)
-                co_100 = co_100[0][0]
+            for data_children_child in data_children_child_1s:
+                data_childs = data_children_child['children']
 
-                # 根据颜色设置01，红色未完成：0，绿色完成：1
-                if color == 'red':
-                    array_finish[int(co_100)] = 0
-                else:
-                    array_finish[int(co_100)] = 1
+                for child in data_childs:
+                    name = child['name']
+                    color = child['itemStyle']['borderColor']
+                    # print(name, color)
+                    co_100 = coname2co[name]
+
+                    # 根据颜色设置01，红色未完成：0，绿色完成：1
+                    if color == 'red':
+                        array_finish[int(co_100) - 1] = 0
+                    else:
+                        print("-----")
+                        print(name)
+                        array_finish[int(co_100) - 1] = 1
     # 根据刚才生成的01，对应到finish_co字段
     finish_co = ''
-    for i in range(1, 119):
+    for i in range(0, len(array_finish)):
         if array_finish[i] == 1:
             finish_co += '1'
         else:
@@ -588,3 +704,12 @@ def updateScore(stu_id, scores):
         sql = "UPDATE CHOOSE SET COMMENT='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (scores[cur], stu_id, name2no[cur])
         # print(sql)
         update(sql)
+
+
+if __name__ == '__main__':
+    config['DATABASE_NAME'] = "studenttrainplan2"
+    print(json.dumps(get_plan_tree(2016012107)))
+
+    # arrarys = [0, 1, 3, 4, 5]
+    # for i in range(0, len(arrarys)):
+    #     print(arrarys[i])

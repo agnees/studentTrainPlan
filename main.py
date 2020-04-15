@@ -364,7 +364,8 @@ def get_info():
     """
     # 获取stu_id后传入到query的getplantree方法中，转为json格式
     stu_id = session.get('stu_id')
-    planTree = query.getPlanTreeJson(stu_id)
+    # planTree = query.getPlanTreeJson(stu_id)
+    planTree = query.get_plan_tree(stu_id)
     print(planTree)
     return jsonify(planTree)
 
@@ -387,38 +388,38 @@ def submit_train_place():
     print(train_plan)
     # 从根节点找出孩子进行遍历
     data = train_plan['children']
-    array_finish = [0] * 120
-    # print(array_finish)
-    # 遍历第二层里面的每一个孩子
-    for data_children in data:
-        data_children = data_children['children']
-        # print(data_children)
-        # 对第三层遍历
-        for data_children_child_1 in data_children:
-            # print('data_children_child', data_children_child)
-            data_children_child_1 = data_children_child_1['children']
-            # 对第四层进行遍历
-            for data_children_child in data_children_child_1:
-                # 获取name,color
-                name = data_children_child['children'][0]['name']
-                color = data_children_child['children'][0]['itemStyle']['borderColor']
-                # print(name, color)
-                # 用name查找co_100
-                sql = "select CO_100 from EDUCATION_PLAN WHERE CO_NAME='%s'" % name
-                co_100 = query.query(sql)
-                co_100 = co_100[0][0]
-
-                if color == 'red':
-                    array_finish[int(co_100)] = 0
-                else:
-                    array_finish[int(co_100)] = 1
-    finish_co = ''
-    for i in range(1, 119):
-        if array_finish[i] == 1:
-            finish_co += '1'
-        else:
-            finish_co += '0'
-    print(finish_co)
+    # array_finish = [0] * 120
+    # # print(array_finish)
+    # # 遍历第二层里面的每一个孩子
+    # for data_children in data:
+    #     data_children = data_children['children']
+    #     # print(data_children)
+    #     # 对第三层遍历
+    #     for data_children_child_1 in data_children:
+    #         # print('data_children_child', data_children_child)
+    #         data_children_child_1 = data_children_child_1['children']
+    #         # 对第四层进行遍历
+    #         for data_children_child in data_children_child_1:
+    #             # 获取name,color
+    #             name = data_children_child['children'][0]['name']
+    #             color = data_children_child['children'][0]['itemStyle']['borderColor']
+    #             # print(name, color)
+    #             # 用name查找co_100
+    #             sql = "select CO_100 from EDUCATION_PLAN WHERE CO_NAME='%s'" % name
+    #             co_100 = query.query(sql)
+    #             co_100 = co_100[0][0]
+    #
+    #             if color == 'red':
+    #                 array_finish[int(co_100)] = 0
+    #             else:
+    #                 array_finish[int(co_100)] = 1
+    # finish_co = ''
+    # for i in range(1, 119):
+    #     if array_finish[i] == 1:
+    #         finish_co += '1'
+    #     else:
+    #         finish_co += '0'
+    # print(finish_co)
     # print(array_finish)
 
     stu_id = session.get('stu_id')
