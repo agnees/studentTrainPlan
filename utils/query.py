@@ -111,12 +111,17 @@ def get_plan_tree(stu_id):
     data['name'] = '总进度'
     childrens = []
     ## 遍历拿到第二层所有节点
+    classfication_index = list(classfication_index)
+    classfication_index.sort()
+
     for classfication in classfication_index:
         children = {'name': classfication, 'value': calssfication_config[classfication]}
 
         third_childrens = []
         # 索引第三层节点
-        for ad_year_calssfaiction in ad_year_calssfaiction_index[classfication]:
+        adindexs = list(ad_year_calssfaiction_index[classfication])
+        adindexs.sort()
+        for ad_year_calssfaiction in adindexs:
             print(ad_year_calssfaiction)
             third_children = {'name': ad_year_calssfaiction.split("_")[0]}
 
@@ -696,9 +701,9 @@ def updateScore(stu_id, scores):
 
 
 if __name__ == '__main__':
-    # config['DATABASE_NAME'] = "studenttrainplan2"
-    # print(json.dumps(get_plan_tree(2016012107)))
+    config['DATABASE_NAME'] = "studenttrainplan2"
+    print(json.dumps(get_plan_tree(2016012107)))
 
-    arrarys = [0, 1, 3, 4, 5]
-    for i in range(0, len(arrarys)):
-        print(arrarys[i])
+    # arrarys = [0, 1, 3, 4, 5]
+    # for i in range(0, len(arrarys)):
+    #     print(arrarys[i])
