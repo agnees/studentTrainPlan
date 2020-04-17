@@ -18,7 +18,7 @@ function submit(){
         success: function(data){
             myChart.setOption({
                 series:[{
-                    name:"trianPlanTree",
+                    name:"trainPlanTree",
                     data: [data]
                 }]
             })
@@ -34,7 +34,7 @@ function submit(){
 function rebuild(){
     myChart.setOption({
         series:[{
-            name:"trianPlanTree",
+            name:"trainPlanTree",
             data: [originTrainPlain]
         }]
     })
