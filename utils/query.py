@@ -32,7 +32,7 @@ def query(sql):
 
 
 def update(sql):
-    """
+    """ `
     功能; 使用sql语句更新数据库中学生选课信息。
     参数: sql(string)
     """
@@ -40,8 +40,8 @@ def update(sql):
                          charset='utf8')
     cur = db.cursor()
     try:
-        cur.execute(sql)
-        db.commit()
+        cur.execute(sql) # 执行sql语句
+        db.commit() # 提交数据库执行
         # print('update success')
         # print('update success')
     except:
@@ -52,6 +52,7 @@ def update(sql):
 
 
 def get_plan_tree(stu_id):
+    # 为课程大类设置学分
     calssfication_config = {'通识理论必修': 36, '通识理论选修（公选）': 8, '通识实践必修': 3, '实践选修': 6, '学科理论必修': 52.5, "学科实践必修": 6,
                             '专业理论必修': 24, '专业理论选修': 12, '专业实践必修': 22.5, '第二课堂': 12}
     """
@@ -59,91 +60,123 @@ def get_plan_tree(stu_id):
     :param stud_id:
     :return: 学生选课计划树Json数据
     """
+    # 在学生课程信息表，根据学号查询到课程序列finished_co
     sql = "select FINISHED_CO from EDU_STU_PLAN WHERE STU_NO='%s'" % stu_id
     result = query(sql)
+    # 以finished_co表示查询结果
     finished_co = result[0][0]
     print(finished_co)
 
-    # 从CHOOSE表获取课程序列号和评分，用stu_id查找
+    # 从CHOOSE表获取课程编号co_no和评分comment，用学号查找
     sql = "SELECT CO_NO,COMMENT FROM CHOOSE WHERE STU_NO='%s'" % stu_id
     # 将查询结果定义为course2score
     course2score = query(sql)
+    # 建立co2score字典
     co2score = {}
-    # 对当前查到的课程在course2score进行遍历，生成字典{课程序列号：评分}
+    # 对当前查到的课程在course2score进行遍历，结果填入字典co2score={课程编号：评分}
     for cur in course2score:
         co2score[cur[0]] = cur[1]
 
+    # 在教学计划表中查询课程信息，用课程序列号co_100>0查询
     sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO,AD_YEAR,CO_100 " \
           "from EDUCATION_PLAN WHERE CO_100>'%s'" % '0'
+    # 查询结果用course表示
     courses = query(sql)
 
-    co2course = {}
-    classfication_index = set()  # 存大类
+    co2course = {} # 存数据
+    classfication_index = set()  # 建集合存大类
     ad_year_calssfaiction_index = {}  # key: 大类： value : 2016_大类
     ad_year_calssfaiction_is_must_index = {}  # key :2016_大类 value :选修_2016_大类
     ad_year_calssfaiction_is_must_data = {}
+    # 遍历去重
     for course in courses:
+        # 找出course(co_no) = course(co_no)
         co2course[course[5]] = course
+        # 将classification字段添加在classification_index集合中
         classfication_index.add(course[0])
 
+        # 如果有哪个classification不在字典ad_year_classification返回的keys中
         if course[0] not in ad_year_calssfaiction_index.keys():
+            # 以classification为key创建集合ad_year_classification
             ad_year_calssfaiction_index[course[0]] = set()
+            # 将(ad_year)_(classification)设置为value添加到集合
         ad_year_calssfaiction_index[course[0]].add('%s_%s' % (course[6], course[0]))
 
+        # 如果(ad_year)_(classification)不在 ad_year_is_must_index字典的keys中
         if '%s_%s' % (course[6], course[0]) not in ad_year_calssfaiction_is_must_index.keys():
+            # 建立集合 ad_year_is_must_index,以(ad_year)_(classification)为key
             ad_year_calssfaiction_is_must_index['%s_%s' % (course[6], course[0])] = set()
+            # 将（is_must)_(ad_year)_(classification)设置为value添加到集合
         ad_year_calssfaiction_is_must_index['%s_%s' % (course[6], course[0])].add(
             '%s_%s_%s' % (course[3], course[6], course[0]))
 
+        # 如果（is_must)_(ad_year)_(classification)不在ad_year_classifiction_is_must_data字典的keys中
         if '%s_%s_%s' % (course[3], course[6], course[0]) not in ad_year_calssfaiction_is_must_data.keys():
+            # 创建包含所有(is_must)_(ad_year)_(classification)的列表
             ad_year_calssfaiction_is_must_data['%s_%s_%s' % (course[3], course[6], course[0])] = []
 
-        # 处理data
+        # 处理data叶子节点,学分设置浮点型，评分设置整数型，颜色为红色
         course_data = {'name': course[2], 'value': float(course[4]), 'score': int(co2score[course[5]]),
                        'itemStyle': {'borderColor': 'red'}}
 
+        # 如果课程序列finished_co(用co_100-1来遍历）=1
         if finished_co[int(course[7]) - 1] == '1':
+            # 颜色变为绿色
             course_data['itemStyle'] = {'borderColor': 'green'}
 
+        # 将course_data添加到ad_year_calssfaiction_is_must_data列表
         ad_year_calssfaiction_is_must_data['%s_%s_%s' % (course[3], course[6], course[0])].append(course_data)
+
     # 进行树的处理
+    # 建立父节点和第二层子节点
     data = {}
     data['name'] = '总进度'
     childrens = []
-    ## 遍历拿到第二层所有节点
+    # 遍历拿到第二层所有节点，生成列表
     classfication_index = list(classfication_index)
+    # 数组排序
     classfication_index.sort()
 
+    # 遍历课程大类
     for classfication in classfication_index:
+        # 在第二层子节点加入{课程大类：学分}
         children = {'name': classfication, 'value': calssfication_config[classfication]}
 
+        # 建立第三层子节点
         third_childrens = []
-        # 索引第三层节点
+        # 索引第三层节点，建立列表ad_year_calssfaiction_index，并排序
         adindexs = list(ad_year_calssfaiction_index[classfication])
         adindexs.sort()
+        # 遍历adindexs
         for ad_year_calssfaiction in adindexs:
             print(ad_year_calssfaiction)
+            # 填入第三层子节点，将(ad_year)_(classification)以_分开，取ad_year为名字
             third_children = {'name': ad_year_calssfaiction.split("_")[0]}
 
+
+            # 建立第四层子节点
             fourth_childrens = []
-            # 找第四层索引
+            # 找第四层索引，直接遍历
             for must in ad_year_calssfaiction_is_must_index[ad_year_calssfaiction]:
+                # 添加名字为选修
                 name = "选修"
+                # 如果以_分割后，第一位是1，那么名字为必修
                 if must.split("_")[0] == "1":
                     name = "必修"
+                # 填入第四层子结点，这只名字和孩子
                 fourth_children = {'name': name, 'children': ad_year_calssfaiction_is_must_data[must]}
-
+                # 添加到第四层，生成列表
                 fourth_childrens.append(fourth_children)
 
-            # 设置第四层
+            # 设置第三层子结点孩子
             third_children['children'] = fourth_childrens
             third_childrens.append(third_children)
 
-        # 设置第三层
+        # 设置第二层子结点孩子
         children["children"] = third_childrens
         childrens.append(children)
 
-    # 设置第二层节点
+    # 设置父节点孩子
     data["children"] = childrens
 
     return data
@@ -669,7 +702,7 @@ def updateDatabase(stu_id, train_plan):
                     color = child['itemStyle']['borderColor']
                     # print(name, color)
                     co_100 = coname2co[name]
-
+    `
                     # 根据颜色设置01，红色未完成：0，绿色完成：1
                     if color == 'red':
                         array_finish[int(co_100) - 1] = 0
