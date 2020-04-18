@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/recommedBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/recommedBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recommed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recommed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/map_student_course.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/map_student_course.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/recommed_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/recommed_module.py" afterDir="false" />
-    </list>
+    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +63,15 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/train_plan.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="329" lean-forward="true" selection-start-line="329" selection-end-line="329" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/recommedBar.js">
           <provider selected="true" editor-type-id="text-editor" />
@@ -85,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/query.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="701" column="8" selection-start-line="701" selection-start-column="8" selection-end-line="701" selection-end-column="8" />
+            <state relative-caret-position="178">
+              <caret line="696" column="16" lean-forward="true" selection-start-line="696" selection-start-column="16" selection-end-line="696" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -104,11 +105,6 @@
               <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/404.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -157,6 +153,7 @@
       <find>data_children</find>
       <find>data_childrens</find>
       <find>map_student</find>
+      <find>评分</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,6 +171,7 @@
         <option value="$PROJECT_DIR$/static/js/recommedBar.js" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/utils/query.py" />
+        <option value="$PROJECT_DIR$/templates/train_plan.html" />
       </list>
     </option>
   </component>
@@ -328,6 +326,9 @@
       <module name="studentTrainPlan" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -463,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586928947233</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1）修改后端逻辑">
+      <created>1587197862580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587197862580</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -479,7 +487,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968536" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" weight="0.41445783" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" visible="true" weight="0.26024097" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" visible="true" weight="0.3325301" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -502,7 +510,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/agnees/studentTrainPlan&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="1）" />
     <MESSAGE value="1) 处理后端代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="1) 处理后端代码" />
+    <MESSAGE value="1）修改后端逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="1）修改后端逻辑" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="98" key="#HTTP_Proxy" />
@@ -651,9 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/recommed.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/recommedBar.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -676,11 +682,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="701" column="8" selection-start-line="701" selection-start-column="8" selection-end-line="701" selection-end-column="8" />
+        <state relative-caret-position="178">
+          <caret line="696" column="16" lean-forward="true" selection-start-line="696" selection-start-column="16" selection-end-line="696" selection-end-column="16" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/recommed.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/train_plan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="329" lean-forward="true" selection-start-line="329" selection-end-line="329" />
         </state>
       </provider>
     </entry>
