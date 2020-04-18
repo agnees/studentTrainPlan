@@ -692,7 +692,7 @@ def updateDatabase(stu_id, train_plan):
 
 
 def updateScore(stu_id, scores):
-    sql = "SELECT CO_NO, CO_NAME FROM EDUCATION_PLAN";
+    sql = "SELECT CO_NO, CO_NAME FROM EDUCATION_PLAN"
     # 变成字典{co_name:co_no}
     name2no = {}
     result = query(sql)
@@ -701,7 +701,8 @@ def updateScore(stu_id, scores):
 
     for cur in scores:
         # 更新选课表
-        sql = "UPDATE CHOOSE SET COMMENT='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (scores[cur], stu_id, name2no[cur])
+        sql = "UPDATE CHOOSE SET COMMENT='%d' and PASS='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
+            scores[cur].get('score'), scores[cur].get('pass'), stu_id, name2no[cur])
         # print(sql)
         update(sql)
 

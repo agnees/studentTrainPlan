@@ -1,7 +1,7 @@
 from utils.query import query
 
-def get_map_student():
 
+def get_map_student():
     # {0:[白雪,12321],1:[xxx,1231]}
     map_student = {}
 
@@ -23,7 +23,7 @@ def get_map_student():
     # {0: co_name}
     map_course = {}
     # 查找所有课程名
-    sql = "SELECT CO_NAME FROM EDUCATION_PLAN"
+    sql = "SELECT CO_NAME FROM EDUCATION_PLAN "
     result = query(sql)
     # 从0开始编号
     map_course_id = 0
@@ -38,7 +38,6 @@ def get_map_student():
         # {12321: 0 ,1231:1}
         stuNo2MatNo[map_student[idx][1]] = idx
 
-
     return map_student, map_course, stuNo2MatNo
 
 
@@ -47,21 +46,24 @@ def get_matrix(map_student):
     {0:[名字，学号]}
     '''
     # 生成30*118的矩阵，30人，每个人有118门课；每个元素代表每个人对这门课的评分
-    matrix = []
-    for i in range(30):
-        matrix.append([])
-    for i in range(30):
+    comment_matrix = []
+    pass_matrix = []
+    for i in range(0, len(map_student)):
+        comment_matrix.append([])
+        pass_matrix.append([])
+    for i in range(0, len(map_student)):
         # 在 map_student里面找到stu_no，作为[i]
         stu_no = map_student[i][1]
-        #print(stu_no)
+        # print(stu_no)
         # 用stu_no查找到评分
-        sql = "SELECT COMMENT FROM CHOOSE WHERE STU_NO='%s'" % (stu_no)
+        sql = "SELECT COMMENT,PASS FROM CHOOSE a left join EDUCATION_PLAN  b on a.CO_NO=b.CO_NO  WHERE a.STU_NO='%s'" % (
+            stu_no)
         # 查询结果用score定义
         score = query(sql)
-        #print(score)
-        for j in range(118):
+        # print(score)
+        for j in range(0, len(score)):
             # 将score作为[j]添加到矩阵，取第一列
-            matrix[i].append(int(score[j][0]))
+            comment_matrix[i].append(int(score[j][0]))
+            pass_matrix[i].append(score[j][1])
 
-    return matrix
-
+    return comment_matrix, pass_matrix

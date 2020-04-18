@@ -38,9 +38,9 @@ $.getJSON('/getRecommedData', function(coursePersonJson)
         ]
     };
     var optionPerson = {
-        dataset: coursePersonJson['person'],
+        dataset: coursePersonJson['passCourse'],
         grid: {containLabel: true},
-        xAxis: {name: '相似度'},
+        xAxis: {name: '好过程度'},
         yAxis: {type: 'category'},
         visualMap: {
             orient: 'horizontal',

@@ -147,7 +147,11 @@ def regularData(data, a, b):
     """
     # 获取二维数组第一列，推荐级别
     dataNum = [i[0] for i in data['source']]
+
     Max, Min = max(dataNum), min(dataNum)
+    if Max == Min:
+        return data
+
     k = (b - a) / (Max - Min)
     dataRg = [a + k * (i - Min) for i in dataNum]
     for idx, each in enumerate(data['source']):

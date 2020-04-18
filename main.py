@@ -297,14 +297,15 @@ def getRecommedData():
     # {0:[白雪,12321],1:[xxx,1231]}；{0: co_name}；{12321: 0 ,1231:1}
     id2Student, id2Course, stuNo2MatId = map_student_course.get_map_student()
     # [[5.0，4.0][2.0,3.0]] 每个用户对课程的评分，行编号为学生编号，列为课程编号
-    scoreMatrix = map_student_course.get_matrix(id2Student)
+    scoreMatrix, passMatrix = map_student_course.get_matrix(id2Student)
     """
     函数，recommedCourse：使用SVD进行课程推荐：
     入参： 学生对课程的评分矩阵，需要推荐的那个人的编号 推荐top20
     返回:(课程1ID， 课程1评分)
     """
     # 需要推荐的课程和人及评分
-    topNCourse, topNStudent = recommed_module.recommedCoursePerson(scoreMatrix, stuNo2MatId[stu_no], N=20)
+    topNCourse, _ = recommed_module.recommedCoursePerson(scoreMatrix, stuNo2MatId[stu_no], N=20)
+    passTopNCourse, _ = recommed_module.recommedCoursePerson(passMatrix, stuNo2MatId[stu_no], N=10)
     """
     将得到的Course与Person装换为前端图标需要的json格式:
      {
@@ -319,19 +320,20 @@ def getRecommedData():
      }   
     """
     # 生成新字典{数字：姓名}
-    id2Student = {i: id2Student[i][0] for i in id2Student.keys()}
-    print(id2Student)
-    print(id2Course)
+    # id2Student = {i: id2Student[i][0] for i in id2Student.keys()}
+    # print(id2Student)
+    # print(id2Course)
     # [评分：课程]
     courseJson = recommed_module.toBarJson(topNCourse, id2Course)
     # [评分：姓名]
-    personJson = recommed_module.toBarJson(topNStudent, id2Student)
+    passTopNCourse = recommed_module.toBarJson(passTopNCourse, id2Course)
     courseJson = recommed_module.regularData(courseJson, 1, 5)
-    personJson = recommed_module.regularData(personJson, 0, 1)
+    passCourseJson = recommed_module.regularData(passTopNCourse, 1, 5)
 
     coursePersonJson = {}
     coursePersonJson['course'] = courseJson
-    coursePersonJson['person'] = personJson
+    coursePersonJson['passCourse'] = passCourseJson
+    print(coursePersonJson)
     return jsonify(coursePersonJson)
 
 
@@ -346,7 +348,7 @@ def personal_information():
     stu_no = session.get('stu_id')
     print(stu_no + ' is stu_no')
     # 在数据库查找这个学生
-    sql = "SELECT * FROM STUDENT WHERE STU_NO = '%s'" % stu_no
+    sql = "SELECT * FROM STUDENT  WHERE STU_NO = '%s'" % stu_no
     result = query.query(sql)
     return render_template('personal_information.html', result=result)
 
