@@ -702,7 +702,7 @@ def updateDatabase(stu_id, train_plan):
                     color = child['itemStyle']['borderColor']
                     # print(name, color)
                     co_100 = coname2co[name]
-    `
+
                     # 根据颜色设置01，红色未完成：0，绿色完成：1
                     if color == 'red':
                         array_finish[int(co_100) - 1] = 0
