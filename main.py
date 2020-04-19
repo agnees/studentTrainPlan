@@ -232,7 +232,7 @@ def news_center():
     sql = "select * from NEWS WHERE IS_FIRST='0'"
     result = query.query(sql)
     print(result)
-    return render_template('news_center.html', result=result)
+    return jsonify(result)
 
 
 # 单个话题详情路由
