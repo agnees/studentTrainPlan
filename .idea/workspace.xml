@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="" />
+    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="430" column="17" selection-start-line="430" selection-start-column="17" selection-end-line="430" selection-end-column="17" />
+            <state relative-caret-position="294">
+              <caret line="149" column="47" lean-forward="true" selection-start-line="149" selection-start-column="15" selection-end-line="149" selection-end-column="47" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
               </folding>
@@ -59,22 +61,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/course_discussion.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/news_center.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/recommed.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/train_plan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="329" lean-forward="true" selection-start-line="329" selection-end-line="329" />
+            <state relative-caret-position="267">
+              <caret line="341" column="29" lean-forward="true" selection-start-line="341" selection-start-column="29" selection-end-line="341" selection-end-column="29" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/recommedBar.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -89,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/query.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="696" column="16" lean-forward="true" selection-start-line="696" selection-start-column="16" selection-end-line="696" selection-end-column="16" />
+            <state relative-caret-position="478">
+              <caret line="704" selection-start-line="704" selection-end-line="704" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -99,36 +106,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/map_student_course.py">
+        <entry file="file://$PROJECT_DIR$/static/js/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="205">
+              <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style1.css">
+        <entry file="file://$PROJECT_DIR$/static/js/Tree.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/actions.js">
+        <entry file="file://$PROJECT_DIR$/practice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1305">
-                <caret line="87" selection-start-line="87" selection-end-line="87" />
-              </first_editor>
-              <second_editor />
+            <state>
+              <folding>
+                <element signature="e#0#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +150,11 @@
       <find>data_children</find>
       <find>data_childrens</find>
       <find>map_student</find>
+      <find>submi</find>
       <find>评分</find>
+      <find>course2score</find>
+      <find>news_center</find>
+      <find>pass</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,16 +163,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/js/actions.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/utils/recommed_module.py" />
         <option value="$PROJECT_DIR$/utils/map_student_course.py" />
         <option value="$PROJECT_DIR$/templates/recommed.html" />
         <option value="$PROJECT_DIR$/static/js/recommedBar.js" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/utils/query.py" />
         <option value="$PROJECT_DIR$/templates/train_plan.html" />
+        <option value="$PROJECT_DIR$/utils/query.py" />
+        <option value="$PROJECT_DIR$/static/js/actions.js" />
+        <option value="$PROJECT_DIR$/templates/news_center.html" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -200,18 +202,7 @@
             <path>
               <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
               <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
@@ -223,11 +214,6 @@
               <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
               <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -471,12 +457,25 @@
       <option name="project" value="LOCAL" />
       <updated>1587197862580</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1）修改后端逻辑">
+      <created>1587197897613</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587197897613</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1）修改后端逻辑">
+      <created>1587197996382</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587197996382</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19379845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -636,13 +635,6 @@
     <entry file="file://$PROJECT_DIR$/static/css/style1.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -670,33 +662,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/templates/train_plan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="430" column="17" selection-start-line="430" selection-start-column="17" selection-end-line="430" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="696" column="16" lean-forward="true" selection-start-line="696" selection-start-column="16" selection-end-line="696" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="267">
+          <caret line="341" column="29" lean-forward="true" selection-start-line="341" selection-start-column="29" selection-end-line="341" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/recommed.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/train_plan.html">
+    <entry file="file://$PROJECT_DIR$/practice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="329" lean-forward="true" selection-start-line="329" selection-end-line="329" />
+        <state>
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/news_center.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/course_discussion.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/Tree.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="704" selection-start-line="704" selection-end-line="704" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="149" column="47" lean-forward="true" selection-start-line="149" selection-start-column="15" selection-end-line="149" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
