@@ -147,7 +147,7 @@ def course_discussion():
         print(sql)
         # 后端更新数据表，并返回news_center函数
         query.update(sql)
-        return redirect(url_for('news_center'))
+        return render_template('news_center.html')
 
 
 # 为登录界面登录绑定路由，以及设置打开浏览器的自动呈现界面
@@ -228,11 +228,13 @@ def register():
 # 话题讨论首页路由
 @app.route('/news_center', methods=['GET', 'POST'])
 def news_center():
+    if request.method == 'GET':
+        return render_template('news_center.html')
     # 在news表查找is_first=0，也就是原创帖
     sql = "select * from NEWS WHERE IS_FIRST='0'"
     result = query.query(sql)
     print(result)
-    return render_template('news_center.html', result=result)
+    return jsonify(result)
 
 
 # 单个话题详情路由
@@ -297,14 +299,15 @@ def getRecommedData():
     # {0:[白雪,12321],1:[xxx,1231]}；{0: co_name}；{12321: 0 ,1231:1}
     id2Student, id2Course, stuNo2MatId = map_student_course.get_map_student()
     # [[5.0，4.0][2.0,3.0]] 每个用户对课程的评分，行编号为学生编号，列为课程编号
-    scoreMatrix = map_student_course.get_matrix(id2Student)
+    scoreMatrix, passMatrix = map_student_course.get_matrix(id2Student)
     """
     函数，recommedCourse：使用SVD进行课程推荐：
     入参： 学生对课程的评分矩阵，需要推荐的那个人的编号 推荐top20
     返回:(课程1ID， 课程1评分)
     """
     # 需要推荐的课程和人及评分
-    topNCourse, topNStudent = recommed_module.recommedCoursePerson(scoreMatrix, stuNo2MatId[stu_no], N=20)
+    topNCourse, _ = recommed_module.recommedCoursePerson(scoreMatrix, stuNo2MatId[stu_no], N=20)
+    passTopNCourse, _ = recommed_module.recommedCoursePerson(passMatrix, stuNo2MatId[stu_no], N=10)
     """
     将得到的Course与Person装换为前端图标需要的json格式:
      {
@@ -319,19 +322,20 @@ def getRecommedData():
      }   
     """
     # 生成新字典{数字：姓名}
-    id2Student = {i: id2Student[i][0] for i in id2Student.keys()}
-    print(id2Student)
-    print(id2Course)
+    # id2Student = {i: id2Student[i][0] for i in id2Student.keys()}
+    # print(id2Student)
+    # print(id2Course)
     # [评分：课程]
     courseJson = recommed_module.toBarJson(topNCourse, id2Course)
     # [评分：姓名]
-    personJson = recommed_module.toBarJson(topNStudent, id2Student)
+    passTopNCourse = recommed_module.toBarJson(passTopNCourse, id2Course)
     courseJson = recommed_module.regularData(courseJson, 1, 5)
-    personJson = recommed_module.regularData(personJson, 0, 1)
+    passCourseJson = recommed_module.regularData(passTopNCourse, 1, 1)
 
     coursePersonJson = {}
     coursePersonJson['course'] = courseJson
-    coursePersonJson['person'] = personJson
+    coursePersonJson['passCourse'] = passCourseJson
+    print(coursePersonJson)
     return jsonify(coursePersonJson)
 
 
@@ -346,7 +350,7 @@ def personal_information():
     stu_no = session.get('stu_id')
     print(stu_no + ' is stu_no')
     # 在数据库查找这个学生
-    sql = "SELECT * FROM STUDENT WHERE STU_NO = '%s'" % stu_no
+    sql = "SELECT * FROM STUDENT  WHERE STU_NO = '%s'" % stu_no
     result = query.query(sql)
     return render_template('personal_information.html', result=result)
 
@@ -380,14 +384,20 @@ def submit_train_place():
     """功能1："""
     # 入参
     twoData = request.get_json(force=True)
-    train_plan = twoData['tree']
-    scores = twoData['scores']
+    train_plan = {}
+    if "tree" in twoData:
+        train_plan = twoData['tree']
 
+    scores = {}
+
+    if "scores" in twoData:
+        scores = twoData['scores']
+        print(scores)
     # train_plan['name'] = "数据转换成功"
     print('反馈回来的数据是：')
     print(train_plan)
     # 从根节点找出孩子进行遍历
-    data = train_plan['children']
+    # data = train_plan['children']
     # array_finish = [0] * 120
     # # print(array_finish)
     # # 遍历第二层里面的每一个孩子
@@ -423,17 +433,13 @@ def submit_train_place():
     # print(array_finish)
 
     stu_id = session.get('stu_id')
+    # stu_id = 2016012107
     # 更新选课计划
     query.updateDatabase(stu_id, train_plan)
     # 更新选课记录
     query.updateScore(stu_id, scores)
 
-    """功能2："""
-    train_plan_str = json.dumps(train_plan)
-    # 告诉前端将已经选好的课更新为绿色
-    train_plan_str = train_plan_str.replace("yellow", "green")
-    train_plan = json.loads(train_plan_str)
-    return jsonify(train_plan)
+    return jsonify(query.get_plan_tree(stu_id))
 
 
 if __name__ == '__main__':

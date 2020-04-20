@@ -219,12 +219,14 @@ a:active, a:focus {
 	margin-bottom:6px;
 	position:relative;}
 .info_news_but{ overflow:hidden; border-bottom:1px solid #e6e6e6; height:38px; margin-bottom:6px;}
-.info_news_but p{ font-size:16px;
+.info_news_but p
+{ font-size:16px;
 	text-align:center;
 	line-height:38px;
 	float:left;
 	width:96px;
-	height:38px;}
+	height:38px;
+}
 .on{ background:#e6e6e6; color:#003d79;}
 .on1{ color:#003d79;}
 .info_news_text{ width:300px;
@@ -318,6 +320,16 @@ a:active, a:focus {
 .info_search_r a span{ display:block;
 	float:right;
 	margin-left:8px;}
+
+
+
+
+
+
+
+
+
+
 /************************首页内容结束************************************/
 /****************************************************************************************************************************************************/
 /*************************关于华企开始**********************************/
@@ -687,6 +699,7 @@ a:active, a:focus {
 	height: 100px;
 	width: 200px;
 	border-radius: 3px;
+	cursor: pointer;
 }
 .process-son {
 	position: relative;

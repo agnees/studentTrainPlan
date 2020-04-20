@@ -1,0 +1,155 @@
+
+
+html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wapper_box {
+    overflow: initial;
+  }
+
+  body {
+    background: url(../static/images/index-bgc.jpg)no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .header_box1 {
+    position: relative;
+    background: url(../static/images/index-header.jpg)no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .user-msg {
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    cursor: pointer;
+  }
+
+  .user-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .user-name-num {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+
+  .user-name-num>div {
+    width: 96px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 3px;
+
+    /* border: 1px solid #000; */
+  }
+  .user-name-num div>a{
+    color:black;
+  }
+
+  .contacts {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    width: 500px;
+    overflow: hidden;
+    height: 25px;
+  }
+
+  .tab-ctn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .tab-item {
+    width: 300px;
+    height: 47px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: right;
+    line-height: 45px;
+    text-indent: 10px;
+    padding-right: 22px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 45px;
+    cursor: pointer;
+  }
+
+  .tab-item:nth-of-type(1) {
+    background: url(../static/images/shu.png)no-repeat left center;
+    background-size: 40px 40px;
+  }
+
+  .tab-item:nth-of-type(2) {
+    background: url(../static/images/A.png)no-repeat left center;
+    background-size: 40px 40px;
+  }
+
+  .tab-item:nth-of-type(3) {
+    background: url(../static/images/tuijian.png)no-repeat left center;
+    background-size: 40px 40px;
+  }
+
+  .tab-item:nth-of-type(4) {
+    background: url(../static/images/shequluntan.png)no-repeat left center;
+    background-size: 50px 40px;
+  }
+
+  .news-topic {
+    width: 300PX;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .news-topic-item {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 60px;
+  }
+
+  .news-topic-item .news-date,
+  .news-topic-item .news-msg {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+  }
+  .news-topic-item .news-msg{
+    align-items: initial;
+  }
+
+  .news-topic-item .news-msg {
+    flex: 1;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .news-topic-item .news-msg>div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
