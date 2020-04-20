@@ -678,6 +678,8 @@ def updateDatabase(stu_id, train_plan):
     for result in results:
         coname2co[result[1]] = result[0]
 
+    if 'children' not in train_plan:
+        return
     data = train_plan['children']
     if len(data) <= 0:
         return

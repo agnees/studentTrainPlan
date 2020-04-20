@@ -389,14 +389,14 @@ def submit_train_place():
         train_plan = twoData['tree']
 
     scores = []
-    if "socres" in twoData:
+    if "scores" in twoData:
         scores = twoData['scores']
 
     # train_plan['name'] = "数据转换成功"
     print('反馈回来的数据是：')
     print(train_plan)
     # 从根节点找出孩子进行遍历
-    data = train_plan['children']
+    # data = train_plan['children']
     # array_finish = [0] * 120
     # # print(array_finish)
     # # 遍历第二层里面的每一个孩子
