@@ -439,12 +439,7 @@ def submit_train_place():
     # 更新选课记录
     query.updateScore(stu_id, scores)
 
-    """功能2："""
-    train_plan_str = json.dumps(train_plan)
-    # 告诉前端将已经选好的课更新为绿色
-    train_plan_str = train_plan_str.replace("yellow", "green")
-    train_plan = json.loads(train_plan_str)
-    return jsonify(train_plan)
+    return redirect('get_info')
 
 
 if __name__ == '__main__':
