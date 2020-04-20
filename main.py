@@ -384,8 +384,13 @@ def submit_train_place():
     """功能1："""
     # 入参
     twoData = request.get_json(force=True)
-    train_plan = twoData['tree']
-    scores = twoData['scores']
+    train_plan = {}
+    if "tree" in twoData:
+        train_plan = twoData['tree']
+
+    scores = []
+    if "socres" in twoData:
+        scores = twoData['scores']
 
     # train_plan['name'] = "数据转换成功"
     print('反馈回来的数据是：')

@@ -734,6 +734,7 @@ def updateScore(stu_id, scores):
 
     for cur in scores:
         # 更新选课表
+        print(cur.get('name'))
         sql = "UPDATE CHOOSE SET COMMENT='%d' and PASS='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
             cur.get('score'), cur.get('pass'), stu_id, name2no[cur.get('name')])
         # print(sql)
