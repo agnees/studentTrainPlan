@@ -40,8 +40,8 @@ def update(sql):
                          charset='utf8')
     cur = db.cursor()
     try:
-        cur.execute(sql) # 执行sql语句
-        db.commit() # 提交数据库执行
+        cur.execute(sql)  # 执行sql语句
+        db.commit()  # 提交数据库执行
         # print('update success')
         # print('update success')
     except:
@@ -68,14 +68,14 @@ def get_plan_tree(stu_id):
     print(finished_co)
 
     # 从CHOOSE表获取课程编号co_no和评分comment，用学号查找
-    sql = "SELECT CO_NO,COMMENT FROM CHOOSE WHERE STU_NO='%s'" % stu_id
+    sql = "SELECT CO_NO,COMMENT,PASS FROM CHOOSE WHERE STU_NO='%s'" % stu_id
     # 将查询结果定义为course2score
     course2score = query(sql)
     # 建立co2score字典
     co2score = {}
     # 对当前查到的课程在course2score进行遍历，结果填入字典co2score={课程编号：评分}
     for cur in course2score:
-        co2score[cur[0]] = cur[1]
+        co2score[cur[0]] = {'score': cur[1], 'pass': cur[2]}
 
     # 在教学计划表中查询课程信息，用课程序列号co_100>0查询
     sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO,AD_YEAR,CO_100 " \
@@ -83,7 +83,7 @@ def get_plan_tree(stu_id):
     # 查询结果用course表示
     courses = query(sql)
 
-    co2course = {} # 存数据
+    co2course = {}  # 存数据
     classfication_index = set()  # 建集合存大类
     ad_year_calssfaiction_index = {}  # key: 大类： value : 2016_大类
     ad_year_calssfaiction_is_must_index = {}  # key :2016_大类 value :选修_2016_大类
@@ -116,7 +116,8 @@ def get_plan_tree(stu_id):
             ad_year_calssfaiction_is_must_data['%s_%s_%s' % (course[3], course[6], course[0])] = []
 
         # 处理data叶子节点,学分设置浮点型，评分设置整数型，颜色为红色
-        course_data = {'name': course[2], 'value': float(course[4]), 'score': int(co2score[course[5]]),
+        course_data = {'name': course[2], 'value': float(course[4]), 'score': int(co2score[course[5]].get("score")),
+                       'pass': co2score[course[5]].get("pass"),
                        'itemStyle': {'borderColor': 'red'}}
 
         # 如果课程序列finished_co(用co_100-1来遍历）=1
@@ -152,7 +153,6 @@ def get_plan_tree(stu_id):
             print(ad_year_calssfaiction)
             # 填入第三层子节点，将(ad_year)_(classification)以_分开，取ad_year为名字
             third_children = {'name': ad_year_calssfaiction.split("_")[0]}
-
 
             # 建立第四层子节点
             fourth_childrens = []

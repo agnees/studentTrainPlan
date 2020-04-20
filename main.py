@@ -147,7 +147,7 @@ def course_discussion():
         print(sql)
         # 后端更新数据表，并返回news_center函数
         query.update(sql)
-        return jsonify({'errno': 0})
+        return render_template('news_center.html')
 
 
 # 为登录界面登录绑定路由，以及设置打开浏览器的自动呈现界面
