@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="1) 防止为空情况">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/static/css/register-login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/register-login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/A.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/IMG_1431.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/IMG_1431.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/banner2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/banner2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/btn.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/btn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/but_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/but_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/c185d1064baf2d54bebc3afd962a1089.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/c185d1064baf2d54bebc3afd962a1089.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/github.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/github.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/guangao1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/guangao1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon11.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon21.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon31.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon41.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon6.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/icon_A.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/icon_A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index-bgc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/index-bgc.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index-header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/index-header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/info_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/info_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/info_icon1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/info_icon1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/info_icon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/info_icon2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/jj_pic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/jj_pic.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/login-bgc.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/login-bgc.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/login-header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/login-header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo1920.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo1920.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo220.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/logo220.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lunkuodasan-.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/lunkuodasan-.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lxwm_icon1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/lxwm_icon1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lxwm_icon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/lxwm_icon2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lxwm_icon3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/lxwm_icon3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lxwm_icon4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/lxwm_icon4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lxwm_icon5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/lxwm_icon5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/personal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/personal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/qq.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/qq.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/shequluntan.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/shequluntan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/shu.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/shu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/siade_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/siade_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/siade_bg1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/siade_bg1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/sys-name-bgc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/sys-name-bgc.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/tuijian.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/tuijian.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/xl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/xl.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/dataTool.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/dataTool.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/echarts-gl.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/echarts-gl.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery-2.2.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery-2.2.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.superslide.2.1.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery.superslide.2.1.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery1.42.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery1.42.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/layer/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/layer/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/layer/skin/default/icon-ext.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/layer/skin/default/icon-ext.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/layer/skin/default/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/layer/skin/default/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/layer/skin/default/loading-0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/layer/skin/default/loading-0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/layer/skin/default/loading-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/layer/skin/default/loading-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/layer/skin/default/loading-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/layer/skin/default/loading-2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/layer/skin/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/layer/skin/layer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/particles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/recommedBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/recommedBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/course_discussion.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/course_discussion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/managerAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/managerAdd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/managerDelete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/managerDelete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/managerEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/managerEdit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news_center.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personal_information.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personal_information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recommed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recommed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/train_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/train_plan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/query.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="439" column="18" lean-forward="true" selection-start-line="439" selection-start-column="18" selection-end-line="439" selection-end-column="18" />
+            <state relative-caret-position="183">
+              <caret line="439" column="19" selection-start-line="439" selection-start-column="19" selection-end-line="439" selection-end-column="19" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
               </folding>
@@ -80,25 +165,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/recommed_module.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/recommed.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+            <state relative-caret-position="306">
+              <caret line="203" column="15" lean-forward="true" selection-start-line="203" selection-start-column="15" selection-end-line="203" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/query.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="739" column="20" lean-forward="true" selection-start-line="739" selection-start-column="20" selection-end-line="739" selection-end-column="20" />
+            <state relative-caret-position="200">
+              <caret line="749" column="19" lean-forward="true" selection-start-line="749" selection-start-column="19" selection-end-line="749" selection-end-column="19" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mark.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -122,15 +212,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="156" selection-start-line="156" selection-end-line="156" />
+            <state relative-caret-position="1418">
+              <caret line="218" selection-start-line="218" selection-end-line="218" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/Tree.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -182,13 +267,13 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/utils/recommed_module.py" />
         <option value="$PROJECT_DIR$/utils/map_student_course.py" />
-        <option value="$PROJECT_DIR$/templates/recommed.html" />
         <option value="$PROJECT_DIR$/static/js/recommedBar.js" />
         <option value="$PROJECT_DIR$/templates/train_plan.html" />
         <option value="$PROJECT_DIR$/templates/news_center.html" />
         <option value="$PROJECT_DIR$/static/js/actions.js" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/utils/query.py" />
+        <option value="$PROJECT_DIR$/templates/recommed.html" />
       </list>
     </option>
   </component>
@@ -227,13 +312,7 @@
             <path>
               <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
               <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studentTrainPlan" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="studentTrainPlan" type="b2602c69:ProjectViewProjectNode" />
@@ -580,23 +659,31 @@
       <option name="project" value="LOCAL" />
       <updated>1587400112175</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1) 防止为空情况">
+      <created>1587401056239</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1587401056240</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19379845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19379845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" weight="0.32980973" />
       <window_info id="Project Explorer" order="4" />
       <window_info id="Job Explorer" order="5" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968536" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" weight="0.41445783" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" visible="true" weight="0.4554217" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" visible="true" weight="0.41445783" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4554217" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -772,9 +859,6 @@
     <entry file="file://$PROJECT_DIR$/templates/news_center.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/recommed.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/train_plan.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5115">
@@ -810,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        <state relative-caret-position="1418">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
         </state>
       </provider>
     </entry>
@@ -838,21 +922,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="439" column="18" lean-forward="true" selection-start-line="439" selection-start-column="18" selection-end-line="439" selection-end-column="18" />
+        <state relative-caret-position="183">
+          <caret line="439" column="19" selection-start-line="439" selection-start-column="19" selection-end-line="439" selection-end-column="19" />
           <folding>
             <element signature="e#0#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mark.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="739" column="20" lean-forward="true" selection-start-line="739" selection-start-column="20" selection-end-line="739" selection-end-column="20" />
+        <state relative-caret-position="200">
+          <caret line="749" column="19" lean-forward="true" selection-start-line="749" selection-start-column="19" selection-end-line="749" selection-end-column="19" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/recommed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="203" column="15" lean-forward="true" selection-start-line="203" selection-start-column="15" selection-end-line="203" selection-end-column="15" />
         </state>
       </provider>
     </entry>
