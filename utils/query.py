@@ -734,13 +734,17 @@ def updateScore(stu_id, scores):
     for cur in result:
         name2no[cur[1]] = cur[0]
 
-    for cur in scores:
+    for key, val in scores.iteritems():
         # 更新选课表
-        if cur.get('name') == "":
+        if key == "":
             continue
-        print(cur.get('name'))
-        sql = "UPDATE CHOOSE SET COMMENT='%d' and PASS='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
-            cur.get('score'), cur.get('pass'), stu_id, name2no[cur.get('name')])
+        print(val.get('name'))
+        if 'pass' not in val:
+            sql = "UPDATE CHOOSE SET COMMENT='%d'  WHERE STU_NO='%s' AND CO_NO='%s'" % (
+                val.get('score'), stu_id, name2no[key])
+        else:
+            sql = "UPDATE CHOOSE SET COMMENT='%d' and PASS='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
+                val.get('score'), val.get('pass'), stu_id, name2no[key])
         # print(sql)
         update(sql)
 

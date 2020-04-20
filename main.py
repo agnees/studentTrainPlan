@@ -388,7 +388,7 @@ def submit_train_place():
     if "tree" in twoData:
         train_plan = twoData['tree']
 
-    scores = []
+    scores = {}
     if "scores" in twoData:
         scores = twoData['scores']
 
