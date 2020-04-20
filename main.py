@@ -389,9 +389,10 @@ def submit_train_place():
         train_plan = twoData['tree']
 
     scores = {}
+
     if "scores" in twoData:
         scores = twoData['scores']
-
+        print(scores)
     # train_plan['name'] = "数据转换成功"
     print('反馈回来的数据是：')
     print(train_plan)

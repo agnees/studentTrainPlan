@@ -9,6 +9,7 @@ function submit(){
     var postData = {};
     var tree = myChart.getOption()['series'][0]['data'][0];
     var scores = course2score;
+
     var returnData = {'tree':tree, 'scores':scores};
     $.ajax({
         type:'POST',
