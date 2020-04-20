@@ -439,7 +439,7 @@ def submit_train_place():
     # 更新选课记录
     query.updateScore(stu_id, scores)
 
-    return redirect('get_info')
+    return jsonify(query.get_plan_tree(stu_id))
 
 
 if __name__ == '__main__':
