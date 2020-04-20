@@ -13,8 +13,20 @@
   <title>评论回复</title>
 </head>
 <style type="text/css">
+
+   html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    background: url(../static/images/index-bgc.jpg)no-repeat;
+    background-size: 100% 100%;
+  }
+
   .header_box1 {
-    /* position: relative; */
+    position: relative;
     background: url(../static/images/index-header.jpg)no-repeat;
     background-size: 100% 100%;
   }
@@ -66,6 +78,7 @@
   }
 
   .article_content {
+    width:100%;
     background: #ffffff;
     clear: both;
     padding: 1em 4em;
@@ -240,7 +253,7 @@
   .user-msg {
     position: absolute;
     right: 50px;
-    bottom: 0;
+    bottom: 20px;
     cursor: pointer;
   }
 
@@ -258,11 +271,18 @@
   }
 
   .user-name-num>div {
-    width: 96px;
-    height: 30px;
-    background-color: rgb(215, 215, 215);
+    width: 200%;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+    line-height: 40px;
     font-size: 16px;
-    border: 1px solid #000;
+    border-radius: 3px;
+    /* border: 1px solid #000; */
+  }
+  .user-name-num div>a{
+    color:black;
+    text-decoration: none;
   }
 
   .contacts {
@@ -282,17 +302,6 @@
     ;
   }
 
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-  }
-
-  body {
-    background: url(../static/images/index-bgc.jpg)no-repeat;
-    background-size: 100% 100%;
-  }
-
   .article_content {
     background: none;
   }
@@ -304,7 +313,7 @@
 
 <body>
   <div class="wapper_box">
-    <div class="header_box"></div>
+  
     <div class="header_box1">
       <div class="user-msg">
         <img src="../static/images/icon_A.png" class="user-icon" alt="个人信息">
@@ -408,11 +417,11 @@
         </table>
       </div>
     </form>
-    <div class="contacts">
+    <!-- <div class="contacts">
       <div class="contacts-ctn">
         <p style="white-space: nowrap;">如有问题请联系：************</p>
       </div>
-    </div>
+    </div> -->
 
 
   </div>
@@ -431,7 +440,7 @@
   <div class="article_content">
     <!-- <h2> {{ title[1] }}</h2> -->
   </div>
-  <hr>
+  <hr >
   {% for message in result %}
   <h3>
     <li><a class="content_boxL_list_info">{{ message[2] }}:【 {{ message[0] }}】 {{ message[1] }}<span

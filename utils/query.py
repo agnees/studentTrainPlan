@@ -744,7 +744,7 @@ def updateScore(stu_id, scores):
             sql = "UPDATE CHOOSE SET COMMENT='%d'  WHERE STU_NO='%s' AND CO_NO='%s'" % (
                 val.get('score'), stu_id, name2no[key])
         else:
-            sql = "UPDATE CHOOSE SET COMMENT='%d' . PASS='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
+            sql = "UPDATE CHOOSE SET COMMENT='%d' ,PASS='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
                 val.get('score'), val.get('pass'), stu_id, name2no[key])
         print(sql)
         update(sql)

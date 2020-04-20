@@ -330,7 +330,7 @@ def getRecommedData():
     # [评分：姓名]
     passTopNCourse = recommed_module.toBarJson(passTopNCourse, id2Course)
     courseJson = recommed_module.regularData(courseJson, 1, 5)
-    passCourseJson = recommed_module.regularData(passTopNCourse, 1, 5)
+    passCourseJson = recommed_module.regularData(passTopNCourse, 1, 1)
 
     coursePersonJson = {}
     coursePersonJson['course'] = courseJson

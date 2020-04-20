@@ -3,11 +3,13 @@ var domPerson = document.getElementById("person_box");
 var chartCourse = echarts.init(domCourse);
 var chartPerson = echarts.init(domPerson);
 var app = {};
-optionCourse = null;
-optionPerson = null;
+var optionCourse = null;
+var optionPerson = null;
+
+
 $.getJSON('/getRecommedData', function(coursePersonJson)
 {
-    console.log(3333)
+    // console.log(3333)
     var optionCourse = {
         dataset: coursePersonJson['course'],
         grid: {containLabel: true},
@@ -40,7 +42,7 @@ $.getJSON('/getRecommedData', function(coursePersonJson)
     var optionPerson = {
         dataset: coursePersonJson['passCourse'],
         grid: {containLabel: true},
-        xAxis: {name: '好过程度'},
+        xAxis: {name: '相似度'},
         yAxis: {type: 'category'},
         visualMap: {
             orient: 'horizontal',
@@ -67,13 +69,13 @@ $.getJSON('/getRecommedData', function(coursePersonJson)
         ]
     };
     if (optionCourse && typeof optionCourse === "object") {
-        console.log(optionCourse)
+        // console.log(optionCourse)
         chartCourse.setOption(optionCourse, true);
-        console.log(chartCourse)
+        // console.log(chartCourse)
     }
     if (optionPerson && typeof optionPerson === "object") {
-        console.log(optionPerson)
+        // console.log(optionPerson)
         chartPerson.setOption(optionPerson, true);
-        console.log(chartPerson)
+        // console.log(chartPerson)
     }
 });
