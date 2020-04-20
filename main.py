@@ -228,6 +228,8 @@ def register():
 # 话题讨论首页路由
 @app.route('/news_center', methods=['GET', 'POST'])
 def news_center():
+    if request.method == 'GET':
+        return render_template('news_center.html')
     # 在news表查找is_first=0，也就是原创帖
     sql = "select * from NEWS WHERE IS_FIRST='0'"
     result = query.query(sql)
