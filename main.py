@@ -427,6 +427,7 @@ def submit_train_place():
     # print(array_finish)
 
     stu_id = session.get('stu_id')
+    # stu_id = 2016012107
     # 更新选课计划
     query.updateDatabase(stu_id, train_plan)
     # 更新选课记录
