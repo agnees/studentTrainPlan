@@ -18,7 +18,7 @@ var option = null;
 函数(1) clickFun:
     功能: 点击计划树叶子节点时(即课程节点)改变其状态。
     状态:
-        绿色: 已选课
+        绿色: k已选课
         黄色: 预选课
         红色：未选课
     状态变化
@@ -31,9 +31,9 @@ function clickFun(param) {
     if (typeof param.seriesIndex == 'undefined') {
         return;
     }
-    //只有最后一个参数可以点击
+    //只有最后一个参数可以点击,设置点击后颜色变化
     if (param.type == 'click' && typeof param.data.children == "undefined") {
-        console.log(param.data.name);
+        console.log(param.data.name); //信息分组
         if (param.data.itemStyle.borderColor == 'red') {
             param.data.itemStyle.borderColor = 'yellow';
             param.data.itemStyle.Color = 'yellow';
@@ -46,6 +46,7 @@ function clickFun(param) {
             // param.data.itemStyle.borderColor = 'red';
             // param.data.itemStyle.Color = 'red';
         // }
+        //使用指定的配置项和数据显示图表
         myChart.setOption({});
         // console.log(myChart);
         // console.log(param.data.itemStyle.borderColor);
@@ -71,30 +72,31 @@ $.getJSON('/get_info', function(data)
     console.log(data);
     console.log(new Date().getTime())
     option = {
-        // 配置提示信息
-        tooltip: {
+        tooltip: { //提示框组建
             trigger: 'item',
             triggerOn: 'mousemove'
         },
-        // 图标类型
-        series:[
+        series:[ //系列列表
             {
-                type: 'tree',
+                type: 'tree',  //树形结构
               
-                data: [data],
-    
+                data: [data], //从json获取的数据
+
+                //距离上下左右的距离
                 left: '2%',
                 right: '2%',
                 top: '8%',
                 bottom: '20%',
-                // 图元的图形类别
+                // 图元形状类别
                 symbol: 'emptyCircle',
                 //图元的大小
                 symbolSize: 7,
 
+                //垂直排列
                 orient: 'vertical',
                 // 控制显示层数
                 initialTreeDepth: 4,
+                //字数这列和展开交互，默认打开
                 expandAndCollapse: true,
                 // 高亮时显示的内容设置
                 label: {
@@ -107,7 +109,7 @@ $.getJSON('/get_info', function(data)
                     }
                 },
     
-                leaves: {
+                leaves: { //叶子节点特殊配置，标签不同
                      // 高亮时显示的内容设置
                     label: {
                         normal: {
@@ -125,7 +127,7 @@ $.getJSON('/get_info', function(data)
             }
         ]};
     
-    
+    //使用指定的配置项和数据显示图表
     myChart.setOption(option);
     // console.log("mychart 的值2"+myChart);
     // console.log("mychart option的值1"+myChart.getOption().series[0].data);
@@ -146,10 +148,11 @@ $.getJSON('/get_info', function(data)
  */
 //已修学分
 var perExistScore=0;
-//预加学分
+//预选学分
 var perAddScore=0;
 console.log("peraddscore 的值是： "+perAddScore);
 function getScore(Node){
+    //如果结点b不为红色未定义
     if(typeof Node.children == 'undefined'){
         if(Node.itemStyle.borderColor == "yellow"){
             perAddScore += Node.value;
@@ -201,11 +204,11 @@ function getScore(Node){
 function fuckThisBug (){
     console.log("fuck 函数");
     //得到传入的树形图一摸一样的数据
-  
    var Tree = myChart.getOption()["series"][0]["data"][0];
    console.log(Tree);
 
-   var subjects = ["专业实践必修", "专业理论必修", "专业理论选修", "学科实践必修", "学科理论必修", "实践选修", "第三课堂", "通识实践必修", "通识理论必修",
+   //命名
+   var subjects = ["专业实践必修", "专业理论必修", "专业理论选修", "学科实践必修", "学科理论必修", "实践选修", "第二课堂", "通识实践必修", "通识理论必修",
      "通识理论选修(公选)"];
   
    var subjects2TotalScore = {};  //所需总学分。每科分开
@@ -222,7 +225,7 @@ function fuckThisBug (){
        // console.log(subjects2ExistScore+"222");
        // console.log(subjects2AddScore+"333");
    }
-   // 求得每科已选的学分和（绿） 将选分数和（黄色）
+   // 求得每科已选的学分和（绿）；将选分数和（黄色）
    for(var sub =0; sub <subjects.length; sub++){
        perExistScore = 0;
        perAddScore = 0;
@@ -239,9 +242,11 @@ function fuckThisBug (){
    var TotalAddScore = 0;//黄色
 
    for(var i=0; i<subjects.length; i++){
-       TotalScore += subjects2TotalScore[subjects[i]];//所有科目总分数
+       TotalScore += subjects2TotalScore[subjects[i]];//所有科目总分数= 0+所有科目所需总学分
     //    console.log(subjects[i]+"总分数"+TotalScore);
+       //总共已休分数=min(已修学分，总需学分)
        TotalExistScore += Math.min(subjects2ExistScore[subjects[i]],subjects2TotalScore[subjects[i]]);
+       //如果（总学分-已修学分）>0，总共还需学分=min[(学科总分-已修学分),将选学分]
        if(subjects2TotalScore[subjects[i]] - subjects2ExistScore[subjects[i]] > 0)
            TotalAddScore += Math.min(subjects2TotalScore[subjects[i]]-subjects2ExistScore[subjects[i]], subjects2AddScore[subjects[i]]);
 
@@ -254,32 +259,32 @@ function fuckThisBug (){
    var pLabels = [];
    //更新除总进度条外的进度条
    for(var i=2; i< subjects.length+2; i++){
-       processes.push("process-parent"+i.toString());//每一个进度条黄+绿总进度
+       processes.push("process-parent"+i.toString());//为每一个进度条黄+绿添加总进度
        pLabels.push("on" + i.toString());//绿
    }
    // 更新总进度条
    var greenWidth, yellowWidth;
 
    var doms = document.getElementsByClassName("process-parent1")[0].children;
-   greenWidth = (TotalExistScore*100/TotalScore).toFixed(2);//四舍五入为指定小数位数
-   greenWidth =  Math.min(100, greenWidth);
+   greenWidth = (TotalExistScore*100/TotalScore).toFixed(2); // 四舍五入为指定小数位数
+   greenWidth =  Math.min(100, greenWidth); // 不能超过100%
    yellowWidth = (TotalAddScore*100/TotalScore).toFixed(2);
    yellowWidth = Math.min(100-greenWidth, yellowWidth)
    doms[0].style.width = greenWidth + "%";
    doms[1].style.width = yellowWidth + "%";
-   dom = document.getElementById("on1");
-   dom.textContent = TotalExistScore + '/' + TotalScore;
+   dom = document.getElementById("on1"); //css格式
+   dom.textContent = TotalExistScore + '/' + TotalScore; //文本显示
 
    // 设置各个子进度条
 
    for(var idx=0; idx<processes.length; idx++){
-       TotalScore = subjects2TotalScore[subjects[idx]];
-       TotalExistScore = subjects2ExistScore[subjects[idx]];
-       TotalAddScore = subjects2AddScore[subjects[idx]];
+       TotalScore = subjects2TotalScore[subjects[idx]]; //学科总分数
+       TotalExistScore = subjects2ExistScore[subjects[idx]]; //学科现存分数
+       TotalAddScore = subjects2AddScore[subjects[idx]]; //学科还需分数
        var doms = document.getElementsByClassName(processes[idx])[0].children;
-       greenWidth = (TotalExistScore*100/TotalScore).toFixed(2);
+       greenWidth = (TotalExistScore*100/TotalScore).toFixed(2); //学科现有/学科总需
        greenWidth =  Math.min(100, greenWidth);
-       yellowWidth = (TotalAddScore*100/TotalScore).toFixed(2);
+       yellowWidth = (TotalAddScore*100/TotalScore).toFixed(2); //学科需修/学科总需
        yellowWidth = Math.min(100-greenWidth, yellowWidth)
        doms[0].style.width = greenWidth + "%";
        doms[1].style.width = yellowWidth + "%";
@@ -295,7 +300,7 @@ function fuckThisBug (){
 // }
 }
 
- 
+//加载时间
 window.onload=function(){
     
   

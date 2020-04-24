@@ -7,31 +7,39 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/register-login.css?v=5">
 	<link rel="icon" href="../static/images/logo.ico" type="image/x-icon" />
 	<style>
+        /*标题大盒*/
 		.school-title {
+            /*弹性盒*/
 			display: flex;
 			display: -webkit-flex;
 			display: -webkit-box;
 			display: -moz-box;
+            /*支持谷歌、Safari和IE浏览器*/
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			-webkit-align-items: center;
 			box-align: center;
+            /*纵轴居中*/
 			align-items: center;
 			position: absolute;
 			top: 50px;
 			left: 50%;
+            /*横轴移动*/
 			transform: translateX(-50%);
 			-webkit-transform: translateX(-50%);
 			-moz-transform: translateX(-50%);
 		}
 
+        /*学校logo*/
 		.school-logo {
 			margin-top:2px;
 			width: 150px;
 			height: 150px;
+            /*圆角*/
 			border-radius: 50%;
 		}
 
+        /*学校标题*/
 		.school-msg {
 			margin-left: 50px;
 			color:white;
@@ -43,10 +51,12 @@
 			/* background-color: rgb(245, 239, 239); */
 		}
 
+        /*子元素选择器*/
 		.school-msg>p:nth-of-type(2) {
 			font-size: 21px;
 		}
 
+        /*下半部分大盒*/
 		.cent-box {
 			display: flex;
 			margin-top:50px;
@@ -57,6 +67,7 @@
 			background-color: #ffffff;
 		}
 
+        /*学分管理系统*/
 		.sys-name {
 			width: 20px;
 			font-size: 23px;
@@ -76,6 +87,7 @@
 			background-size: cover;
 		}
 
+        /*登录部分盒*/
 		.cont-main {
 			padding: 0 205px;
 			border-top: 1px solid #000;
@@ -84,6 +96,7 @@
 			text-align: center;
 		}
 
+        /*滑动框*/
 		.contacts {
 			color:black;
 			position: absolute;
@@ -93,6 +106,7 @@
 			-webkit-transform: translateX(-50%);
 			-moz-transform: translateX(-50%);
 			width: 500px;
+            //超过隐藏
 			overflow: hidden;
 			height: 25px;
 		}
@@ -102,6 +116,7 @@
 <body>
 	<div id="box"></div>
 	<div class="school-title">
+        <!--alt替换属性-->
 		<img src="../static/images/login-header.jpg" alt="北京信息科技大学" class="school-logo">
 		<div class="school-msg">
 			<p>北京信息科技大学</p>
@@ -113,6 +128,7 @@
 			选课学分管理系统
 		</div>
 		<div class="cont-main clearfix">
+            <!--welcome部分-->
 			<p style="font-size: 32px;
 			color: #000;
 			line-height: 110px;
@@ -125,15 +141,19 @@
 				</div>
 			</div> -->
 			<form method="post">
+                <!--登录输入大框-->
 				<div class="login form">
 					<div class="group">
+                        <!--学号-->
 						<div class="group-ipt email">
 							<input type="text" name="stu_id" id="email" class="ipt" placeholder="请输入账号" required>
 						</div>
+                        <!--密码-->
 						<div class="group-ipt password">
 							<input type="password" name="password" id="password" class="ipt" placeholder="请输入密码" required>
 						</div>
 					</div>
+                    <!--提交按钮-->
 					<button type="submit" id="login-btn" style="display: none;"></button>
 				</div>
 			</form>
@@ -161,25 +181,34 @@
 	<script src='../static/js/jquery.min.js' type="text/javascript"></script>
 	<script src='../static/js/layer/layer.js' type="text/javascript"></script>
 	<!-- <script src='../static/js/index.js' type="text/javascript"></script> -->
+    <!--滚动条-->
 	<script>
 		$(function(){
+		    //处于边框最左
 			var marginLeft = 0;
+			//获取内容
 			var elm = document.querySelector('.contacts-ctn');
+			//边框长
 			var elmOffsetWidth = elm.offsetWidth;
+			//边框长=距离左边的距离，位于最右
 			marginLeft = elmOffsetWidth
 			$(elm).css('margin-left',marginLeft);
 			setInterval(function(){
+			    //左边距离-1移动
 				marginLeft--;
 				$(elm).css('margin-left',marginLeft);
+				//如果距离边框绝对值大于边框长度，则跳转为相等时的状态
 				if(Math.abs(marginLeft)>elmOffsetWidth){
 					marginLeft = elmOffsetWidth;
 					$(elm).css('margin-left',marginLeft)
 				}
+				//间隔时间
 			},25);
 			$('.login-btn').on('click',function(){
 				$('#login-btn').click();
 			})
 		})
+        //记住我
 		$("#remember-me").click(function () {
 			var n = document.getElementById("remember-me").checked;
         

@@ -22,24 +22,29 @@
 			width: 100%;
 			height: 100%;
 		}
+        /*页面顶部导航条*/
         .wapper_box {
-	    overflow: initial;
+	    overflow: initial; /*初始化溢出*/
 	    }
-  
+
+        /*大背景*/
 		body {
 			background: url(../static/images/index-bgc.jpg)no-repeat;
 			background-size: 125% 123%;
 		}
+        /*中间个人信息框*/
 		.content_box1 {
 			top: 119px;
 		}
 
+        /*顶部背景*/
 		.header_box1 {
 			position: relative;
 			background: url(../static/images/index-header.jpg)no-repeat;
 			background-size: 110% 100%;
 		}
 
+        /*导航具体图标框*/
 		.nav_box {
             width: 50%;
             height: 10%;
@@ -49,15 +54,18 @@
             color: #ffffff;
         }
 
+        /*弹出框字体颜色*/
 		.nav_box a {
 			color: #ffffff;
 		}
 
+        /*单个话题下拉框*/
 		.nav_slide1 a {
-			word-break: keep-all;
+			word-break: keep-all; /*断行规则：只能在半角空格或连字符处换行*/
 			color: #000;
 		}
 
+        /*滚动条*/
 		.contacts {
 			position: absolute;
 			bottom: 12%;
@@ -70,13 +78,14 @@
 			height: 25px;
 		}
 
-		
+		/*个人信息内容部分*/
 		.personal{
 			font-size: 20px;
 			margin-left:220px;
 			margin-top: 50px;
 		    /* background: grey; */
 		}
+        /*子元素选择器 设置行与行间隔*/
 		.personal>p{
 			margin-bottom: 20px;
 		}
@@ -107,6 +116,7 @@
                 </ul>
             </div>
 			<script>
+                //鼠标移动到话题是下拉框
 				$(".nav_1").mouseenter(function () {
 					$(this).find(".nav_slide").slideDown()
 				});
@@ -162,6 +172,7 @@
 		<div class="content_box1">
 			<div class="content_box2">
 				<div class="menu_box">
+                    <!--行内修饰-->
 					<p class="menu_box_title">个人中心<span>Personal</span></p>
 					<ul class="menu_box1">
 						<li>
@@ -190,20 +201,6 @@
 						</p>
 						<p>专业：<font color="#4169E1">{{ result[0][4] }}</font>
 						</p>
-						<!-- 
-						<div class="content">
-							<span class="follow-us">
-								<a href="https://user.qzone.qq.com"><img src="../static/images/qq.jpg"
-										style="height: 300px;width: 300px"></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-								<a href="https://www.sina.com.cn/"><img src="../static/images/xl.jpg"
-										style="height: 300px;width: 300px"></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-								<a href="https://github.com/"><img src="../static/images/github.jpg"
-										style="height: 300px;width: 300px"></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-							</span>
-						</div> -->
 					</div>
 
 				</div>
@@ -218,6 +215,7 @@
 	</div>
 </body>
 <script>
+    //滚动条
 	$(function () {
 		var marginLeft = 0;
 		var elm = document.querySelector('.contacts-ctn');

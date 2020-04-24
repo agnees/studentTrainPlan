@@ -219,6 +219,7 @@ $("#course").change(function(){
  */
 
 function updataScore(){
+    //获取评分数据
     var domCourse = document.getElementById("course")
     var courseName = domCourse[domCourse.selectedIndex].text;
     var domScore =  document.getElementById("score");
