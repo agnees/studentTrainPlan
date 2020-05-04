@@ -1,3 +1,4 @@
+import datetime
 import json
 
 import pymysql
@@ -78,7 +79,7 @@ def get_plan_tree(stu_id):
         co2score[cur[0]] = {'score': cur[1], 'pass': cur[2]}
 
     # 在教学计划表中查询课程信息，用课程序列号co_100>0查询
-    sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO,AD_YEAR,CO_100 " \
+    sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO,AD_YEAR,CO_100,END_TIME,CLASS_TIME " \
           "from EDUCATION_PLAN WHERE CO_100>'%s'" % '0'
     # 查询结果用course表示
     courses = query(sql)
@@ -118,7 +119,9 @@ def get_plan_tree(stu_id):
         # 处理data叶子节点,学分设置浮点型，评分设置整数型，颜色为红色
         course_data = {'name': course[2], 'value': float(course[4]), 'score': int(co2score[course[5]].get("score")),
                        'pass': co2score[course[5]].get("pass"),
-                       'itemStyle': {'borderColor': 'red'}}
+                       'itemStyle': {'borderColor': 'red'}, 'start_time': str(course[1]),
+                       "end_time": str(course[8]),
+                       "class_time": str(course[9])}
 
         # 如果课程序列finished_co(用co_100-1来遍历）=1
         if finished_co[int(course[7]) - 1] == '1':

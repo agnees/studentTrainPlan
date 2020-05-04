@@ -55,6 +55,7 @@ def svdMethod(svdData, dataMat, simMeas, user, item):
     k = 0
     while sum(Sigma[:k]) < sum(Sigma) * 0.9:
         k = k + 1
+    print(k)
     SigK = getSigK(Sigma, k)
     itemFeature = dataMat.T * U[:, :k] * SigK.I
     for j in range(N):
@@ -96,6 +97,8 @@ def recommedCoursePerson(dataMat, user, N=7, simMeas=ecludSim, estMethod=svdMeth
         print("没有未评分商品")
         return None
     U, Sigma, I_t = la.svd(dataMat)
+
+
     item_and_score = []
     for item in unRatedItems:
         score = estMethod([U, Sigma, I_t], dataMat, simMeas, user, item)
@@ -104,14 +107,20 @@ def recommedCoursePerson(dataMat, user, N=7, simMeas=ecludSim, estMethod=svdMeth
     k = 0
     while sum(Sigma[:k]) < sum(Sigma) * 0.9:
         k = k + 1
+
     SigK = getSigK(Sigma, k)
     userFeature = dataMat * I_t[:, :k] * SigK.I
+
     recomedUserVec = userFeature[user, :]
+
     user_and_score = []
+
     for idx, each in enumerate(userFeature):
         if user != idx:
             user_and_score.append((idx, cosSim(recomedUserVec.T, each.T)))
+
     recommedCourse = sorted(item_and_score, key=lambda k: k[1], reverse=True)[:min(N, len(item_and_score))]
+
     recommedPerson = sorted(user_and_score, key=lambda k: k[1], reverse=True)[:min(N, len(user_and_score))]
     print(recommedCourse)
     print(recommedPerson)
