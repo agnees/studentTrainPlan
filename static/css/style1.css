@@ -79,24 +79,29 @@ a:active, a:focus {
 .logo_box{ display:block;
 	margin-top:20px;
 	float:left;}
+/*导航条*/
 .nav_box{ width:902px;
 	height:116px;
 	float:left;
 	margin-left:50px;
 	margin-top:50px;}
+/*单个导航块*/
 .nav_box .nav_1{float:right; position:relative;}
+/*鼠标放置后的蓝框*/
 .nav_but{ font-size:16px;
 	color:black;
 	margin-left:22px;
 	padding:48px 14px;}
 .nav_but:hover{ background:#003d79;
 	color:white;}
+/*话题下拉框*/
 .nav_slide{ width:150px;
 	position:absolute;
 	left:22px;
 	display:none;
 	top:66px;
 	z-index:800;}
+/*单个下拉框*/
 .nav_slide1{ width:140px;
 	background:white;
 	border-bottom:3px solid #e0e2e3;}
@@ -107,9 +112,10 @@ a:active, a:focus {
 	color:#8c8c8c;
 	display:block;
 	position:relative;
-	background:url(../images/siade_bg.png) no-repeat left center;
-	border-bottom:1px solid #eeeeee; }
+	background:url(../images/siade_bg.png) no-repeat left center; /*图标*/
+	border-bottom:1px solid #eeeeee; } /*灰色条*/
 .on{}
+/*下拉框图标*/
 .nav_slide span{ position:absolute;
 	right:-31px;
 	top:20px;
@@ -214,11 +220,15 @@ a:active, a:focus {
 .content_box_bot_r{ width:10px;
 	height:100%;
 	float:right;}
+/*课程进度标题框*/
 .info_news{ width:300px;
 	height:160px;
 	margin-bottom:6px;
 	position:relative;}
+/*灰色装饰条*/
 .info_news_but{ overflow:hidden; border-bottom:1px solid #e6e6e6; height:38px; margin-bottom:6px;}
+
+/*课程进度标题字部分*//*评分大框顶部*/
 .info_news_but p
 { font-size:16px;
 	text-align:center;
@@ -227,8 +237,10 @@ a:active, a:focus {
 	width:96px;
 	height:38px;
 }
+/*课程进度灰色背景框*/
 .on{ background:#e6e6e6; color:#003d79;}
 .on1{ color:#003d79;}
+/*评分下拉框部分*/
 .info_news_text{ width:300px;
 	height:120px;}
 .info_news_text1{ position:absolute; left:0; top:45px; z-index:30;}
@@ -332,7 +344,7 @@ a:active, a:focus {
 
 /************************首页内容结束************************************/
 /****************************************************************************************************************************************************/
-/*************************关于华企开始**********************************/
+/*************************个人信息框**********************************/
 .content_box1{ width:100%;
 	position:absolute;
 	top:398px;
@@ -341,7 +353,9 @@ a:active, a:focus {
 .content_box2{ width:1200px;
 	overflow:hidden;
 	margin:0 auto;}
+/*侧边导航框*/
 .menu_box{ width:207px; float:left;}
+/*个人中心 侧栏标题*/
 .menu_box_title{ width:207px;
 	height:83px;
 	color:white;
@@ -350,7 +364,9 @@ a:active, a:focus {
 	padding-top:20px;
 	background:#003d79;}
 .menu_box_title span{ display:block; font-size:20px; color:#ffffff;}
+/*侧面个人信息和修改密码大框*/
 .menu_box1{ width:207px;}
+/*单框*/
 .menu_box1 li{ width:207px;
 	height:46px;
 	font-size:16px;
@@ -363,21 +379,25 @@ a:active, a:focus {
 	width:207px;
 	height:46px;}
 .menu_box1 li a:hover{ background:#003d79; color:white;}
+/*每个人的信息大框*/
 .content_boxL{ width:978px;
 	float:right;
 	overflow:hidden;}
+/*每个人信息表头*/
 .content_boxL_nav{ width:978px;
 	height:56px;
 	line-height:56px;
 	margin-top:47px;
 	overflow:hidden;
 	border-bottom:1px solid #cacaca;}
+/*纯字体部分*/
 .content_boxL_nav_title{ float:left;
 	font-size:18px;
 	color:#363636;}
+/*链接部分*/
 .content_boxL_nav_R{ float:right;}
 .content_boxL_nav_R a{ color:#363636;}
-.content_boxL_nav_R a:hover{ text-decoration:underline;}
+.content_boxL_nav_R a:hover{ text-decoration:underline;} /*下划线*/
 .content_boxL_text{ width:945px; margin:0 auto 80px;}
 .content_boxL_pic{ display:block;margin:50px auto;}
 .content_boxL_text p{ text-indent:2em; font:14px/24px "微软雅黑"; color:#666666; margin:30px 0;}
@@ -467,7 +487,7 @@ a:active, a:focus {
 	padding: 0;
 	margin: 0;
 }
-
+/*学分进度条*/
 .process-parent1 {
 	margin-top: 0px;
 	margin-left:70px;
@@ -478,7 +498,7 @@ a:active, a:focus {
 	border-radius: 3px;
 }
 
-
+/*学分进度条小标题*/
 .info1{
 	position: absolute;
 	margin-top: 15px;
@@ -732,6 +752,7 @@ a:active, a:focus {
 	margin-top:100px;
 	margin-left:1200px;
 }
+/*学分页按钮*/
 .el-button {
 	display: inline-block;
 	line-height: 1;
