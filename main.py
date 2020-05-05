@@ -442,5 +442,17 @@ def submit_train_place():
     return jsonify(query.get_plan_tree(stu_id))
 
 
+@app.route('/get_user_info', methods=['GET', 'POST'])
+def get_user_info():
+    stu_id = session.get('stu_id')
+    # stu_id = '2016012107'
+    sql = "select STU_NO,PASSWORD from STUDENT where STU_NO =%s" % stu_id
+    result = query.query(sql)
+    return jsonify({'stu_no': result[0][0], 'password': result[0][1]})
+
+
 if __name__ == '__main__':
     app.run("0.0.0.0", debug=True)
+
+# config['DATABASE_NAME'] = "studenttrainplan2"
+# get_user_info()
