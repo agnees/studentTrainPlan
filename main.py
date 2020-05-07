@@ -444,11 +444,22 @@ def submit_train_place():
 
 @app.route('/get_user_info', methods=['GET', 'POST'])
 def get_user_info():
-    stu_id = session.get('stu_id')
+    params = request.get_json(force=True)
+
+    stu_no = params['stu_no']
+    ad_year = params['ad_year']
     # stu_id = '2016012107'
-    sql = "select STU_NO,PASSWORD from STUDENT where STU_NO =%s" % stu_id
+    sql = "select STU_NO,PASSWORD from STUDENT where STU_NO =%s and AD_YEAR=%s" % (stu_no, ad_year)
     result = query.query(sql)
+    if len(result) < 0:
+        return jsonify({'stu_no': 0, 'password': 0})
     return jsonify({'stu_no': result[0][0], 'password': result[0][1]})
+
+
+# 忘记密码
+@app.route('/forget_password', methods=['GET', 'POST'])
+def forget():
+    return render_template('forget_password.html')
 
 
 if __name__ == '__main__':
