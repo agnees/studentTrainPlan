@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d52729f6-c0ec-4ea1-a020-1e9f52cfa856" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/register-login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/register-login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/Tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mark.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mark.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personal_information.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personal_information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recommed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recommed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/train_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/train_plan.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="467" column="47" lean-forward="true" selection-start-line="467" selection-start-column="47" selection-end-line="467" selection-end-column="47" />
+            <state relative-caret-position="447">
+              <caret line="469" selection-start-line="469" selection-end-line="469" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
               </folding>
@@ -89,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/recommed_module.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
+            <state relative-caret-position="1455">
               <caret line="99" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <element signature="e#26#45#0" expanded="true" />
@@ -145,7 +133,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="28125">
               <caret line="1934" selection-start-line="1934" selection-end-line="1934" />
             </state>
           </provider>
@@ -607,14 +595,27 @@
       <option name="project" value="LOCAL" />
       <updated>1588813126716</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="1) 搞定">
+      <created>1588952555290</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1588952555290</updated>
+    </task>
+    <task id="LOCAL-00030" summary="1) 搞定">
+      <created>1588952695594</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1588952695594</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19379845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19379845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" weight="0.32980973" />
@@ -623,13 +624,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968536" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" weight="0.47108433" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" visible="true" weight="0.4554217" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4554217" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" weight="0.29759037" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4982382" visible="true" weight="0.29759037" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010571" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.31084338" />
       <window_info anchor="bottom" id="Console" order="12" />
@@ -653,7 +654,8 @@
     <MESSAGE value="1) 完成后端返回时间" />
     <MESSAGE value="1) 添加get_user_info" />
     <MESSAGE value="1) 修改get_user_info 接口&#10;2） 增加跳转" />
-    <option name="LAST_COMMIT_MESSAGE" value="1) 修改get_user_info 接口&#10;2） 增加跳转" />
+    <MESSAGE value="1) 搞定" />
+    <option name="LAST_COMMIT_MESSAGE" value="1) 搞定" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="98" key="#HTTP_Proxy" />
@@ -727,29 +729,29 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sql/schema.sql">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="OdpsQlEditor">
         <state relative-caret-position="525">
           <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
       <provider editor-type-id="OdpsQlGraph" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sql/insert_student.sql">
-      <provider selected="true" editor-type-id="OdpsQlEditor" />
-      <provider editor-type-id="OdpsQlGraph" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="27" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="OdpsQlEditor" />
+      <provider editor-type-id="OdpsQlGraph" />
     </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/1437855905/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -857,6 +859,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="469" selection-start-line="469" selection-end-line="469" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -869,7 +881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/recommed_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
+        <state relative-caret-position="1455">
           <caret line="99" selection-start-line="99" selection-end-line="99" />
           <folding>
             <element signature="e#26#45#0" expanded="true" />
@@ -913,18 +925,8 @@
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="28125">
           <caret line="1934" selection-start-line="1934" selection-end-line="1934" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="467" column="47" lean-forward="true" selection-start-line="467" selection-start-column="47" selection-end-line="467" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
