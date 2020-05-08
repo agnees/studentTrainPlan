@@ -103,7 +103,7 @@ function initScore(){
     console.log("111");
     // console.log(course2score[Node['name']]});
     
-    console.log(myChart);
+   
     // console.log(myChart.getOption());
     Tree = myChart.getOption()['series'][0]['data'][0];
     // Tree=orientation[0];
@@ -219,7 +219,6 @@ $("#course").change(function(){
  */
 
 function updataScore(){
-    //获取评分数据
     var domCourse = document.getElementById("course")
     var courseName = domCourse[domCourse.selectedIndex].text;
     var domScore =  document.getElementById("score");

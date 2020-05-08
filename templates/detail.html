@@ -349,25 +349,11 @@
         $(".nav_1").mouseleave(function () {
           $(".nav_slide").slideUp()
         });
-    //$(".producys_box").mouseout(function(){
-    // $(this).find(".producys_box1").slideUp();
-    //});
+   
+   
       </script>
     </div>
-    <!--banner部分开始-->
-    <!-- <div class="banner_box">
-      <ul class="banner_pic">
-        <li><img src="../static/images/logo.jpeg" /></li>
-        <li><img src="../static/images/logo.jpeg" /></li>
-        <li><img src="../static/images/logo.jpeg" /></li>
-
-      </ul>
-      <a class="prev" href="javascript:void(0)"></a>
-      <a class="next" href="javascript:void(0)"></a>
-      <div class="num">
-        <ul></ul>
-      </div>
-    </div> -->
+   
     <script>
       /*鼠标移过，左右按钮显示*/
       $(".banner_box").hover(function () {
@@ -417,11 +403,6 @@
         </table>
       </div>
     </form>
-    <!-- <div class="contacts">
-      <div class="contacts-ctn">
-        <p style="white-space: nowrap;">如有问题请联系：************</p>
-      </div>
-    </div> -->
 
 
   </div>
@@ -454,21 +435,22 @@
 <script>
   $(function () {
     //跑马灯
-    var marginLeft = 0;
-    var elm = document.querySelector('.contacts-ctn');
-    var elmOffsetWidth = elm.offsetWidth;
-    marginLeft = elmOffsetWidth
-    $(elm).css('margin-left', marginLeft);
-    setInterval(function () {
-      marginLeft--;
-      $(elm).css('margin-left', marginLeft);
-      if (Math.abs(marginLeft) > elmOffsetWidth) {
-        marginLeft = elmOffsetWidth;
-        $(elm).css('margin-left', marginLeft)
-      }
-    }, 25);
+    // var marginLeft = 0;
+    // var elm = document.querySelector('.contacts-ctn');
+    // var elmOffsetWidth = elm.offsetWidth;
+    // marginLeft = elmOffsetWidth
+    // $(elm).css('margin-left', marginLeft);
+    // setInterval(function () {
+    //   marginLeft--;
+    //   $(elm).css('margin-left', marginLeft);
+    //   if (Math.abs(marginLeft) > elmOffsetWidth) {
+    //     marginLeft = elmOffsetWidth;
+    //     $(elm).css('margin-left', marginLeft)
+    //   }
+    // }, 25);
     /*鼠标移过，左右按钮显示*/
     $(".user-msg").mouseover(function () {
+      console.log("user");
       $('.user-name-num').show();
     }).mouseout(function () {
       $('.user-name-num').hide();

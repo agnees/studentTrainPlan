@@ -18,7 +18,7 @@ var option = null;
 函数(1) clickFun:
     功能: 点击计划树叶子节点时(即课程节点)改变其状态。
     状态:
-        绿色: k已选课
+        绿色: 已选课
         黄色: 预选课
         红色：未选课
     状态变化
@@ -31,9 +31,9 @@ function clickFun(param) {
     if (typeof param.seriesIndex == 'undefined') {
         return;
     }
-    //只有最后一个参数可以点击,设置点击后颜色变化
+    //只有最后一个参数可以点击
     if (param.type == 'click' && typeof param.data.children == "undefined") {
-        console.log(param.data.name); //信息分组
+        console.log(param.data.name);
         if (param.data.itemStyle.borderColor == 'red') {
             param.data.itemStyle.borderColor = 'yellow';
             param.data.itemStyle.Color = 'yellow';
@@ -46,7 +46,6 @@ function clickFun(param) {
             // param.data.itemStyle.borderColor = 'red';
             // param.data.itemStyle.Color = 'red';
         // }
-        //使用指定的配置项和数据显示图表
         myChart.setOption({});
         // console.log(myChart);
         // console.log(param.data.itemStyle.borderColor);
@@ -69,34 +68,35 @@ $.getJSON('/get_info', function(data)
     // alert("getjson 函数");
    
     originTrainPlain = data;
-    console.log(data);
+    var data1=null;
+
     console.log(new Date().getTime())
     option = {
-        tooltip: { //提示框组建
+        // 配置提示信息
+        
+        tooltip: {
             trigger: 'item',
-            triggerOn: 'mousemove'
+            triggerOn: 'mousemove',
         },
-        series:[ //系列列表
+        // 图标类型
+        series:[
             {
-                type: 'tree',  //树形结构
+                type: 'tree',
               
-                data: [data], //从json获取的数据
-
-                //距离上下左右的距离
+                data: [data],
+                name:name,
                 left: '2%',
                 right: '2%',
                 top: '8%',
                 bottom: '20%',
-                // 图元形状类别
+                // 图元的图形类别
                 symbol: 'emptyCircle',
                 //图元的大小
                 symbolSize: 7,
 
-                //垂直排列
                 orient: 'vertical',
                 // 控制显示层数
                 initialTreeDepth: 4,
-                //字数这列和展开交互，默认打开
                 expandAndCollapse: true,
                 // 高亮时显示的内容设置
                 label: {
@@ -109,34 +109,92 @@ $.getJSON('/get_info', function(data)
                     }
                 },
     
-                leaves: { //叶子节点特殊配置，标签不同
+                leaves: {
                      // 高亮时显示的内容设置
                     label: {
                         normal: {
                             position: 'bottom',
                             rotate: -90,
                             verticalAlign: 'middle',
-                            align: 'left'
+                            align: 'left',
+                           
+                           
                         }
                     },
                     //设置图表标志的大小
                     symbolSize: 15
                 },
+                tooltip: {
+                    formatter:function(a){
+                    
+                    //    return params.name;
+                    //     if(params.data.value!=undefined&&params.data.start_time==undefined&&params.data.end_time==undefined)
+                    //    return params.name+":"+params.data.value;
+                    //    return params.name+":"+params.value+"/"+params.data.start_time+"到"+params.data.end_time;
+                       
+                    if(a.data.start_time==undefined&&a.data.end_time==undefined&&a.data.value==undefined)
+                    { let list = [];
+                        list.push(
+                                '<i style="display: inline-block;width: 50px;height: 30px;text-align:center;' +
+                                  +'margin-right: 5px;border-radius: 50%;}"></i>'+
+                                  '<br>课程名称：<span style="width:70px;>'+
+                                  a.name+
+                                  '</span>')
+                         return '<div class="showBox">' + list + '</div>';
+                        }
+                        if(a.data.value!=undefined&&a.data.start_time==undefined&&a.data.end_time==undefined){
+                            let list = [];
+                           
+                            list.push(
+                            '<i style="display: inline-block;width: 80px;height: 50px;text-align:center;' +
+                            +'margin-right: 5px;border-radius: 50%;}"></i>'+
+                            '<br>课程名称：<span style="width:70px;>'+
+                            a.name+
+                            '</span><br>学分：<span style="width:70px;">'+
+                            a.data.value+
+                            '</span>'
+                                      
+                                      
+                            )
+                                  return '<div class="showBox">' + list + '</div>'        
+                        }
+                        let list = [];
+                      
+                        list.push(
+                            '<i style="display: inline-block;width: 200px;height: 100px;' +
+                              +'margin-right: 5px;border-radius: 50%;}"></i>'+
+                              '<br>课程名称：<span style="width:70px;>'+
+                              a.name+
+                              '</span><br>学分：<span style="width:70px;">'+
+                              a.data.value+
+                              '</span><br>开始时间：<span style="width:70px;">' +
+                              a.data.start_time +
+                              '</span><br>结束时间：' +
+                              a.data.end_time +
+                              '<br>上课时间：' +
+                              a.data.class_time 
+                          ) 
+
+                       return '<div class="showBox">' + list + '</div>' ;    
+                      
+                       
+                 
+                    }
+                },
+              
                 //数据更新动画的时长
                 animationDurationUpdate: 750
             }
         ]};
     
-    //使用指定的配置项和数据显示图表
+    
     myChart.setOption(option);
-    // console.log("mychart 的值2"+myChart);
-    // console.log("mychart option的值1"+myChart.getOption().series[0].data);
+
 
 });
 
 
 //----------------------------------------------------------------//
-
 
 
 // ------------------------------------------------------------------//
@@ -148,11 +206,10 @@ $.getJSON('/get_info', function(data)
  */
 //已修学分
 var perExistScore=0;
-//预选学分
+//预加学分
 var perAddScore=0;
-console.log("peraddscore 的值是： "+perAddScore);
+
 function getScore(Node){
-    //如果结点b不为红色未定义
     if(typeof Node.children == 'undefined'){
         if(Node.itemStyle.borderColor == "yellow"){
             perAddScore += Node.value;
@@ -163,38 +220,16 @@ function getScore(Node){
         }
     }
     else{
-        // console.log(Node["children"]);
+    
         for (var sub = 0; sub < Node["children"].length; sub++)
             getScore(Node["children"][sub]);
     }
 }
-//  function getColor(Node){
-    
-//     if(typeof Node.children == 'undefined'){
-//         if(Node.itemStyle.borderColor == "yellow"){
-//             perAddScore += Node.value;
-//         }
-//         else if (Node.itemStyle.borderColor == "green"){
-//             perExistScore += Node.value;
-        
-            
-//         }
-//     }
-//     else{
-//         // console.log(Node["children"]);
-//         for (var sub = 0; sub < Node["children"].length; sub++)
-//             {getScore(Node["children"][sub]);
-//             console.log(Node['children'][sub]);   
-//         }
-//     }
-    
-//  }
+
 
     
 //------------------------------------------------------------------------//
-// var option = myChart.getOption();
-// console.log(option,'option')
-// console.log(new Date().getTIme())
+
 // -----------------------------------------------------------------------//
 /*
 函数(4):setInterval(function(){...}
@@ -204,11 +239,11 @@ function getScore(Node){
 function fuckThisBug (){
     console.log("fuck 函数");
     //得到传入的树形图一摸一样的数据
+  
    var Tree = myChart.getOption()["series"][0]["data"][0];
    console.log(Tree);
 
-   //命名
-   var subjects = ["专业实践必修", "专业理论必修", "专业理论选修", "学科实践必修", "学科理论必修", "实践选修", "第二课堂", "通识实践必修", "通识理论必修",
+   var subjects = ["专业实践必修", "专业理论必修", "专业理论选修", "学科实践必修", "学科理论必修", "实践选修", "第三课堂", "通识实践必修", "通识理论必修",
      "通识理论选修(公选)"];
   
    var subjects2TotalScore = {};  //所需总学分。每科分开
@@ -217,15 +252,12 @@ function fuckThisBug (){
    // 初始化已选分数和总分数
    for(var i=0; i<subjects.length;i++){
        subjects2TotalScore[subjects[i]] = Tree.children[i].value;
-    //    console.log("总分数parent"+Tree.children[i].value);
-    //    console.log(subjects[i]+"总分数"+subjects2TotalScore[subjects[i]]);
+  
        subjects2ExistScore[subjects[i]] = 0;
        subjects2AddScore[subjects[i]] = 0;
-       // console.log(subjects2TotalScore+"111");
-       // console.log(subjects2ExistScore+"222");
-       // console.log(subjects2AddScore+"333");
+    
    }
-   // 求得每科已选的学分和（绿）；将选分数和（黄色）
+   // 求得每科已选的学分和（绿） 将选分数和（黄色）
    for(var sub =0; sub <subjects.length; sub++){
        perExistScore = 0;
        perAddScore = 0;
@@ -242,11 +274,9 @@ function fuckThisBug (){
    var TotalAddScore = 0;//黄色
 
    for(var i=0; i<subjects.length; i++){
-       TotalScore += subjects2TotalScore[subjects[i]];//所有科目总分数= 0+所有科目所需总学分
-    //    console.log(subjects[i]+"总分数"+TotalScore);
-       //总共已休分数=min(已修学分，总需学分)
+       TotalScore += subjects2TotalScore[subjects[i]];//所有科目总分数
+
        TotalExistScore += Math.min(subjects2ExistScore[subjects[i]],subjects2TotalScore[subjects[i]]);
-       //如果（总学分-已修学分）>0，总共还需学分=min[(学科总分-已修学分),将选学分]
        if(subjects2TotalScore[subjects[i]] - subjects2ExistScore[subjects[i]] > 0)
            TotalAddScore += Math.min(subjects2TotalScore[subjects[i]]-subjects2ExistScore[subjects[i]], subjects2AddScore[subjects[i]]);
 
@@ -259,32 +289,32 @@ function fuckThisBug (){
    var pLabels = [];
    //更新除总进度条外的进度条
    for(var i=2; i< subjects.length+2; i++){
-       processes.push("process-parent"+i.toString());//为每一个进度条黄+绿添加总进度
+       processes.push("process-parent"+i.toString());//每一个进度条黄+绿总进度
        pLabels.push("on" + i.toString());//绿
    }
    // 更新总进度条
    var greenWidth, yellowWidth;
 
    var doms = document.getElementsByClassName("process-parent1")[0].children;
-   greenWidth = (TotalExistScore*100/TotalScore).toFixed(2); // 四舍五入为指定小数位数
-   greenWidth =  Math.min(100, greenWidth); // 不能超过100%
+   greenWidth = (TotalExistScore*100/TotalScore).toFixed(2);//四舍五入为指定小数位数
+   greenWidth =  Math.min(100, greenWidth);
    yellowWidth = (TotalAddScore*100/TotalScore).toFixed(2);
    yellowWidth = Math.min(100-greenWidth, yellowWidth)
    doms[0].style.width = greenWidth + "%";
    doms[1].style.width = yellowWidth + "%";
-   dom = document.getElementById("on1"); //css格式
-   dom.textContent = TotalExistScore + '/' + TotalScore; //文本显示
+   dom = document.getElementById("on1");
+   dom.textContent = TotalExistScore + '/' + TotalScore;
 
    // 设置各个子进度条
 
    for(var idx=0; idx<processes.length; idx++){
-       TotalScore = subjects2TotalScore[subjects[idx]]; //学科总分数
-       TotalExistScore = subjects2ExistScore[subjects[idx]]; //学科现存分数
-       TotalAddScore = subjects2AddScore[subjects[idx]]; //学科还需分数
+       TotalScore = subjects2TotalScore[subjects[idx]];
+       TotalExistScore = subjects2ExistScore[subjects[idx]];
+       TotalAddScore = subjects2AddScore[subjects[idx]];
        var doms = document.getElementsByClassName(processes[idx])[0].children;
-       greenWidth = (TotalExistScore*100/TotalScore).toFixed(2); //学科现有/学科总需
+       greenWidth = (TotalExistScore*100/TotalScore).toFixed(2);
        greenWidth =  Math.min(100, greenWidth);
-       yellowWidth = (TotalAddScore*100/TotalScore).toFixed(2); //学科需修/学科总需
+       yellowWidth = (TotalAddScore*100/TotalScore).toFixed(2);
        yellowWidth = Math.min(100-greenWidth, yellowWidth)
        doms[0].style.width = greenWidth + "%";
        doms[1].style.width = yellowWidth + "%";
@@ -294,18 +324,15 @@ function fuckThisBug (){
 
 
 
-//    for(var i=2; i< subjects.length+2; i++){
-//     if(progress[i].length!=0)
 
-// }
 }
 
-//加载时间
+ 
 window.onload=function(){
     
   
 setInterval(function(){fuckThisBug();}, 2000);}
-// domain.onchange=changeDomain;
+
 
 
 

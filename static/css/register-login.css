@@ -71,13 +71,11 @@
 			content: '';
 			display: table;
 		}
-		/*修改密码框*/
 		.index-tab{
 			text-align: center;
 			font-size: 18px;
 			margin-bottom: 10px;
 		}
-		/*修改密码部分*/
 		.index-tab .index-slide-nav{
 			display: inline-block;
 			position: relative;
@@ -111,27 +109,23 @@
 		.slide-bar1{
 			left: 4em;
 		}
-		/*登录表单*/ /*修改表单*/
 		.form{
 			float: none;
 			margin: auto;
 			text-align: left;
 			width: 300px;
 		}
-		/*输入部分大框*/
 		.form .group{
 			padding: 1px 0;
     		/* border: 1px solid #d5d5d5; */
     		border-radius: 3px;
 		}
-		/*输入单框*/
 		.form .group .group-ipt{
 			position: relative;
     		margin: 0;
 			overflow: hidden;
 			margin-bottom: 34px;
 		}
-		/*输入内容*/
 		.form .group .group-ipt input{
 			padding: 1em .8em;
     		width: 100%;
@@ -145,7 +139,6 @@
 			position: relative;
 			background-color: rgb(242,242,242);
 		}
-		/*未输入内容时填充*/
 		.form .group .group-ipt input::placeholder{
 			text-align: center;
 			color:rgb(177, 175, 175);
@@ -162,7 +155,6 @@
 			cursor: pointer;
 			height: 40px;
 		}
-		/*登录按钮*/ /*修改按钮*/
 		.button{
 			margin-top:18px; 
 		}
@@ -189,14 +181,12 @@
 		.remember label{
 			display: block;
 		}
-		/*记住我字*/
 		.remember-me{
 			font-size: 14px;
 			float: left;
 			position: relative;
 			cursor: pointer;
 		}
-		/*记住我框*/
 		.icon{
 			width: 11px;
 			height: 11px;
