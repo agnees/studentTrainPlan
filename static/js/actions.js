@@ -73,7 +73,6 @@ function dfsScore(Node){
         allSujPass.push(Node['pass']);
         allSujIntersting.push(Node['interesting']);
         allSujAcknowledged.push(Node['acknowledged']);
-        allSujPass.push(Node['']);
         console.log(allSujPass);
         
    
