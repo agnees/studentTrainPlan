@@ -69,14 +69,14 @@ def get_plan_tree(stu_id):
     print(finished_co)
 
     # 从CHOOSE表获取课程编号co_no和评分comment，用学号查找
-    sql = "SELECT CO_NO,COMMENT,PASS FROM CHOOSE WHERE STU_NO='%s'" % stu_id
+    sql = "SELECT CO_NO,COMMENT,PASS,interesting,acknowledged FROM CHOOSE WHERE STU_NO='%s'" % stu_id
     # 将查询结果定义为course2score
     course2score = query(sql)
     # 建立co2score字典
     co2score = {}
     # 对当前查到的课程在course2score进行遍历，结果填入字典co2score={课程编号：评分}
     for cur in course2score:
-        co2score[cur[0]] = {'score': cur[1], 'pass': cur[2]}
+        co2score[cur[0]] = {'score': cur[1], 'pass': cur[2], 'interesting': cur[3], 'acknowledged': cur[4]}
 
     # 在教学计划表中查询课程信息，用课程序列号co_100>0查询
     sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO,AD_YEAR,CO_100,END_TIME,CLASS_TIME " \
@@ -118,7 +118,8 @@ def get_plan_tree(stu_id):
 
         # 处理data叶子节点,学分设置浮点型，评分设置整数型，颜色为红色
         course_data = {'name': course[2], 'value': float(course[4]), 'score': int(co2score[course[5]].get("score")),
-                       'pass': co2score[course[5]].get("pass"),
+                       'pass': co2score[course[5]].get("pass"), 'interesting': co2score[course[5]].get("interesting"),
+                       'acknowledged': co2score[course[5]].get("acknowledged"),
                        'itemStyle': {'borderColor': 'red'}, 'start_time': str(course[1]),
                        "end_time": str(course[8]),
                        "class_time": str(course[9])}
@@ -742,13 +743,19 @@ def updateScore(stu_id, scores):
         if key == "":
             continue
         val = scores[key]
+        interesting = 0
+        acknowledged = 0
+        if 'interesting' in val:
+            interesting = val.get('interesting')
+        if 'acknowledged' in val:
+            acknowledged = val.get('acknowledged')
 
         if 'pass' not in val:
             sql = "UPDATE CHOOSE SET COMMENT='%d'  WHERE STU_NO='%s' AND CO_NO='%s'" % (
                 val.get('score'), stu_id, name2no[key])
         else:
-            sql = "UPDATE CHOOSE SET COMMENT='%d' ,PASS='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
-                val.get('score'), val.get('pass'), stu_id, name2no[key])
+            sql = "UPDATE CHOOSE SET COMMENT='%d' ,PASS='%d' ,interesting='%d',acknowledged='%d' WHERE STU_NO='%s' AND CO_NO='%s'" % (
+                val.get('score'), val.get('pass'), interesting, acknowledged, stu_id, name2no[key])
         print(sql)
         update(sql)
 

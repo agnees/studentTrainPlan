@@ -67,3 +67,42 @@ def get_matrix(map_student):
             pass_matrix[i].append(score[j][1])
 
     return comment_matrix, pass_matrix
+
+
+def get_count_by_choose_column(stu_no, column_name):
+    '''
+
+    :param stu_no: 学号
+    :return:  容不容易过的课程，知识丰富都，课程趣味程度，新用户推荐不同
+    '''
+
+    # 在学生课程信息表，根据学号查询到课程序列finished_co
+    sql = "select FINISHED_CO from EDU_STU_PLAN WHERE STU_NO='%s'" % stu_no
+    plan = query(sql)
+    finished_co = plan[0][0]
+    # 在教学计划表中查询课程信息，用课程序列号co_100>0查询
+    sql = "select CLASSIFICATION, START_TIME, CO_NAME, IS_MUST, CREDITS, CO_NO,AD_YEAR,CO_100,END_TIME,CLASS_TIME " \
+          "from EDUCATION_PLAN WHERE CO_100>'%s'" % '0'
+    # 查询结果用course表示
+    courses = query(sql)
+
+    courses2map = {}
+    for course in courses:
+        courses2map[course[5]] = {'co_name': course[2], 'choose': 0, 'is_must': int(course[3])}
+        if finished_co[int(course[7]) - 1] == '1':
+            courses2map[course[5]]['choose'] = 1
+
+    sql = "SELECT CO_NO, sum(%s) as total FROM CHOOSE GROUP BY CO_NO order by total desc" % column_name
+
+    results = query(sql)
+    jsonData = {"source": []}
+    for result in results:
+        if len(jsonData) == 10:
+            break
+        if courses2map[result[0]].get('choose') == 0:
+            continue
+        if courses2map[result[0]].get('is_must') == 1:
+            continue
+        jsonData.get('source').append([int(result[1]), courses2map[result[0]].get('co_name')])
+
+    return jsonData

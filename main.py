@@ -307,7 +307,7 @@ def getRecommedData():
     """
     # 需要推荐的课程和人及评分
     topNCourse, _ = recommed_module.recommedCoursePerson(scoreMatrix, stuNo2MatId[stu_no], N=20)
-    passTopNCourse, _ = recommed_module.recommedCoursePerson(passMatrix, stuNo2MatId[stu_no], N=10)
+    # passTopNCourse, _ = recommed_module.recommedCoursePerson(passMatrix, stuNo2MatId[stu_no], N=10)
     """
     将得到的Course与Person装换为前端图标需要的json格式:
      {
@@ -328,13 +328,21 @@ def getRecommedData():
     # [评分：课程]
     courseJson = recommed_module.toBarJson(topNCourse, id2Course)
     # [评分：姓名]
-    passTopNCourse = recommed_module.toBarJson(passTopNCourse, id2Course)
+    # passTopNCourse = recommed_module.toBarJson(passTopNCourse, id2Course)
+    passTopNCourse = map_student_course.get_count_by_choose_column(stu_no, 'PASS')
+    interstingTopNCourse = map_student_course.get_count_by_choose_column(stu_no, 'interesting')
+    acknowledgeTopNCourse = map_student_course.get_count_by_choose_column(stu_no, 'acknowledged')
+
     courseJson = recommed_module.regularData(courseJson, 1, 5)
-    passCourseJson = recommed_module.regularData(passTopNCourse, 1, 1)
+    passCourseJson = recommed_module.regularData(passTopNCourse, 1, 5)
+    interstingCourseJson = recommed_module.regularData(interstingTopNCourse, 1, 5)
+    acknowledgeCourseJson = recommed_module.regularData(acknowledgeTopNCourse, 1, 5)
 
     coursePersonJson = {}
     coursePersonJson['course'] = courseJson
     coursePersonJson['passCourse'] = passCourseJson
+    coursePersonJson['interstingCourse'] = interstingCourseJson
+    coursePersonJson['acknowledgeCourse'] = acknowledgeCourseJson
     print(coursePersonJson)
     return jsonify(coursePersonJson)
 

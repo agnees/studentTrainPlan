@@ -59,6 +59,8 @@ function rebuild(){
 var allSujCourse = [];
 var allSujScore = [];
 var allSujPass=[];
+var allSujIntersting=[];
+var allSujAcknowledged=[];
 var course2score = {};
 
 function dfsScore(Node){
@@ -69,6 +71,9 @@ function dfsScore(Node){
         allSujCourse.push(Node['name']);
         allSujScore.push(Node['score']);
         allSujPass.push(Node['pass']);
+        allSujIntersting.push(Node['interesting']);
+        allSujAcknowledged.push(Node['acknowledged']);
+        allSujPass.push(Node['']);
         console.log(allSujPass);
         
    
@@ -97,6 +102,8 @@ var allScore = ['1', '2', "3", '4', '5'];
     var courseScore = [];//未选课程的分数
     var courseName = [];//未选课程名称
     var coursePass=[];
+    var courseIntersting=[];
+    var courseAcknowledged=[];
     var allSubject = [];
 function initScore(){
 
@@ -113,12 +120,16 @@ function initScore(){
         allSujCourse = [];
         allSujScore = [];
         allSujPass=[];
+        allSujIntersting=[];
+        allSujAcknowledged=[];
         //得到未选课程以及未评分的课程
         dfsScore(Tree['children'][idx]);
         
         courseScore.push(allSujScore);
         courseName.push(allSujCourse);
-       coursePass.push(allSujPass);
+        courseIntersting.push(allSujIntersting);
+        courseAcknowledged.push(allSujAcknowledged);
+        coursePass.push(allSujPass);
     }
     // console.log("通过与否"+coursePass);
     // console.log(coursePass);
@@ -162,6 +173,8 @@ $("#course").change(function(){
     //初始化分数值
     document.getElementById("score").length=0;
     document.getElementById("pass").length=0;
+    document.getElementById("interesting").length=0;
+    document.getElementById("acknowledged").length=0;
     // console.log("pass的长度"+);
     var domainSelect = document.getElementById("domain");
     var domainIndex = domainSelect.selectedIndex-1;
@@ -204,7 +217,38 @@ $("#course").change(function(){
         $("#pass").attr("disabled",true);
         $("#btnScore").attr("disabled",true);
     }
+    if(courseIntersting[domainIndex][courseIndex] == 0){
+        console.log("未评分");
+        $("#interesting").attr("disabled",false);
+        $("#btnScore").attr("disabled",false);
+        $("#interesting").append($("<option></option>").val(0).html("请给课程有趣度评分:"));
+        for(var s=1; s<=5; s++){
+            $("#interesting").append($("<option></option>").val(s).html(s));
+        }
 
+
+    }
+    else {
+        console.log("已评分")
+        $("#interesting").append($("<option></option>").val(0).html("已评分:"+courseIntersting[domainIndex][courseIndex]));
+        $("#interesting").attr("disabled",true);
+    }
+
+    if(courseAcknowledged[domainIndex][courseIndex] == 0){
+        console.log("未评分");
+        $("#acknowledged").attr("disabled",false);
+        $("#btnScore").attr("disabled",false);
+        $("#acknowledged").append($("<option></option>").val(0).html("请给知识丰富度评分:"));
+        for(var s=1; s<=5; s++){
+            $("#acknowledged").append($("<option></option>").val(s).html(s));
+        }
+    }
+    else {
+        console.log("已评分")
+        console.log(courseAcknowledged)
+        $("#acknowledged").append($("<option></option>").val(0).html("已评分:"+courseAcknowledged[domainIndex][courseIndex]));
+        $("#acknowledged").attr("disabled",true);
+    }
 
     
 })
@@ -223,9 +267,14 @@ function updataScore(){
     var courseName = domCourse[domCourse.selectedIndex].text;
     var domScore =  document.getElementById("score");
     var pass=document.getElementById('pass');
+    var intersting=document.getElementById('interesting');
+    var acknowledged=document.getElementById('acknowledged');
+
     var passIndex=pass.selectedIndex-1;
     var tree = myChart.getOption()['series'][0]['data'][0];
-    course2score[courseName] = {'score':parseInt(domScore[domScore.selectedIndex].text),"pass":parseInt(pass[pass.selectedIndex].value)};
+    course2score[courseName] = {'score':parseInt(domScore[domScore.selectedIndex].text),"pass":parseInt(pass[pass.selectedIndex].value),
+        'interesting':parseInt(domScore[intersting.selectedIndex].text),'acknowledged':parseInt(domScore[acknowledged.selectedIndex].text)
+    };
     console.log(courseName);
     var scores = {};
     scores[courseName] = course2score[courseName];
